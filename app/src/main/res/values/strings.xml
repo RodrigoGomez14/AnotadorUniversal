@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Anotador Universal</string>
+    <string name="boton_truco">Truco</string>
+    <string name="boton_escoba">Escoba del 15</string>
+</resources>
