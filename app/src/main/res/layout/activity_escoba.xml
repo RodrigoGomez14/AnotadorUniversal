@@ -14,7 +14,7 @@
         android:orientation="horizontal">
 
         <EditText
-            android:id="@+id/equipo1"
+            android:id="@+id/editText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -25,15 +25,14 @@
             android:textColor="@android:color/white"
             android:textColorHint="@android:color/white"
             android:textSize="20sp"
-            android:textStyle="bold"
-            />
+            android:textStyle="bold" />
 
         <Space
             android:layout_width="60dp"
             android:layout_height="wrap_content" />
 
         <EditText
-            android:id="@+id/equipo2"
+            android:id="@+id/editText2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -41,12 +40,9 @@
             android:hint="@string/Equipo_Ellos"
             android:inputType="textPersonName"
             android:textAlignment="center"
-            android:textColor="@android:color/white"
             android:textColorHint="@android:color/white"
             android:textSize="20sp"
-            android:textStyle="bold"
-            android:focusable="false"/>
-
+            android:textStyle="bold" />
     </LinearLayout>
 
     <LinearLayout

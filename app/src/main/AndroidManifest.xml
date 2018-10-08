@@ -9,9 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Truco">
-
-        </activity>
+        <activity android:name=".Truco"></activity>
+        <activity android:name=".Escoba"></activity>
+        <activity android:name=".Chancho"></activity>
+        <activity android:name=".Generala"></activity>
+        <activity android:name=".Chinchon"></activity>
+        <activity android:name=".InformacionClase"></activity>
+        <activity android:name=".ConfiguracionTruco"></activity>
+        <activity android:name=".TrucoGallo"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
