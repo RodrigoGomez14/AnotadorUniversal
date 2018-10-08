@@ -53,6 +53,12 @@
             android:onClick="snotadorChinchon"
             android:text="@string/Chinchon" />
 
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="anotadorBurako"
+            android:text="@string/Burako" />
+
     </LinearLayout>
 
 </LinearLayout>

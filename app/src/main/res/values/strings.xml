@@ -32,4 +32,20 @@
     <string name="Cantidad_de_puntos">Cantidad de puntos</string>
     <string name="Explicacion_gallo">En el truco gallo en lugar jugar dos equipos son tres personas</string>
     <string name="Mano_terminada_chinchon">Ronda finalizada</string>
+    <string name="Burako">Burako</string>
+    <string name="numeroUno">1</string>
+    <string name="numeroDos">2</string>
+    <string name="numeroTres">3</string>
+    <string name="numeroCuatro">4</string>
+    <string name="numeroCinco">5</string>
+    <string name="numeroSeis">6</string>
+    <string name="Escalera">Escalera</string>
+    <string name="Full">Full</string>
+    <string name="Poker">Poker</string>
+    <string name="Total">Total</string>
+    
+    
+    
+    
 </resources>
+
