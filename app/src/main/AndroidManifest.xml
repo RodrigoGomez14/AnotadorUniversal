@@ -14,7 +14,8 @@
         <activity android:name=".Chancho"></activity>
         <activity android:name=".Generala"></activity>
         <activity android:name=".Chinchon"></activity>
-        <activity android:name=".InformacionClase"></activity>
+        <activity android:name=".InformacionClase"
+            android:theme="@style/Theme.AppCompat.Dialog"></activity>
         <activity android:name=".ConfiguracionTruco"></activity>
         <activity android:name=".TrucoGallo"></activity>
         <activity android:name=".MainActivity">
