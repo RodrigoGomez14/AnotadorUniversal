@@ -59,6 +59,13 @@
             android:onClick="anotadorBurako"
             android:text="@string/Burako" />
 
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="anotadorRummy"
+            android:text="@string/Rummy" />
+
     </LinearLayout>
 
 </LinearLayout>

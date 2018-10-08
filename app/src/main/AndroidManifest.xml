@@ -15,6 +15,7 @@
         <activity android:name=".Generala"></activity>
         <activity android:name=".Chinchon"></activity>
         <activity android:name=".Burako"></activity>
+        <activity android:name=".Rummy"></activity>
         <activity android:name=".CambiarNombre"
             android:theme="@style/Theme.AppCompat.Dialog"></activity>
         <activity android:name=".InformacionClase"

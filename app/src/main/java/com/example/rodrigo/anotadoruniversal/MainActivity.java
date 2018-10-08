@@ -43,6 +43,11 @@ public class MainActivity extends AppCompatActivity {
         Intent i=new Intent(MainActivity.this,Burako.class);
         startActivity(i);
     }
+    public void anotadorRummy(View vista){
+        Intent i=new Intent(this,Rummy.class);
+        startActivity(i);
+
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
