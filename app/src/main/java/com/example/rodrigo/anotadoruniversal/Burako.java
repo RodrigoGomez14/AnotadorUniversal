@@ -124,7 +124,7 @@ public class Burako extends AppCompatActivity {
                 }
                 if(jugador1.getPuntos()>3000 || jugador2.getPuntos()>3000){
                     Toast.makeText(Burako.this, "Partido Finalizado", Toast.LENGTH_SHORT).show();
-                    
+
                 }
                 cuentaManos++;
             }
@@ -132,7 +132,6 @@ public class Burako extends AppCompatActivity {
         alertdialog.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-
             }
         });
         alertdialog.show();
