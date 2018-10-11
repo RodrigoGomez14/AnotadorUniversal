@@ -1,0 +1,57 @@
+<resources>
+
+    <string name="jugadoruno">Jugador 1</string>
+    <string name="jugadordos">Jugador 2</string>
+    <string name="jugadortres">Jugador 3</string>
+    <string name="jugadorcuatro">Jugador 4</string>
+    <string name="app_name">Anotador Universal</string>
+    <string name="boton_truco">Truco</string>
+    <string name="boton_escoba">Escoba del 15</string>
+    <string name="Sumar_Puntos">+</string>
+    <string name="Restar_Puntos">-</string>
+    <string name="Equipo_Nosotros">Nosotros</string>
+    <string name="Equipo_Ellos">Ellos</string>
+    <string name="boton_chancho">Chancho</string>
+    <string name="Generala">Generala</string>
+    <string name="letra_C">C</string>
+    <string name="letra_H">H</string>
+    <string name="letra_A">A</string>
+    <string name="letra_N">N</string>
+    <string name="letra_C2">C</string>
+    <string name="letra_H2">H</string>
+    <string name="letra_O">O</string>
+    <string name="Configuracion">Configuracion</string>
+    <string name="Informacion">Info</string>
+    <string name="Buscar">Buscar</string>
+    <string name="Creditos1">Creado el 4/10/2018</string>
+    <string name="Creditos2">Rodrigo Gomez</string>
+    <string name="Generala2">Generala 2</string>
+    <string name="Puntaje_en_0">-</string>
+    <string name="Chinchon">Chinchon</string>
+    <string name="Reiniciar">Reiniciar</string>
+    <string name="si">Si</string>
+    <string name="no">No</string>
+    <string name="Gallo">Truco gallo</string>
+    <string name="truco_15">15</string>
+    <string name="truco_30">30</string>
+    <string name="Cantidad_de_puntos">Cantidad de puntos</string>
+    <string name="Explicacion_gallo">En el truco gallo en lugar jugar dos equipos son tres personas</string>
+    <string name="Mano_terminada_chinchon">Ronda finalizada</string>
+    <string name="Burako">Burako</string>
+    <string name="numeroUno">1</string>
+    <string name="numeroDos">2</string>
+    <string name="numeroTres">3</string>
+    <string name="numeroCuatro">4</string>
+    <string name="numeroCinco">5</string>
+    <string name="numeroSeis">6</string>
+    <string name="Escalera">Escalera</string>
+    <string name="Full">Full</string>
+    <string name="Poker">Poker</string>
+    <string name="Total">Total</string>
+    <string name="Rummy">Rummy</string>
+    
+    
+    
+    
+</resources>
+

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/letra_C"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:onClick="capturarToque"
+            android:paddingHorizontal="10dp"
+            android:text="@string/letra_C"
+            android:textAlignment="center"
+            android:textColor="@color/GrisClaro"
+            android:textSize="45sp"
+            android:textStyle="bold" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="10dp" />
+
+        <TextView
+            android:id="@+id/letra_H"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:onClick="capturarToque"
+            android:paddingHorizontal="10dp"
+            android:text="@string/letra_H"
+            android:textAlignment="center"
+            android:textColor="@color/GrisClaro"
+            android:textSize="45sp"
+            android:textStyle="bold" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="10dp" />
+
+        <TextView
+            android:id="@+id/letra_A"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:onClick="capturarToque"
+            android:paddingHorizontal="10dp"
+            android:text="A"
+            android:textAlignment="center"
+            android:textColor="@color/GrisClaro"
+            android:textSize="45sp"
+            android:textStyle="bold" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="10dp" />
+
+        <TextView
+            android:id="@+id/letra_N"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:onClick="capturarToque"
+            android:paddingHorizontal="10dp"
+            android:text="@string/letra_N"
+            android:textAlignment="center"
+            android:textColor="@color/GrisClaro"
+            android:textSize="45sp"
+            android:textStyle="bold" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="10dp" />
+
+        <TextView
+            android:id="@+id/letra_C2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:onClick="capturarToque"
+            android:paddingHorizontal="10dp"
+            android:text="@string/letra_C2"
+            android:textAlignment="center"
+            android:textColor="@color/GrisClaro"
+            android:textSize="45sp"
+            android:textStyle="bold" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="10dp" />
+
+        <TextView
+            android:id="@+id/letra_H2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:onClick="capturarToque"
+            android:paddingHorizontal="10dp"
+            android:text="@string/letra_H2"
+            android:textAlignment="center"
+            android:textColor="@color/GrisClaro"
+            android:textSize="45sp"
+            android:textStyle="bold" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <TextView
+            android:id="@+id/letra_O"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:onClick="capturarToque"
+            android:paddingHorizontal="10dp"
+            android:text="@string/letra_O"
+            android:textAlignment="center"
+            android:textColor="@color/GrisClaro"
+            android:textSize="45sp"
+            android:textStyle="bold" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="40dp" />
+
+        <Button
+            android:id="@+id/botonrestar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/button8"
+            android:layout_alignParentTop="true"
+            android:onClick="restarPuntos"
+            android:text="Restar" />
+
+    </LinearLayout>
+
+</RelativeLayout>
