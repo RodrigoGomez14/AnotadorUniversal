@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import org.w3c.dom.Text;
@@ -157,13 +159,22 @@ public class Generala extends AppCompatActivity {
         final AlertDialog.Builder alertdialog = new AlertDialog.Builder(this);
         alertdialog.setTitle("Ingrese puntaje de: "+ Jugada(casillero));
         LinearLayout layout = new LinearLayout(this);
-        final EditText puntaje = new EditText(this);
-        layout.addView(puntaje);
+        layout.setOrientation(LinearLayout.VERTICAL);
+        RadioGroup grupo= new RadioGroup(this);
+        final RadioButton puntaje = new RadioButton(this);
+        puntaje.setText("2");
+        grupo.addView(puntaje);
+        final RadioButton puntaje1 = new RadioButton(this);
+        grupo.addView(puntaje1);
+        puntaje1.setText("4");
+        puntaje.setHint(capturarJugador(vista).getNombre());
+        layout.addView(grupo);
+        //layout.addView(puntaje1);
         alertdialog.setView(layout);
         alertdialog.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                setearPuntaje(casillero,puntaje);
+                setearPuntaje(casillero,null);
             }
         });
         alertdialog.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
@@ -173,6 +184,7 @@ public class Generala extends AppCompatActivity {
         });
         alertdialog.create().show();
     }
+
 
     public void actualizarunPuntaje(View vista,EditText Mano,Jugador jugador){
         String mano=Mano.getText().toString();
@@ -207,37 +219,37 @@ public class Generala extends AppCompatActivity {
     public String Jugada (View vista){
         TextView casillero = (TextView)vista;
         if(casillero.equals(unouno)||casillero.equals(unodos)||casillero.equals(unotres)||casillero.equals(unocuatro)){
-            return "1";
+            return "\n1";
         }
         if(casillero.equals(dosuno)||casillero.equals(dosdos)||casillero.equals(dostres)||casillero.equals(doscuatro)){
-            return "2";
+            return "\n2";
         }
         if(casillero.equals(tresuno)||casillero.equals(tresdos)||casillero.equals(trestres)||casillero.equals(trescuatro)){
-            return "3";
+            return "\n3";
         }
         if(casillero.equals(cuatrouno)||casillero.equals(cuatrodos)||casillero.equals(cuatrotres)||casillero.equals(cuatrocuatro)){
-            return "4";
+            return "\n4";
         }
         if(casillero.equals(cincouno)||casillero.equals(cincodos)||casillero.equals(cincotres)||casillero.equals(cincocuatro)){
-            return "5";
+            return "\n5";
         }
         if(casillero.equals(seisuno)||casillero.equals(seisdos)||casillero.equals(seistres)||casillero.equals(seiscuatro)){
-            return "6";
+            return "\n6";
         }
         if(casillero.equals(escalerauno)||casillero.equals(escalerados)||casillero.equals(escaleratres)||casillero.equals(escaleracuatro)){
-            return "Escalera";
+            return "\nEscalera";
         }
         if(casillero.equals(fulluno)||casillero.equals(fulldos)||casillero.equals(fulltres)||casillero.equals(fullcuatro)){
-            return "Full";
+            return "\nFull";
         }
         if(casillero.equals(pokeruno)||casillero.equals(pokerdos)||casillero.equals(pokertres)||casillero.equals(pokercuatro)){
-            return "Poker";
+            return "\nPoker";
         }
         if(casillero.equals(generalauno)||casillero.equals(generalados)||casillero.equals(generalatres)||casillero.equals(generalacuatro)){
-            return "Generala";
+            return "\nGenerala";
         }
         if(casillero.equals(generala2uno)||casillero.equals(generala2dos)||casillero.equals(generala2tres)||casillero.equals(generala2cuatro)){
-            return "Generala Doble";
+            return "\nGenerala Doble";
         }
         return null;
 
