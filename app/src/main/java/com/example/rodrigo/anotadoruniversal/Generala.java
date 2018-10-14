@@ -160,7 +160,7 @@ public class Generala extends AppCompatActivity  {
     public void elegirPuntaje(View vista) {
         final TextView casillero = (TextView) vista;
         final AlertDialog.Builder alertdialog = new AlertDialog.Builder(this);
-        alertdialog.setTitle("Ingrese puntaje de: \n" + Jugada(casillero));
+        alertdialog.setTitle(" Ingrese puntaje\nJugada: " + Jugada(casillero));
         LinearLayout layout = new LinearLayout(this);
         layout.setOrientation(LinearLayout.VERTICAL);
         final EditText puntaje = new EditText(this);

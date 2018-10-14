@@ -1,21 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <integer-array name="dado_cara_uno">
+    <integer-array name="puntos_dado_uno">
+        <item>0</item>
         <item>1</item>
         <item>2</item>
         <item>3</item>
         <item>4</item>
         <item>5</item>
-        <item>0</item>
     </integer-array>
 
-    <integer-array name="dado_cara_dos">
+    <integer-array name="puntos_dado_dos">
+        <item>0</item>
         <item>2</item>
         <item>4</item>
         <item>6</item>
         <item>8</item>
         <item>10</item>
+    </integer-array>
+
+    <integer-array name="puntos_lado_tres">
         <item>0</item>
+        <item>3</item>
+        <item>6</item>
+        <item>9</item>
+        <item>12</item>
+        <item>15</item>
+    </integer-array>
+
+    <integer-array name="puntos_lado_cuatro">
+        <item>0</item>
+        <item>4</item>
+        <item>8</item>
+        <item>12</item>
+        <item>16</item>
+        <item>20</item>
+    </integer-array>
+
+    <integer-array name="puntos_lado_cinco">
+        <item>0</item>
+        <item>5</item>
+        <item>10</item>
+        <item>15</item>
+        <item>20</item>
+        <item>25</item>
+    </integer-array>
+
+    <integer-array name="puntos_lado_seis">
+        <item>0</item>
+        <item>6</item>
+        <item>12</item>
+        <item>18</item>
+        <item>24</item>
+        <item>30</item>
+    </integer-array>
+
+    <integer-array name="puntos_escalera">
+        <item>0</item>
+        <item>25</item>
+        <item>20</item>
+    </integer-array>
+    <integer-array name="puntos_full">
+        <item>0</item>
+        <item>35</item>
+        <item>30</item>
+    </integer-array>
+    <integer-array name="puntos_poker">
+        <item>0</item>
+        <item>45</item>
+        <item>40</item>
+    </integer-array>
+    <integer-array name="puntos_generala">
+        <item>0</item>
+        <item>50</item>
+    </integer-array>
+    <integer-array name="puntos_generala_doble">
+        <item>0</item>
+        <item>60</item>
     </integer-array>
 
 </resources>

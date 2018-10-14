@@ -6,127 +6,123 @@
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginHorizontal="15dp">
+        android:layout_marginStart="0dp">
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="15dp">
+            android:layout_weight="1"
+            android:gravity="center"
+            android:weightSum="4">
 
             <TextView
                 android:id="@+id/jugadoruno"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Jugador 1"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="cambiarNombre"
+                android:text="@string/jugadoruno"
+                android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="17sp"
-                android:textStyle="bold"
-                android:clickable="true"
-                android:onClick="cambiarNombre"/>
-
-            <Space
-                android:layout_width="20dp"
-                android:layout_height="wrap_content" />
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/jugadordos"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Jugador 1"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="cambiarNombre"
+                android:text="@string/jugadordos"
+                android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="17sp"
-                android:textStyle="bold"
-                android:clickable="true"
-                android:onClick="cambiarNombre"/>
-
-            <Space
-                android:layout_width="20dp"
-                android:layout_height="wrap_content" />
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/jugadortres"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Jugador 1"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="cambiarNombre"
+                android:text="@string/jugadortres"
+                android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="17sp"
-                android:textStyle="bold"
-                android:clickable="true"
-                android:onClick="cambiarNombre"/>
-
-            <Space
-                android:layout_width="20dp"
-                android:layout_height="wrap_content" />
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/jugadorcuatro"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Jugador 1"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="cambiarNombre"
+                android:text="@string/jugadorcuatro"
+                android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="17sp"
-                android:textStyle="bold"
-                android:clickable="true"
-                android:onClick="cambiarNombre"/>
+                android:textStyle="bold" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <Space
-                android:layout_width="wrap_content"
-                android:layout_height="15dp" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_weight="1">
 
             <TextView
-                android:id="@+id/textView28"
+                android:id="@+id/unouno3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="-"
+                android:layout_weight="1"
+                android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="15sp" />
 
-            <Space
-                android:layout_width="20dp"
-                android:layout_height="wrap_content" />
-
             <TextView
-                android:id="@+id/textView30"
+                android:id="@+id/unouno"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="-"
+                android:layout_weight="1"
+                android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="15sp" />
 
-            <Space
-                android:layout_width="20dp"
-                android:layout_height="wrap_content" />
-
             <TextView
-                android:id="@+id/textView31"
+                android:id="@+id/unodos"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="-"
+                android:layout_weight="1"
+                android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="15sp" />
 
-            <Space
-                android:layout_width="20dp"
-                android:layout_height="wrap_content" />
-
             <TextView
-                android:id="@+id/textView32"
+                android:id="@+id/unotres"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="-"
+                android:layout_weight="1"
+                android:text="@string/Puntaje_en_0"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/unocuatro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="15sp" />
@@ -134,52 +130,45 @@
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_weight="1">
 
             <TextView
-                android:id="@+id/textView28"
+                android:id="@+id/dosuno"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="-"
+                android:layout_weight="1"
+                android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="15sp" />
 
-            <Space
-                android:layout_width="20dp"
-                android:layout_height="wrap_content" />
-
             <TextView
-                android:id="@+id/textView30"
+                android:id="@+id/dosdos"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="-"
+                android:layout_weight="1"
+                android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="15sp" />
 
-            <Space
-                android:layout_width="20dp"
-                android:layout_height="wrap_content" />
-
             <TextView
-                android:id="@+id/textView31"
+                android:id="@+id/dostres"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="-"
+                android:layout_weight="1"
+                android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="15sp" />
 
-            <Space
-                android:layout_width="20dp"
-                android:layout_height="wrap_content" />
-
             <TextView
-                android:id="@+id/textView32"
+                android:id="@+id/doscuatro"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="-"
+                android:layout_weight="1"
+                android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="15sp" />
@@ -187,52 +176,45 @@
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_weight="1">
 
             <TextView
-                android:id="@+id/textView28"
+                android:id="@+id/tresuno"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="-"
+                android:layout_weight="1"
+                android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="15sp" />
 
-            <Space
-                android:layout_width="20dp"
-                android:layout_height="wrap_content" />
-
             <TextView
-                android:id="@+id/textView30"
+                android:id="@+id/tresdos"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="-"
+                android:layout_weight="1"
+                android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="15sp" />
 
-            <Space
-                android:layout_width="20dp"
-                android:layout_height="wrap_content" />
-
             <TextView
-                android:id="@+id/textView31"
+                android:id="@+id/trestres"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="-"
+                android:layout_weight="1"
+                android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="15sp" />
 
-            <Space
-                android:layout_width="20dp"
-                android:layout_height="wrap_content" />
-
             <TextView
-                android:id="@+id/textView32"
+                android:id="@+id/trescuatro"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="-"
+                android:layout_weight="1"
+                android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="15sp" />
@@ -240,52 +222,45 @@
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_weight="1">
 
             <TextView
-                android:id="@+id/textView28"
+                android:id="@+id/cuatrouno"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="-"
+                android:layout_weight="1"
+                android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="15sp" />
 
-            <Space
-                android:layout_width="20dp"
-                android:layout_height="wrap_content" />
-
             <TextView
-                android:id="@+id/textView30"
+                android:id="@+id/cuatrodos"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="-"
+                android:layout_weight="1"
+                android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="15sp" />
 
-            <Space
-                android:layout_width="20dp"
-                android:layout_height="wrap_content" />
-
             <TextView
-                android:id="@+id/textView31"
+                android:id="@+id/cuatrotres"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="-"
+                android:layout_weight="1"
+                android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="15sp" />
 
-            <Space
-                android:layout_width="20dp"
-                android:layout_height="wrap_content" />
-
             <TextView
-                android:id="@+id/textView32"
+                android:id="@+id/cuatrocuatro"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="-"
+                android:layout_weight="1"
+                android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="15sp" />
@@ -293,52 +268,45 @@
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_weight="1">
 
             <TextView
-                android:id="@+id/textView28"
+                android:id="@+id/cincouno"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="-"
+                android:layout_weight="1"
+                android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="15sp" />
 
-            <Space
-                android:layout_width="20dp"
-                android:layout_height="wrap_content" />
-
             <TextView
-                android:id="@+id/textView30"
+                android:id="@+id/cincodos"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="-"
+                android:layout_weight="1"
+                android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="15sp" />
 
-            <Space
-                android:layout_width="20dp"
-                android:layout_height="wrap_content" />
-
             <TextView
-                android:id="@+id/textView31"
+                android:id="@+id/cincotres"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="-"
+                android:layout_weight="1"
+                android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="15sp" />
 
-            <Space
-                android:layout_width="20dp"
-                android:layout_height="wrap_content" />
-
             <TextView
-                android:id="@+id/textView32"
+                android:id="@+id/cincocuatro"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="-"
+                android:layout_weight="1"
+                android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="15sp" />
@@ -346,52 +314,45 @@
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_weight="1">
 
             <TextView
-                android:id="@+id/textView28"
+                android:id="@+id/seisuno"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="-"
+                android:layout_weight="1"
+                android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="15sp" />
 
-            <Space
-                android:layout_width="20dp"
-                android:layout_height="wrap_content" />
-
             <TextView
-                android:id="@+id/textView30"
+                android:id="@+id/seisdos"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="-"
+                android:layout_weight="1"
+                android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="15sp" />
 
-            <Space
-                android:layout_width="20dp"
-                android:layout_height="wrap_content" />
-
             <TextView
-                android:id="@+id/textView31"
+                android:id="@+id/seistres"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="-"
+                android:layout_weight="1"
+                android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="15sp" />
 
-            <Space
-                android:layout_width="20dp"
-                android:layout_height="wrap_content" />
-
             <TextView
-                android:id="@+id/textView32"
+                android:id="@+id/seiscuatro"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="-"
+                android:layout_weight="1"
+                android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="15sp" />
@@ -399,52 +360,45 @@
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_weight="1">
 
             <TextView
-                android:id="@+id/textView28"
+                android:id="@+id/sieteuno"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="-"
+                android:layout_weight="1"
+                android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="15sp" />
 
-            <Space
-                android:layout_width="20dp"
-                android:layout_height="wrap_content" />
-
             <TextView
-                android:id="@+id/textView30"
+                android:id="@+id/sietedos"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="-"
+                android:layout_weight="1"
+                android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="15sp" />
 
-            <Space
-                android:layout_width="20dp"
-                android:layout_height="wrap_content" />
-
             <TextView
-                android:id="@+id/textView31"
+                android:id="@+id/sietetres"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="-"
+                android:layout_weight="1"
+                android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="15sp" />
 
-            <Space
-                android:layout_width="20dp"
-                android:layout_height="wrap_content" />
-
             <TextView
-                android:id="@+id/textView32"
+                android:id="@+id/sietecuatro"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="-"
+                android:layout_weight="1"
+                android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="15sp" />
@@ -452,52 +406,45 @@
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_weight="1">
 
             <TextView
-                android:id="@+id/textView28"
+                android:id="@+id/ochouno"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="-"
+                android:layout_weight="1"
+                android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="15sp" />
 
-            <Space
-                android:layout_width="20dp"
-                android:layout_height="wrap_content" />
-
             <TextView
-                android:id="@+id/textView30"
+                android:id="@+id/ochodos"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="-"
+                android:layout_weight="1"
+                android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="15sp" />
 
-            <Space
-                android:layout_width="20dp"
-                android:layout_height="wrap_content" />
-
             <TextView
-                android:id="@+id/textView31"
+                android:id="@+id/ochotres"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="-"
+                android:layout_weight="1"
+                android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="15sp" />
 
-            <Space
-                android:layout_width="20dp"
-                android:layout_height="wrap_content" />
-
             <TextView
-                android:id="@+id/textView32"
+                android:id="@+id/ochocuatro"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="-"
+                android:layout_weight="1"
+                android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="15sp" />
@@ -505,52 +452,45 @@
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_weight="1">
 
             <TextView
-                android:id="@+id/textView28"
+                android:id="@+id/nueveuno"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="-"
+                android:layout_weight="1"
+                android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="15sp" />
 
-            <Space
-                android:layout_width="20dp"
-                android:layout_height="wrap_content" />
-
             <TextView
-                android:id="@+id/textView30"
+                android:id="@+id/nuevedos"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="-"
+                android:layout_weight="1"
+                android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="15sp" />
 
-            <Space
-                android:layout_width="20dp"
-                android:layout_height="wrap_content" />
-
             <TextView
-                android:id="@+id/textView31"
+                android:id="@+id/nuevetres"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="-"
+                android:layout_weight="1"
+                android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="15sp" />
 
-            <Space
-                android:layout_width="20dp"
-                android:layout_height="wrap_content" />
-
             <TextView
-                android:id="@+id/textView32"
+                android:id="@+id/nuevecuatro"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="-"
+                android:layout_weight="1"
+                android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="15sp" />
@@ -558,52 +498,45 @@
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_weight="1">
 
             <TextView
-                android:id="@+id/textView28"
+                android:id="@+id/diezuno"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="-"
+                android:layout_weight="1"
+                android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="15sp" />
 
-            <Space
-                android:layout_width="20dp"
-                android:layout_height="wrap_content" />
-
             <TextView
-                android:id="@+id/textView30"
+                android:id="@+id/diezdos"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="-"
+                android:layout_weight="1"
+                android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="15sp" />
 
-            <Space
-                android:layout_width="20dp"
-                android:layout_height="wrap_content" />
-
             <TextView
-                android:id="@+id/textView31"
+                android:id="@+id/dieztres"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="-"
+                android:layout_weight="1"
+                android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="15sp" />
 
-            <Space
-                android:layout_width="20dp"
-                android:layout_height="wrap_content" />
-
             <TextView
-                android:id="@+id/textView32"
+                android:id="@+id/diezcuatro"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="-"
+                android:layout_weight="1"
+                android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="15sp" />
@@ -611,52 +544,45 @@
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_weight="1">
 
             <TextView
-                android:id="@+id/textView28"
+                android:id="@+id/onceuno"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="-"
+                android:layout_weight="1"
+                android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="15sp" />
 
-            <Space
-                android:layout_width="20dp"
-                android:layout_height="wrap_content" />
-
             <TextView
-                android:id="@+id/textView30"
+                android:id="@+id/oncedos"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="-"
+                android:layout_weight="1"
+                android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="15sp" />
 
-            <Space
-                android:layout_width="20dp"
-                android:layout_height="wrap_content" />
-
             <TextView
-                android:id="@+id/textView31"
+                android:id="@+id/oncetres"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="-"
+                android:layout_weight="1"
+                android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="15sp" />
 
-            <Space
-                android:layout_width="20dp"
-                android:layout_height="wrap_content" />
-
             <TextView
-                android:id="@+id/textView32"
+                android:id="@+id/oncecuatro"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="-"
+                android:layout_weight="1"
+                android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="15sp" />
@@ -664,52 +590,45 @@
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_weight="1">
 
             <TextView
-                android:id="@+id/textView28"
+                android:id="@+id/doceuno"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="-"
+                android:layout_weight="1"
+                android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="15sp" />
 
-            <Space
-                android:layout_width="20dp"
-                android:layout_height="wrap_content" />
-
             <TextView
-                android:id="@+id/textView30"
+                android:id="@+id/docedos"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="-"
+                android:layout_weight="1"
+                android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="15sp" />
 
-            <Space
-                android:layout_width="20dp"
-                android:layout_height="wrap_content" />
-
             <TextView
-                android:id="@+id/textView31"
+                android:id="@+id/docetres"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="-"
+                android:layout_weight="1"
+                android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="15sp" />
 
-            <Space
-                android:layout_width="20dp"
-                android:layout_height="wrap_content" />
-
             <TextView
-                android:id="@+id/textView32"
+                android:id="@+id/docecuatro"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="-"
+                android:layout_weight="1"
+                android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="15sp" />
@@ -717,52 +636,45 @@
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_weight="1">
 
             <TextView
-                android:id="@+id/textView28"
+                android:id="@+id/treceuno"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="-"
+                android:layout_weight="1"
+                android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="15sp" />
 
-            <Space
-                android:layout_width="20dp"
-                android:layout_height="wrap_content" />
-
             <TextView
-                android:id="@+id/textView30"
+                android:id="@+id/trecedos"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="-"
+                android:layout_weight="1"
+                android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="15sp" />
 
-            <Space
-                android:layout_width="20dp"
-                android:layout_height="wrap_content" />
-
             <TextView
-                android:id="@+id/textView31"
+                android:id="@+id/trecetres"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="-"
+                android:layout_weight="1"
+                android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="15sp" />
 
-            <Space
-                android:layout_width="20dp"
-                android:layout_height="wrap_content" />
-
             <TextView
-                android:id="@+id/textView32"
+                android:id="@+id/trececuatro"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="-"
+                android:layout_weight="1"
+                android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="15sp" />
@@ -770,52 +682,45 @@
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_weight="1">
 
             <TextView
-                android:id="@+id/textView28"
+                android:id="@+id/catorceuno"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="-"
+                android:layout_weight="1"
+                android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="15sp" />
 
-            <Space
-                android:layout_width="20dp"
-                android:layout_height="wrap_content" />
-
             <TextView
-                android:id="@+id/textView30"
+                android:id="@+id/catorcedos"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="-"
+                android:layout_weight="1"
+                android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="15sp" />
 
-            <Space
-                android:layout_width="20dp"
-                android:layout_height="wrap_content" />
-
             <TextView
-                android:id="@+id/textView31"
+                android:id="@+id/catorcetres"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="-"
+                android:layout_weight="1"
+                android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="15sp" />
 
-            <Space
-                android:layout_width="20dp"
-                android:layout_height="wrap_content" />
-
             <TextView
-                android:id="@+id/textView32"
+                android:id="@+id/catorcecuatro"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="-"
+                android:layout_weight="1"
+                android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="15sp" />
@@ -823,553 +728,68 @@
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/textView28"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="-"
-                android:textAlignment="center"
-                android:textColor="@android:color/black"
-                android:textSize="15sp" />
-
-            <Space
-                android:layout_width="20dp"
-                android:layout_height="wrap_content" />
-
-            <TextView
-                android:id="@+id/textView30"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="-"
-                android:textAlignment="center"
-                android:textColor="@android:color/black"
-                android:textSize="15sp" />
-
-            <Space
-                android:layout_width="20dp"
-                android:layout_height="wrap_content" />
-
-            <TextView
-                android:id="@+id/textView31"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="-"
-                android:textAlignment="center"
-                android:textColor="@android:color/black"
-                android:textSize="15sp" />
-
-            <Space
-                android:layout_width="20dp"
-                android:layout_height="wrap_content" />
-
-            <TextView
-                android:id="@+id/textView32"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="-"
-                android:textAlignment="center"
-                android:textColor="@android:color/black"
-                android:textSize="15sp" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/textView28"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="-"
-                android:textAlignment="center"
-                android:textColor="@android:color/black"
-                android:textSize="15sp" />
-
-            <Space
-                android:layout_width="20dp"
-                android:layout_height="wrap_content" />
-
-            <TextView
-                android:id="@+id/textView30"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="-"
-                android:textAlignment="center"
-                android:textColor="@android:color/black"
-                android:textSize="15sp" />
-
-            <Space
-                android:layout_width="20dp"
-                android:layout_height="wrap_content" />
-
-            <TextView
-                android:id="@+id/textView31"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="-"
-                android:textAlignment="center"
-                android:textColor="@android:color/black"
-                android:textSize="15sp" />
-
-            <Space
-                android:layout_width="20dp"
-                android:layout_height="wrap_content" />
-
-            <TextView
-                android:id="@+id/textView32"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="-"
-                android:textAlignment="center"
-                android:textColor="@android:color/black"
-                android:textSize="15sp" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/textView28"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="-"
-                android:textAlignment="center"
-                android:textColor="@android:color/black"
-                android:textSize="15sp" />
-
-            <Space
-                android:layout_width="20dp"
-                android:layout_height="wrap_content" />
-
-            <TextView
-                android:id="@+id/textView30"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="-"
-                android:textAlignment="center"
-                android:textColor="@android:color/black"
-                android:textSize="15sp" />
-
-            <Space
-                android:layout_width="20dp"
-                android:layout_height="wrap_content" />
-
-            <TextView
-                android:id="@+id/textView31"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="-"
-                android:textAlignment="center"
-                android:textColor="@android:color/black"
-                android:textSize="15sp" />
-
-            <Space
-                android:layout_width="20dp"
-                android:layout_height="wrap_content" />
-
-            <TextView
-                android:id="@+id/textView32"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="-"
-                android:textAlignment="center"
-                android:textColor="@android:color/black"
-                android:textSize="15sp" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/textView28"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="-"
-                android:textAlignment="center"
-                android:textColor="@android:color/black"
-                android:textSize="15sp" />
-
-            <Space
-                android:layout_width="20dp"
-                android:layout_height="wrap_content" />
-
-            <TextView
-                android:id="@+id/textView30"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="-"
-                android:textAlignment="center"
-                android:textColor="@android:color/black"
-                android:textSize="15sp" />
-
-            <Space
-                android:layout_width="20dp"
-                android:layout_height="wrap_content" />
-
-            <TextView
-                android:id="@+id/textView31"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="-"
-                android:textAlignment="center"
-                android:textColor="@android:color/black"
-                android:textSize="15sp" />
-
-            <Space
-                android:layout_width="20dp"
-                android:layout_height="wrap_content" />
-
-            <TextView
-                android:id="@+id/textView32"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="-"
-                android:textAlignment="center"
-                android:textColor="@android:color/black"
-                android:textSize="15sp" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/textView28"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="-"
-                android:textAlignment="center"
-                android:textColor="@android:color/black"
-                android:textSize="15sp" />
-
-            <Space
-                android:layout_width="20dp"
-                android:layout_height="wrap_content" />
-
-            <TextView
-                android:id="@+id/textView30"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="-"
-                android:textAlignment="center"
-                android:textColor="@android:color/black"
-                android:textSize="15sp" />
-
-            <Space
-                android:layout_width="20dp"
-                android:layout_height="wrap_content" />
-
-            <TextView
-                android:id="@+id/textView31"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="-"
-                android:textAlignment="center"
-                android:textColor="@android:color/black"
-                android:textSize="15sp" />
-
-            <Space
-                android:layout_width="20dp"
-                android:layout_height="wrap_content" />
-
-            <TextView
-                android:id="@+id/textView32"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="-"
-                android:textAlignment="center"
-                android:textColor="@android:color/black"
-                android:textSize="15sp" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/textView28"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="-"
-                android:textAlignment="center"
-                android:textColor="@android:color/black"
-                android:textSize="15sp" />
-
-            <Space
-                android:layout_width="20dp"
-                android:layout_height="wrap_content" />
-
-            <TextView
-                android:id="@+id/textView30"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="-"
-                android:textAlignment="center"
-                android:textColor="@android:color/black"
-                android:textSize="15sp" />
-
-            <Space
-                android:layout_width="20dp"
-                android:layout_height="wrap_content" />
-
-            <TextView
-                android:id="@+id/textView31"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="-"
-                android:textAlignment="center"
-                android:textColor="@android:color/black"
-                android:textSize="15sp" />
-
-            <Space
-                android:layout_width="20dp"
-                android:layout_height="wrap_content" />
-
-            <TextView
-                android:id="@+id/textView32"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="-"
-                android:textAlignment="center"
-                android:textColor="@android:color/black"
-                android:textSize="15sp" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/textView28"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="-"
-                android:textAlignment="center"
-                android:textColor="@android:color/black"
-                android:textSize="15sp" />
-
-            <Space
-                android:layout_width="20dp"
-                android:layout_height="wrap_content" />
-
-            <TextView
-                android:id="@+id/textView30"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="-"
-                android:textAlignment="center"
-                android:textColor="@android:color/black"
-                android:textSize="15sp" />
-
-            <Space
-                android:layout_width="20dp"
-                android:layout_height="wrap_content" />
-
-            <TextView
-                android:id="@+id/textView31"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="-"
-                android:textAlignment="center"
-                android:textColor="@android:color/black"
-                android:textSize="15sp" />
-
-            <Space
-                android:layout_width="20dp"
-                android:layout_height="wrap_content" />
-
-            <TextView
-                android:id="@+id/textView32"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="-"
-                android:textAlignment="center"
-                android:textColor="@android:color/black"
-                android:textSize="15sp" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/textView28"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="-"
-                android:textAlignment="center"
-                android:textColor="@android:color/black"
-                android:textSize="15sp" />
-
-            <Space
-                android:layout_width="20dp"
-                android:layout_height="wrap_content" />
-
-            <TextView
-                android:id="@+id/textView30"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="-"
-                android:textAlignment="center"
-                android:textColor="@android:color/black"
-                android:textSize="15sp" />
-
-            <Space
-                android:layout_width="20dp"
-                android:layout_height="wrap_content" />
-
-            <TextView
-                android:id="@+id/textView31"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="-"
-                android:textAlignment="center"
-                android:textColor="@android:color/black"
-                android:textSize="15sp" />
-
-            <Space
-                android:layout_width="20dp"
-                android:layout_height="wrap_content" />
-
-            <TextView
-                android:id="@+id/textView32"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="-"
-                android:textAlignment="center"
-                android:textColor="@android:color/black"
-                android:textSize="15sp" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/textView28"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="-"
-                android:textAlignment="center"
-                android:textColor="@android:color/black"
-                android:textSize="15sp" />
-
-            <Space
-                android:layout_width="20dp"
-                android:layout_height="wrap_content" />
-
-            <TextView
-                android:id="@+id/textView30"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="-"
-                android:textAlignment="center"
-                android:textColor="@android:color/black"
-                android:textSize="15sp" />
-
-            <Space
-                android:layout_width="20dp"
-                android:layout_height="wrap_content" />
-
-            <TextView
-                android:id="@+id/textView31"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="-"
-                android:textAlignment="center"
-                android:textColor="@android:color/black"
-                android:textSize="15sp" />
-
-            <Space
-                android:layout_width="20dp"
-                android:layout_height="wrap_content" />
-
-            <TextView
-                android:id="@+id/textView32"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="-"
-                android:textAlignment="center"
-                android:textColor="@android:color/black"
-                android:textSize="15sp" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
 
             <TextView
                 android:id="@+id/Total1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="-"
+                android:layout_weight="0.25"
+                android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:textStyle="bold" />
-
-            <Space
-                android:layout_width="20dp"
-                android:layout_height="wrap_content" />
 
             <TextView
                 android:id="@+id/Total2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="-"
+                android:layout_weight="0.25"
+                android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:textStyle="bold" />
-
-            <Space
-                android:layout_width="20dp"
-                android:layout_height="wrap_content" />
 
             <TextView
                 android:id="@+id/Total3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="-"
+                android:layout_weight="0.25"
+                android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
-            <Space
-                android:layout_width="20dp"
-                android:layout_height="wrap_content" />
-
             <TextView
                 android:id="@+id/Total4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="-"
+                android:layout_weight="0.25"
+                android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:textStyle="bold" />
         </TableRow>
 
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/button11"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/Mano_terminada_chinchon" />
+        </TableRow>
+
     </TableLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:gravity="bottom"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/button11"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/Mano_terminada_chinchon" />
-    </LinearLayout>
 </RelativeLayout>

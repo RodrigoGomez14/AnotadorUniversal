@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void anotadorTruco(View vista){
             Intent i= new Intent(MainActivity.this , Truco.class);
+            i.putExtra("cantidadDePuntos","30");
             startActivity(i);
     }
     public void anotadorEscoba(View vista){

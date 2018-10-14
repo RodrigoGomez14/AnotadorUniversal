@@ -6,31 +6,26 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:gravity="top|center"
         android:orientation="vertical"
-        android:weightSum="3">
+        android:weightSum="9">
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/textView23"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="4"
                 android:text="@string/Gallo"
+                android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="25sp"
                 android:textStyle="bold" />
-
-            <Space
-                android:layout_width="180dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
 
             <CheckBox
                 android:id="@+id/check_Gallo"
@@ -39,79 +34,53 @@
                 android:layout_weight="1" />
         </LinearLayout>
 
+        <TextView
+            android:id="@+id/textView18"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/Explicacion_gallo"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            android:textStyle="italic" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/textView18"
-                android:layout_width="392dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/Explicacion_gallo"
-                android:textColor="@android:color/black"
-                android:textSize="19sp"
-                android:textStyle="italic" />
-        </LinearLayout>
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="15dp" />
-
-        <View
-            android:id="@+id/divider"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="?android:attr/listDivider" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="10dp" />
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="60dp"
+            android:layout_weight="1"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/textView6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_weight="4"
                 android:text="@string/Cantidad_de_puntos"
+                android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="25sp"
                 android:textStyle="bold" />
 
-            <Space
-                android:layout_width="75dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
-
             <RadioGroup
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
 
                 <RadioButton
-                    android:id="@+id/radioButton"
+                    android:id="@+id/radioButton15"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/truco_15" />
 
-                <Space
-                    android:layout_width="wrap_content"
-                    android:layout_height="10dp"
-                    android:layout_weight="1" />
-
                 <RadioButton
-                    android:id="@+id/radioButton2"
+                    android:id="@+id/radioButton30"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/truco_30" />
             </RadioGroup>
-
         </LinearLayout>
 
     </LinearLayout>

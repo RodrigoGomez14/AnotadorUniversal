@@ -6,13 +6,178 @@
     android:layout_height="match_parent"
     tools:context=".Truco">
 
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp">
+
+        <ImageView
+            android:id="@+id/linea1_1"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="100dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/lineaparada" />
+
+        <ImageView
+            android:id="@+id/linea1_2"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:layout_marginStart="56dp"
+            android:layout_marginBottom="376dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/lineaacostada" />
+
+        <ImageView
+            android:id="@+id/linea1_3"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:layout_marginStart="56dp"
+            android:layout_marginTop="56dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/lineaacostada" />
+
+        <ImageView
+            android:id="@+id/linea1_4"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="100dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/lineaparada" />
+
+
+        <ImageView
+            android:id="@+id/linea1_5"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:layout_marginStart="56dp"
+            android:layout_marginTop="100dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/diagonal" />
+
+        <ImageView
+            android:id="@+id/linea1_6"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="64dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linea1_5"
+            app:srcCompat="@drawable/lineaparada" />
+
+        <ImageView
+            android:id="@+id/linea1_7"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:layout_marginStart="56dp"
+            android:layout_marginBottom="40dp"
+            app:layout_constraintBottom_toTopOf="@+id/linea1_15"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/lineaacostada" />
+
+        <ImageView
+            android:id="@+id/linea1_8"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:layout_marginStart="56dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linea1_5"
+            app:srcCompat="@drawable/lineaacostada" />
+
+        <ImageView
+            android:id="@+id/linea1_9"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="64dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linea1_5"
+            app:srcCompat="@drawable/lineaparada" />
+
+        <ImageView
+            android:id="@+id/linea1_10"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:layout_marginStart="56dp"
+            android:layout_marginTop="64dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linea1_5"
+            app:srcCompat="@drawable/diagonal" />
+
+        <ImageView
+            android:id="@+id/linea1_11"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginBottom="100dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/lineaparada" />
+
+        <ImageView
+            android:id="@+id/linea1_12"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:layout_marginStart="56dp"
+            android:layout_marginBottom="60dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/lineaacostada" />
+
+        <ImageView
+            android:id="@+id/linea1_13"
+            android:layout_width="86dp"
+            android:layout_height="88dp"
+            android:layout_marginStart="56dp"
+            android:layout_marginTop="40dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linea1_10"
+            app:srcCompat="@drawable/lineaacostada" />
+
+        <ImageView
+            android:id="@+id/linea1_14"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="40dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linea1_7"
+            app:srcCompat="@drawable/lineaparada" />
+
+        <ImageView
+            android:id="@+id/linea1_15"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:layout_marginStart="56dp"
+            android:layout_marginBottom="100dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/diagonal" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
     <TableLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_weight="0"
             android:weightSum="2">
 
             <TextView
@@ -20,58 +185,86 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:clickable="true"
+                android:onClick="alertNombre"
                 android:text="@string/jugadoruno"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
-                android:textStyle="bold"
-                android:clickable="true"
-                android:onClick="cambiarNombre"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/equipo2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:clickable="true"
+                android:onClick="alertNombre"
                 android:text="@string/jugadordos"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
-                android:textStyle="bold"
-                android:clickable="true"
-                android:onClick="cambiarNombre"/>
+                android:textStyle="bold" />
         </TableRow>
 
         <TableRow
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:weightSum="2">
+            android:layout_weight="0"
+            android:weightSum="4">
 
             <TextView
                 android:id="@+id/puntos1"
-                android:layout_width="39dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
-                android:textSize="50sp"
+                android:textSize="20sp"
                 android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/BoM1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAlignment="textStart"
+                android:textColor="@android:color/black"
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/puntos2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
-                android:textSize="50sp"
+                android:textSize="20sp"
                 android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/BoM2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@android:color/black"
+                android:textSize="20sp" />
+
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="4"
+            android:layout_weight="1">
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0"
             android:gravity="bottom">
 
             <Button

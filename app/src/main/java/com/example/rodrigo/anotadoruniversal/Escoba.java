@@ -116,4 +116,25 @@ public class Escoba extends AppCompatActivity {
             equipo.setText(nombrestring);
         }
     }
+    public void onBackPressed() {
+        AlertDialog.Builder alertialog = new AlertDialog.Builder(this);
+        alertialog.setTitle("Salir?");
+        alertialog.setMessage("Se reiniciará la partida");
+        alertialog.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                try {
+                    finish();
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
+                }
+            }
+        });
+        alertialog.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+            }
+        });
+        alertialog.show();
+    }
 }

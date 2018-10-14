@@ -13,80 +13,86 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="-4dp">
+            android:layout_weight="1">
 
-            <Space
+            <TextView
+                android:id="@+id/jugador"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:onClick="cambiarNombre"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="15dp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/Jugador1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="5dp"
+                android:layout_weight="1"
                 android:clickable="true"
                 android:onClick="cambiarNombre"
-                android:text="jugador 1"
+                android:text="@string/jugadoruno"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
-                android:textSize="15dp"
-                android:textStyle="bold"
-                />
+                android:textSize="15sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/Jugador2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="5dp"
-                android:text="jugador 2"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:onClick="cambiarNombre"
+                android:text="@string/jugadordos"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="15sp"
-                android:textStyle="bold"
-                android:clickable="true"
-                android:onClick="cambiarNombre"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/Jugador3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="5dp"
-                android:text="Jugador 3"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:onClick="cambiarNombre"
+                android:text="@string/jugadortres"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="15sp"
-                android:textStyle="bold"
-                android:clickable="true"
-                android:onClick="cambiarNombre"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/Jugador4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Jugador 4"
-                android:textColor="@android:color/black"
-                android:textStyle="bold"
+                android:layout_weight="1"
                 android:clickable="true"
-                android:onClick="cambiarNombre"/>
+                android:onClick="cambiarNombre"
+                android:text="@string/jugadorcuatro"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                android:textStyle="bold" />
 
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@android:color/darker_gray"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="-4dp">
+            android:layout_weight="1"
+            android:background="@android:color/darker_gray">
 
             <TextView
                 android:id="@+id/txt1"
-                android:layout_width="28dp"
-                android:layout_height="44sp"
-                android:layout_marginHorizontal="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:clickable="true"
                 android:onClick="elegirPuntaje"
-                android:paddingTop="10dp"
                 android:text="@string/numeroUno"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
@@ -96,8 +102,8 @@
             <TextView
                 android:id="@+id/unouno"
                 android:layout_width="match_parent"
-                android:layout_height="44sp"
-                android:layout_marginHorizontal="10dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
                 android:clickable="true"
                 android:onClick="elegirPuntaje"
                 android:paddingTop="10dp"
@@ -109,437 +115,406 @@
 
             <TextView
                 android:id="@+id/unodos"
-                android:layout_width="match_parent"
-                android:layout_height="44sp"
-                android:layout_marginHorizontal="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:onClick="elegirPuntaje"
                 android:paddingTop="10dp"
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
-                android:textStyle="bold"
-                android:clickable="true"
-                android:onClick="elegirPuntaje"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/unotres"
-                android:layout_width="match_parent"
-                android:layout_height="44sp"
-                android:layout_marginHorizontal="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:onClick="elegirPuntaje"
                 android:paddingTop="10dp"
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
-                android:textStyle="bold"
-                android:clickable="true"
-                android:onClick="elegirPuntaje"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/unocuatro"
-                android:layout_width="match_parent"
-                android:layout_height="44sp"
-                android:layout_marginHorizontal="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:onClick="elegirPuntaje"
                 android:paddingTop="10dp"
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
-                android:textStyle="bold"
-                android:clickable="true"
-                android:onClick="elegirPuntaje"/>
+                android:textStyle="bold" />
 
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/GrisClaro"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="-4dp">
+            android:layout_weight="1"
+            android:background="@color/GrisClaro">
 
             <TextView
                 android:id="@+id/txt2"
-                android:layout_width="32dp"
-                android:layout_height="44sp"
-                android:layout_marginHorizontal="10dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="-5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="elegirPuntaje"
                 android:text="@string/numeroDos"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:clickable="true"
-                android:onClick="elegirPuntaje" />
+                android:layout_weight="1"/>
 
             <TextView
                 android:id="@+id/dosuno"
-                android:layout_width="28dp"
-                android:layout_height="44sp"
-                android:layout_marginHorizontal="10dp"
-                android:paddingTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="elegirPuntaje"
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:clickable="true"
-                android:onClick="elegirPuntaje"/>
+                android:layout_weight="1"/>
 
             <TextView
                 android:id="@+id/dosdos"
-                android:layout_width="28dp"
-                android:layout_height="44sp"
-                android:layout_marginHorizontal="10dp"
-                android:paddingTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="elegirPuntaje"
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:clickable="true"
-                android:onClick="elegirPuntaje"/>
+                android:layout_weight="1"/>
 
             <TextView
                 android:id="@+id/dostres"
-                android:layout_width="28dp"
-                android:layout_height="44sp"
-                android:layout_marginHorizontal="10dp"
-                android:paddingTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="elegirPuntaje"
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:clickable="true"
-                android:onClick="elegirPuntaje"/>
+                android:layout_weight="1"/>
 
             <TextView
                 android:id="@+id/doscuatro"
-                android:layout_width="28dp"
-                android:layout_height="44sp"
-                android:layout_marginHorizontal="10dp"
-                android:paddingTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="elegirPuntaje"
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:clickable="true"
-                android:onClick="elegirPuntaje"/>
+                android:layout_weight="1"/>
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@android:color/darker_gray"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="-4dp">
+            android:layout_weight="1"
+            android:background="@android:color/darker_gray">
 
             <TextView
                 android:id="@+id/txt3"
                 android:layout_width="wrap_content"
-                android:layout_height="44sp"
-                android:layout_marginHorizontal="10dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="-5dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:onClick="elegirPuntaje"
                 android:text="@string/numeroTres"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
-                android:textStyle="bold"
-                android:clickable="true"
-                android:onClick="elegirPuntaje"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/tresuno"
-                android:layout_width="28dp"
-                android:layout_height="44sp"
-                android:layout_marginHorizontal="10dp"
-                android:paddingTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="elegirPuntaje"
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:clickable="true"
-                android:onClick="elegirPuntaje"/>
+                android:layout_weight="1"/>
 
             <TextView
                 android:id="@+id/tresdos"
-                android:layout_width="28dp"
-                android:layout_height="44sp"
-                android:layout_marginHorizontal="10dp"
-                android:paddingTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="elegirPuntaje"
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:clickable="true"
-                android:onClick="elegirPuntaje"/>
+                android:layout_weight="1"/>
 
             <TextView
                 android:id="@+id/trestres"
-                android:layout_width="28dp"
-                android:layout_height="44sp"
-                android:layout_marginHorizontal="10dp"
-                android:paddingTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="elegirPuntaje"
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:clickable="true"
-                android:onClick="elegirPuntaje"/>
+                android:layout_weight="1"/>
 
             <TextView
                 android:id="@+id/trescuatro"
-                android:layout_width="28dp"
-                android:layout_height="44sp"
-                android:layout_marginHorizontal="10dp"
-                android:paddingTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="elegirPuntaje"
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:clickable="true"
-                android:onClick="elegirPuntaje"/>
+                android:layout_weight="1"/>
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/GrisClaro"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="-4dp">
+            android:layout_weight="1"
+            android:background="@color/GrisClaro">
 
             <TextView
                 android:id="@+id/txt4"
                 android:layout_width="wrap_content"
-                android:layout_height="44sp"
-                android:layout_marginHorizontal="10dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="-4dp"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="elegirPuntaje"
                 android:text="@string/numeroCuatro"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:clickable="true"
-                android:onClick="elegirPuntaje"/>
+                android:layout_weight="1"/>
 
             <TextView
                 android:id="@+id/cuatrouno"
-                android:layout_width="28dp"
-                android:layout_height="44sp"
-                android:layout_marginHorizontal="10dp"
-                android:paddingTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="elegirPuntaje"
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:clickable="true"
-                android:onClick="elegirPuntaje"/>
+                android:layout_weight="1"/>
 
             <TextView
                 android:id="@+id/cuatrodos"
-                android:layout_width="28dp"
-                android:layout_height="44sp"
-                android:layout_marginHorizontal="10dp"
-                android:paddingTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="elegirPuntaje"
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:clickable="true"
-                android:onClick="elegirPuntaje"/>
+                android:layout_weight="1"/>
 
             <TextView
                 android:id="@+id/cuatrotres"
-                android:layout_width="28dp"
-                android:layout_height="44sp"
-                android:layout_marginHorizontal="10dp"
-                android:paddingTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="elegirPuntaje"
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:clickable="true"
-                android:onClick="elegirPuntaje"/>
+                android:layout_weight="1"/>
 
             <TextView
                 android:id="@+id/cuatrocuatro"
-                android:layout_width="28dp"
-                android:layout_height="44sp"
-                android:layout_marginHorizontal="10dp"
-                android:paddingTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="elegirPuntaje"
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:clickable="true"
-                android:onClick="elegirPuntaje"/>
+                android:layout_weight="1"/>
         </TableRow>
 
         <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@android:color/darker_gray"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="-4dp">
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/darker_gray">
 
             <TextView
                 android:id="@+id/txt5"
                 android:layout_width="wrap_content"
-                android:layout_height="44sp"
-                android:layout_marginHorizontal="10dp"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="elegirPuntaje"
                 android:text="@string/numeroCinco"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:clickable="true"
-                android:onClick="elegirPuntaje"/>
+                android:layout_weight="1"/>
 
             <TextView
                 android:id="@+id/cincouno"
-                android:layout_width="28dp"
-                android:layout_height="44sp"
-                android:layout_marginHorizontal="10dp"
-                android:paddingTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="elegirPuntaje"
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:clickable="true"
-                android:onClick="elegirPuntaje"/>
+                android:layout_weight="1"/>
 
             <TextView
                 android:id="@+id/cincodos"
-                android:layout_width="28dp"
-                android:layout_height="44sp"
-                android:layout_marginHorizontal="10dp"
-                android:paddingTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="elegirPuntaje"
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:clickable="true"
-                android:onClick="elegirPuntaje"/>
+                android:layout_weight="1"/>
 
             <TextView
                 android:id="@+id/cincotres"
-                android:layout_width="28dp"
-                android:layout_height="44sp"
-                android:layout_marginHorizontal="10dp"
-                android:paddingTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="elegirPuntaje"
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:clickable="true"
-                android:onClick="elegirPuntaje"/>
+                android:layout_weight="1"/>
 
             <TextView
                 android:id="@+id/cincocuatro"
-                android:layout_width="28dp"
-                android:layout_height="44sp"
-                android:layout_marginHorizontal="10dp"
-                android:paddingTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="elegirPuntaje"
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:clickable="true"
-                android:onClick="elegirPuntaje"/>
+                android:layout_weight="1"/>
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/GrisClaro"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="-4dp">
+            android:layout_weight="1"
+            android:background="@color/GrisClaro">
 
             <TextView
                 android:id="@+id/txt6"
                 android:layout_width="wrap_content"
-                android:layout_height="44sp"
-                android:layout_marginHorizontal="10dp"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="elegirPuntaje"
                 android:text="@string/numeroSeis"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:clickable="true"
-                android:onClick="elegirPuntaje"/>
+                android:layout_weight="1"/>
 
             <TextView
                 android:id="@+id/seisuno"
-                android:layout_width="28dp"
-                android:layout_height="44sp"
-                android:layout_marginHorizontal="10dp"
-                android:paddingTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="elegirPuntaje"
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:clickable="true"
-                android:onClick="elegirPuntaje"/>
+                android:layout_weight="1"/>
 
             <TextView
                 android:id="@+id/seisdos"
-                android:layout_width="28dp"
-                android:layout_height="44sp"
-                android:layout_marginHorizontal="10dp"
-                android:paddingTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="elegirPuntaje"
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:clickable="true"
-                android:onClick="elegirPuntaje"/>
+                android:layout_weight="1"/>
 
             <TextView
                 android:id="@+id/seistres"
-                android:layout_width="28dp"
-                android:layout_height="44sp"
-                android:layout_marginHorizontal="10dp"
-                android:paddingTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="elegirPuntaje"
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:clickable="true"
-                android:onClick="elegirPuntaje"/>
+                android:layout_weight="1"/>
 
             <TextView
                 android:id="@+id/seiscuatro"
-                android:layout_width="28dp"
-                android:layout_height="44sp"
-                android:layout_marginHorizontal="10dp"
-                android:paddingTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="elegirPuntaje"
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:clickable="true"
-                android:onClick="elegirPuntaje"/>
+                android:layout_weight="1"/>
         </TableRow>
 
         <TableRow
@@ -547,78 +522,73 @@
             android:layout_height="match_parent"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="-4dp"
+            android:layout_weight="1"
             android:background="@android:color/darker_gray">
 
             <TextView
                 android:id="@+id/txtescalera"
                 android:layout_width="wrap_content"
-                android:layout_height="45dp"
-                android:layout_marginHorizontal="10dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="-5dp"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="elegirPuntaje"
                 android:text="@string/Escalera"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:clickable="true"
-                android:onClick="elegirPuntaje"/>
+                android:layout_weight="1"/>
 
             <TextView
                 android:id="@+id/escalerauno"
-                android:layout_width="28dp"
-                android:layout_height="44sp"
-                android:layout_marginHorizontal="10dp"
-                android:paddingTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="elegirPuntaje"
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:clickable="true"
-                android:onClick="elegirPuntaje"/>
+                android:layout_weight="1"/>
 
             <TextView
                 android:id="@+id/escalerados"
-                android:layout_width="28dp"
-                android:layout_height="44sp"
-                android:layout_marginHorizontal="10dp"
-                android:paddingTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="elegirPuntaje"
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:clickable="true"
-                android:onClick="elegirPuntaje"/>
+                android:layout_weight="1"/>
 
             <TextView
                 android:id="@+id/escaleratres"
-                android:layout_width="28dp"
-                android:layout_height="44sp"
-                android:layout_marginHorizontal="10dp"
-                android:paddingTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="elegirPuntaje"
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:clickable="true"
-                android:onClick="elegirPuntaje"/>
+                android:layout_weight="1"/>
 
             <TextView
                 android:id="@+id/escaleracuatro"
-                android:layout_width="28dp"
-                android:layout_height="44sp"
-                android:layout_marginHorizontal="10dp"
-                android:paddingTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="elegirPuntaje"
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:clickable="true"
-                android:onClick="elegirPuntaje"/>
+                android:layout_weight="1"/>
         </TableRow>
 
         <TableRow
@@ -626,157 +596,147 @@
             android:layout_height="match_parent"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="-4dp"
+            android:layout_weight="1"
             android:background="@color/GrisClaro">
 
             <TextView
                 android:id="@+id/txtfull"
                 android:layout_width="wrap_content"
-                android:layout_height="44sp"
-                android:layout_marginHorizontal="10dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="-5dp"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="elegirPuntaje"
                 android:text="@string/Full"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:clickable="true"
-                android:onClick="elegirPuntaje"/>
+                android:layout_weight="1"/>
 
             <TextView
                 android:id="@+id/fulluno"
-                android:layout_width="28dp"
-                android:layout_height="44sp"
-                android:layout_marginHorizontal="10dp"
-                android:paddingTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="elegirPuntaje"
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:clickable="true"
-                android:onClick="elegirPuntaje"/>
+                android:layout_weight="1"
+                />
 
             <TextView
                 android:id="@+id/fulldos"
-                android:layout_width="28dp"
-                android:layout_height="44sp"
-                android:layout_marginHorizontal="10dp"
-                android:paddingTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="elegirPuntaje"
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:clickable="true"
-                android:onClick="elegirPuntaje"/>
+                android:layout_weight="1"/>
 
             <TextView
                 android:id="@+id/fulltres"
-                android:layout_width="28dp"
-                android:layout_height="44sp"
-                android:layout_marginHorizontal="10dp"
-                android:paddingTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="elegirPuntaje"
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:clickable="true"
-                android:onClick="elegirPuntaje"/>
+                android:layout_weight="1"/>
 
             <TextView
                 android:id="@+id/fullcuatro"
-                android:layout_width="28dp"
-                android:layout_height="44sp"
-                android:layout_marginHorizontal="10dp"
-                android:paddingTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="elegirPuntaje"
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:clickable="true"
-                android:onClick="elegirPuntaje"/>
+                android:layout_weight="1"/>
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="-4dp"
-            android:background="@android:color/darker_gray">
+            android:layout_weight="1"
+            android:background="@android:color/darker_gray"
+            android:gravity="center">
 
             <TextView
                 android:id="@+id/txtpoker"
                 android:layout_width="wrap_content"
-                android:layout_height="44sp"
-                android:layout_marginHorizontal="10dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="-5dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:onClick="elegirPuntaje"
                 android:text="@string/Poker"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
-                android:textStyle="bold"
-                android:clickable="true"
-                android:onClick="elegirPuntaje"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/pokeruno"
-                android:layout_width="28dp"
-                android:layout_height="44sp"
-                android:layout_marginHorizontal="10dp"
-                android:paddingTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:onClick="elegirPuntaje"
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
-                android:textStyle="bold"
-                android:clickable="true"
-                android:onClick="elegirPuntaje"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/pokerdos"
-                android:layout_width="28dp"
-                android:layout_height="44sp"
-                android:layout_marginHorizontal="10dp"
-                android:paddingTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:onClick="elegirPuntaje"
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
-                android:textStyle="bold"
-                android:clickable="true"
-                android:onClick="elegirPuntaje"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/pokertres"
-                android:layout_width="28dp"
-                android:layout_height="44sp"
-                android:layout_marginHorizontal="10dp"
-                android:paddingTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:onClick="elegirPuntaje"
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
-                android:textStyle="bold"
-                android:clickable="true"
-                android:onClick="elegirPuntaje"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/pokercuatro"
-                android:layout_width="28dp"
-                android:layout_height="44sp"
-                android:layout_marginHorizontal="10dp"
-                android:paddingTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:onClick="elegirPuntaje"
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
-                android:textStyle="bold"
-                android:clickable="true"
-                android:onClick="elegirPuntaje"/>
+                android:textStyle="bold" />
         </TableRow>
 
         <TableRow
@@ -784,78 +744,74 @@
             android:layout_height="match_parent"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="-4dp"
+            android:layout_weight="1"
             android:background="@color/GrisClaro">
 
             <TextView
                 android:id="@+id/txtgenerala"
                 android:layout_width="wrap_content"
-                android:layout_height="44sp"
-                android:layout_marginHorizontal="10dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="-5dp"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="elegirPuntaje"
                 android:text="Generala"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:clickable="true"
-                android:onClick="elegirPuntaje"/>
+                android:layout_weight="1"/>
 
             <TextView
                 android:id="@+id/generalauno"
-                android:layout_width="28dp"
-                android:layout_height="44sp"
-                android:layout_marginHorizontal="10dp"
-                android:paddingTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="elegirPuntaje"
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:clickable="true"
-                android:onClick="elegirPuntaje"/>
+                android:layout_weight="1"/>
 
             <TextView
                 android:id="@+id/generalados"
-                android:layout_width="28dp"
-                android:layout_height="44sp"
-                android:layout_marginHorizontal="10dp"
-                android:paddingTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="elegirPuntaje"
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:clickable="true"
-                android:onClick="elegirPuntaje"/>
+                android:layout_weight="1"/>
 
             <TextView
                 android:id="@+id/generalatres"
-                android:layout_width="28dp"
-                android:layout_height="44sp"
-                android:layout_marginHorizontal="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="elegirPuntaje"
                 android:paddingTop="10dp"
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:clickable="true"
-                android:onClick="elegirPuntaje"/>
+                android:layout_weight="1"/>
 
             <TextView
                 android:id="@+id/generalacuatro"
-                android:layout_width="28dp"
-                android:layout_height="44sp"
-                android:layout_marginHorizontal="10dp"
-                android:paddingTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="elegirPuntaje"
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:clickable="true"
-                android:onClick="elegirPuntaje"/>
+                android:layout_weight="1"/>
         </TableRow>
 
         <TableRow
@@ -863,147 +819,135 @@
             android:layout_height="match_parent"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="-4dp"
+            android:layout_weight="1"
             android:background="@android:color/darker_gray">
 
             <TextView
                 android:id="@+id/txtgeneralados"
                 android:layout_width="wrap_content"
-                android:layout_height="44sp"
-                android:layout_marginHorizontal="10dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="-5dp"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="elegirPuntaje"
                 android:text="@string/Generala2"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:clickable="true"
-                android:onClick="elegirPuntaje"/>
+                android:layout_weight="1"/>
 
             <TextView
                 android:id="@+id/generala2uno"
-                android:layout_width="28dp"
-                android:layout_height="44sp"
-                android:layout_marginHorizontal="10dp"
-                android:paddingTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="elegirPuntaje"
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:clickable="true"
-                android:onClick="elegirPuntaje"/>
+                android:layout_weight="1"/>
 
             <TextView
                 android:id="@+id/generala2dos"
-                android:layout_width="28dp"
-                android:layout_height="44sp"
-                android:layout_marginHorizontal="10dp"
-                android:paddingTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="elegirPuntaje"
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:clickable="true"
-                android:onClick="elegirPuntaje"/>
+                android:layout_weight="1"/>
 
             <TextView
                 android:id="@+id/generala2tres"
-                android:layout_width="28dp"
-                android:layout_height="44sp"
-                android:layout_marginHorizontal="10dp"
-                android:paddingTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="elegirPuntaje"
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:clickable="true"
-                android:onClick="elegirPuntaje"/>
+                android:layout_weight="1"/>
 
             <TextView
                 android:id="@+id/generala2cuatro"
-                android:layout_width="28dp"
-                android:layout_height="44sp"
-                android:layout_marginHorizontal="10dp"
-                android:paddingTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="elegirPuntaje"
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:clickable="true"
-                android:onClick="elegirPuntaje"/>
+                android:layout_weight="1"/>
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="44dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="-4dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
             android:background="@color/GrisClaro">
 
             <TextView
                 android:id="@+id/textView17"
                 android:layout_width="wrap_content"
-                android:layout_height="44sp"
-                android:layout_marginHorizontal="10dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="-5dp"
+                android:layout_height="wrap_content"
                 android:text="@string/Total"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:layout_weight="1"/>
 
             <TextView
                 android:id="@+id/Total1"
-                android:layout_width="28dp"
-                android:layout_height="44sp"
-                android:layout_marginHorizontal="10dp"
-                android:paddingTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:layout_weight="1"/>
 
             <TextView
                 android:id="@+id/Total2"
-                android:layout_width="28dp"
-                android:layout_height="44sp"
-                android:layout_marginHorizontal="10dp"
-                android:paddingTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:layout_weight="1"/>
 
             <TextView
                 android:id="@+id/Total3"
-                android:layout_width="28dp"
-                android:layout_height="44sp"
-                android:layout_marginHorizontal="10dp"
-                android:paddingTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:layout_weight="1"/>
 
             <TextView
                 android:id="@+id/Total4"
-                android:layout_width="28dp"
-                android:layout_height="44sp"
-                android:layout_marginHorizontal="10dp"
-                android:paddingTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:layout_weight="1"/>
         </TableRow>
 
     </TableLayout>
