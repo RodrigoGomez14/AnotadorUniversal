@@ -21,7 +21,7 @@ public class Truco extends AppCompatActivity {
     private TextView puntos1, puntos2,equipo1,equipo2,BoM1,BoM2;
     private Button boton1,boton2,boton3,boton4;
     private int cantidadDePuntos;
-    private ImageView linea1_1,linea1_2,linea1_3,linea1_4;
+    private ImageView linea1_1,linea1_2,linea1_3,linea1_4,linea1_5,linea1_6,linea1_7,linea1_8,linea1_9,linea1_10,linea1_11,linea1_12,linea1_13,linea1_14,linea1_15;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_truco);
@@ -40,6 +40,17 @@ public class Truco extends AppCompatActivity {
         linea1_2=findViewById(R.id.linea1_2);
         linea1_3=findViewById(R.id.linea1_3);
         linea1_4=findViewById(R.id.linea1_4);
+        linea1_5=findViewById(R.id.linea1_5);
+        linea1_6=findViewById(R.id.linea1_6);
+        linea1_7=findViewById(R.id.linea1_7);
+        linea1_8=findViewById(R.id.linea1_8);
+        linea1_9=findViewById(R.id.linea1_9);
+        linea1_10=findViewById(R.id.linea1_10);
+        linea1_11=findViewById(R.id.linea1_11);
+        linea1_12=findViewById(R.id.linea1_12);
+        linea1_13=findViewById(R.id.linea1_13);
+        linea1_14=findViewById(R.id.linea1_14);
+        linea1_15=findViewById(R.id.linea1_15);
         BoM1=findViewById(R.id.BoM1);
         BoM2=findViewById(R.id.BoM2);
         lineas();
@@ -55,38 +66,36 @@ public class Truco extends AppCompatActivity {
     public void sumar(View vista, Jugador jugador){
             TextView resultado = (TextView)vista;
             jugador.sumarPuntos(1);
-            if(jugador.getPuntos()<=15){
-                BoM1.setText("Malas");
-                BoM1.setTextColor(getResources().getColor(R.color.colorPrimary));
-                resultado.setText(String.valueOf(jugador.getPuntos()));
+        if(jugador.getPuntos()>=cantidadDePuntos){
+            jugador.setPuntos(cantidadDePuntos);
+            Toast.makeText(this, "Partido Finalizado", Toast.LENGTH_LONG).show();
+        }
+             if(jugador.equals(jugador1)){
+                byM(BoM1,resultado,jugador1);
+             }
+             if(jugador.equals(jugador2)){
+                byM(BoM2,resultado,jugador2);
             }
-            if (jugador.getPuntos()>15 && cantidadDePuntos==30){
-                BoM1.setText("Buenas");
-                BoM1.setTextColor(getResources().getColor(R.color.GrisClaro));
-                resultado.setText(String.valueOf(jugador.getPuntos()-15));
-            }
-            if(jugador.getPuntos()>=cantidadDePuntos){
-                jugador.setPuntos(cantidadDePuntos);
-                Toast.makeText(this, "Partido Finalizado", Toast.LENGTH_LONG).show();
-            }
+
 
     }
     public void restar(View vista, Jugador jugador){
         TextView resultado=(TextView)vista;
         jugador.restarPuntos(1);
+        if(jugador.getPuntos()>=cantidadDePuntos){
+            jugador.setPuntos(cantidadDePuntos);
+            Toast.makeText(this, "Partido Finalizado", Toast.LENGTH_LONG).show();
+        }
         if(jugador.getPuntos()<0){
             jugador.setPuntos(0);
         }
-        if(jugador.getPuntos()<=15){
-            BoM1.setText("Malas");
-            BoM1.setTextColor(getResources().getColor(R.color.colorPrimary));
-            resultado.setText(String.valueOf(jugador.getPuntos()));
+        if(jugador.equals(jugador1)){
+            byM(BoM1,resultado,jugador1);
         }
-        if (jugador.getPuntos()>15 && cantidadDePuntos==30) {
-            BoM1.setText("Buenas");
-            BoM1.setTextColor(getResources().getColor(R.color.GrisClaro));
-            resultado.setText(String.valueOf(jugador.getPuntos() - 15));
+        if(jugador.equals(jugador2)){
+            byM(BoM2,resultado,jugador2);
         }
+
     }
 
     public void capturarBoton(View vista){
@@ -101,8 +110,9 @@ public class Truco extends AppCompatActivity {
             sumar(puntos2,jugador2);
         }
         if(boton.equals(boton4)){
-            sumar(puntos2,jugador2);
+            restar(puntos2,jugador2);
         }
+
 
     }
 
@@ -125,6 +135,8 @@ public class Truco extends AppCompatActivity {
                 @Override
                 public void onClick(DialogInterface dialogInterface, int i) {
                     Intent j=new Intent(Truco.this,ConfiguracionTruco.class);
+                    boolean gallo=false;
+                    j.putExtra("gallo",gallo);
                     startActivity(j);
                     finish();
                 }
@@ -140,6 +152,7 @@ public class Truco extends AppCompatActivity {
 
             reiniciarPartido(null);
         }
+
         return super.onOptionsItemSelected(item);
     }
 
@@ -164,11 +177,21 @@ public class Truco extends AppCompatActivity {
         });
         alertialog.show();
     }
-    public void mostrarLineas(View vista){
-        linea1_1.setVisibility(View.VISIBLE);
-        linea1_2.setVisibility(View.VISIBLE);
+    public void byM(TextView bym, TextView numero,Jugador jug){
+
+        if(jug.getPuntos()<=16){
+            bym.setText("Malas");
+            bym.setTextColor(getResources().getColor(R.color.rojo));
+            numero.setText(String.valueOf(jug.getPuntos()));
+        }
+        if (jug.getPuntos()>=16 && cantidadDePuntos==30) {
+            bym.setText("Buenas");
+            bym.setTextColor(getResources().getColor(R.color.verde));
+            numero.setText(String.valueOf(jug.getPuntos()-15));
+        }
 
     }
+
 
     public void alertNombre(View vista){
         AlertDialog.Builder alertialog = new AlertDialog.Builder(this);
@@ -201,10 +224,22 @@ public class Truco extends AppCompatActivity {
         casillero.setText(nombreNuevo);
         jug.setNombre(nombreNuevo);
     }
+
     public void lineas(){
         linea1_1.setVisibility(View.INVISIBLE);
         linea1_2.setVisibility(View.INVISIBLE);
         linea1_3.setVisibility(View.INVISIBLE);
         linea1_4.setVisibility(View.INVISIBLE);
+        linea1_5.setVisibility(View.INVISIBLE);
+        linea1_6.setVisibility(View.INVISIBLE);
+        linea1_7.setVisibility(View.INVISIBLE);
+        linea1_8.setVisibility(View.INVISIBLE);
+        linea1_9.setVisibility(View.INVISIBLE);
+        linea1_10.setVisibility(View.INVISIBLE);
+        linea1_11.setVisibility(View.INVISIBLE);
+        linea1_12.setVisibility(View.INVISIBLE);
+        linea1_13.setVisibility(View.INVISIBLE);
+        linea1_14.setVisibility(View.INVISIBLE);
+        linea1_15.setVisibility(View.INVISIBLE);
     }
 }

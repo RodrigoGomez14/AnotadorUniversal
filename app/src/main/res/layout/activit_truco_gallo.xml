@@ -5,6 +5,73 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/boton1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="capturarBoton"
+            android:text="@string/Sumar_Puntos"
+            android:textColor="@android:color/black"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/boton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="capturarBoton"
+            android:text="@string/Restar_Puntos"
+            android:textColor="@android:color/black"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/boton3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="capturarBoton"
+            android:text="@string/Sumar_Puntos"
+            android:textColor="@android:color/black"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/boton4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="capturarBoton"
+            android:text="@string/Restar_Puntos"
+            android:textColor="@android:color/black"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/boton5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="capturarBoton"
+            android:text="@string/Sumar_Puntos"
+            android:textColor="@android:color/black"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/boton6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="capturarBoton"
+            android:text="@string/Restar_Puntos"
+            android:textColor="@android:color/black"
+            android:textSize="25sp" />
+    </LinearLayout>
+
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -19,7 +86,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:clickable="true"
-                android:onClick="cambiarNombre"
+                android:onClick="alertNombre"
                 android:text="@string/jugadoruno"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
@@ -32,7 +99,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:clickable="true"
-                android:onClick="cambiarNombre"
+                android:onClick="alertNombre"
                 android:text="@string/jugadordos"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
@@ -45,7 +112,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:clickable="true"
-                android:onClick="cambiarNombre"
+                android:onClick="alertNombre"
                 android:text="@string/jugadortres"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
@@ -54,163 +121,100 @@
 
         </TableRow>
 
+    </TableLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="0"
-            android:visibility="visible"
-            android:weightSum="6">
+            android:layout_height="match_parent"><![CDATA[
+
+            20sp />
+
+            ]]>
 
             <TextView
-                android:id="@+id/textView14"
+                android:id="@+id/textView8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1.5"
-                android:text="1"
-                android:textAlignment="center"
-                android:textSize="15sp" />
+                android:layout_weight="1"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/textView13"
+                android:id="@+id/TextView9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="0"
-                android:text="Buenas"
-                android:textSize="15sp" />
+                android:layout_weight="1"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/textView12"
+                android:id="@+id/TextView10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:text="1"
-                android:textAlignment="center"
-                android:textSize="15sp" />
+                android:layout_weight="1"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/textView11"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="0"
-                android:text="Malas"
-                android:textSize="15sp" />
-
-            <TextView
-                android:id="@+id/textView10"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:text="1"
-                android:textAlignment="center"
-                android:textSize="15sp" />
-
-            <TextView
-                android:id="@+id/textView9"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="0"
-                android:text="Buenas"
-                android:textSize="15sp" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:weightSum="3">
+            android:layout_height="match_parent" >
 
             <TextView
-                android:id="@+id/textView20"
+                android:id="@+id/puntos1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="TextView"
-                android:textAlignment="center" />
+                android:text="@string/Puntaje_en_0"
+                android:textAlignment="center"
+                android:textColor="@android:color/black" />
 
             <TextView
-                android:id="@+id/textView19"
+                android:id="@+id/BoM1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="TextView"
-                android:textAlignment="center" />
+                android:text="@string/Malas"
+                android:textColor="@android:color/holo_red_dark" />
 
             <TextView
-                android:id="@+id/textView16"
+                android:id="@+id/puntos2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="TextView"
-                android:textAlignment="center" />
+                android:text="@string/Puntaje_en_0"
+                android:textAlignment="center"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/BoM2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/Malas"
+                android:textColor="@android:color/holo_red_dark" />
+
+            <TextView
+                android:id="@+id/puntos3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/Puntaje_en_0"
+                android:textAlignment="center"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/BoM3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/Malas"
+                android:textColor="@android:color/holo_red_dark"/>
         </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="0"
-            android:gravity="bottom">
-
-            <Button
-                android:id="@+id/boton1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:onClick="capturarBoton"
-                android:text="@string/Sumar_Puntos"
-                android:textColor="@android:color/black"
-                android:textSize="25sp" />
-
-            <Button
-                android:id="@+id/boton2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:onClick="capturarBoton"
-                android:text="@string/Restar_Puntos"
-                android:textColor="@android:color/black"
-                android:textSize="25sp" />
-
-            <Button
-                android:id="@+id/boton3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:onClick="capturarBoton"
-                android:text="@string/Sumar_Puntos"
-                android:textColor="@android:color/black"
-                android:textSize="25sp" />
-
-
-            <Button
-                android:id="@+id/boton4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:onClick="capturarBoton"
-                android:text="@string/Restar_Puntos"
-                android:textColor="@android:color/black"
-                android:textSize="25sp" />
-            <Button
-                android:id="@+id/boton5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:onClick="capturarBoton"
-                android:text="@string/Sumar_Puntos"
-                android:textColor="@android:color/black"
-                android:textSize="25sp" />
-
-
-            <Button
-                android:id="@+id/boton6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:onClick="capturarBoton"
-                android:text="@string/Restar_Puntos"
-                android:textColor="@android:color/black"
-                android:textSize="25sp" />
-        </TableRow>
-
     </TableLayout>
 </RelativeLayout>

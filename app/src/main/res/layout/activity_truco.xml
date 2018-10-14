@@ -229,8 +229,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:text="@string/Malas"
                 android:textAlignment="textStart"
-                android:textColor="@android:color/black"
+                android:textColor="@android:color/holo_red_dark"
                 android:textSize="20sp" />
 
             <TextView
@@ -249,7 +250,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:textColor="@android:color/black"
+                android:text="@string/Malas"
+                android:textColor="@android:color/holo_red_dark"
                 android:textSize="20sp" />
 
         </TableRow>

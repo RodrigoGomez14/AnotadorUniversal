@@ -5,4 +5,6 @@
     <color name="colorAccent">#D81B60</color>
     <color name="Negro">#000000</color>
     <color name="GrisClaro">#757575</color>
+    <color name="rojo">@android:color/holo_red_dark</color>
+    <color name="verde">@android:color/holo_green_dark</color>
 </resources>
