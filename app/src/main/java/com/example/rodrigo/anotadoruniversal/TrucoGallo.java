@@ -213,12 +213,25 @@ public class TrucoGallo extends AppCompatActivity {
             alertialog.show();
         }
         if(id==R.id.Reiniciar){
+            AlertDialog.Builder alertdialog =new AlertDialog.Builder(this);
+            alertdialog.setTitle("Reiniciar?");
+            alertdialog.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                    reiniciarPartido();
+                }
+            });
+            alertdialog.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
 
-            reiniciarPartido(null);
+                }
+            });
+            alertdialog.create().show();
         }
         return super.onOptionsItemSelected(item);
     }
-    public void reiniciarPartido(View vista){
+    public void reiniciarPartido(){
         jugador1.setPuntos(0);
         puntos1.setText( String.valueOf(jugador1.getPuntos()));
         jugador2.setPuntos(0);

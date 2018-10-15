@@ -19,10 +19,11 @@
                 android:id="@+id/equipo1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="0"
                 android:clickable="true"
                 android:hint="@string/Equipo_Nosotros"
                 android:onClick="alertNombre"
+                android:text="@string/jugadoruno"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textColorHint="@android:color/black"
@@ -33,14 +34,70 @@
                 android:id="@+id/equipo2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="3"
+                android:layout_weight="0.5"
                 android:clickable="true"
                 android:hint="@string/Equipo_Ellos"
                 android:onClick="alertNombre"
+                android:text="@string/jugadordos"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textColorHint="@android:color/black"
                 android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/equipo3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:clickable="true"
+                android:hint="@string/Equipo_Ellos"
+                android:onClick="alertNombre"
+                android:text="@string/jugadortres"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:text="@string/Puntaje_en_0"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="@string/Puntaje_en_0"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="@string/Puntaje_en_0"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
                 android:textStyle="bold" />
         </TableRow>
 
@@ -50,10 +107,21 @@
             android:layout_weight="1">
 
             <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:text="@string/Puntaje_en_0"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
                 android:id="@+id/textView5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="0.5"
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
@@ -64,7 +132,7 @@
                 android:id="@+id/textView6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="3"
+                android:layout_weight="0.5"
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
@@ -81,7 +149,7 @@
                 android:id="@+id/textView7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="0"
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
@@ -92,35 +160,18 @@
                 android:id="@+id/textView8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="3"
+                android:layout_weight="0.5"
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="18sp"
                 android:textStyle="bold" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1">
 
             <TextView
                 android:id="@+id/textView9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/Puntaje_en_0"
-                android:textAlignment="center"
-                android:textColor="@android:color/black"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/textView10"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="3"
+                android:layout_weight="0.5"
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
@@ -134,10 +185,21 @@
             android:layout_weight="1">
 
             <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:text="@string/Puntaje_en_0"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
                 android:id="@+id/textView11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="0.5"
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
@@ -148,7 +210,7 @@
                 android:id="@+id/textView12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="3"
+                android:layout_weight="0.5"
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
@@ -165,7 +227,7 @@
                 android:id="@+id/textView13"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="0"
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
@@ -176,7 +238,18 @@
                 android:id="@+id/textView14"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="3"
+                android:layout_weight="0.5"
+                android:text="@string/Puntaje_en_0"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
@@ -190,10 +263,10 @@
             android:layout_weight="1">
 
             <TextView
-                android:id="@+id/textView15"
+                android:id="@+id/textView16"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="0"
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
@@ -201,10 +274,21 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/textView16"
+                android:id="@+id/textView17"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="3"
+                android:layout_weight="0.5"
+                android:text="@string/Puntaje_en_0"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
@@ -239,7 +323,7 @@
                 android:id="@+id/total1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="0"
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
@@ -250,7 +334,18 @@
                 android:id="@+id/total2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="3"
+                android:layout_weight="0.5"
+                android:text="@string/Puntaje_en_0"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/total3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"

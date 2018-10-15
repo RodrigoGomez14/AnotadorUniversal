@@ -22,10 +22,11 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="4"
                 android:text="@string/Gallo"
-                android:textAlignment="center"
+                android:textAlignment="viewStart"
                 android:textColor="@android:color/black"
                 android:textSize="25sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:paddingHorizontal="10dp"/>
 
             <CheckBox
                 android:id="@+id/check_Gallo"
@@ -40,7 +41,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/Explicacion_gallo"
-            android:textAlignment="center"
+            android:textAlignment="viewStart"
             android:textColor="@android:color/black"
             android:textSize="15sp"
             android:textStyle="italic" />
@@ -57,10 +58,11 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="4"
                 android:text="@string/Cantidad_de_puntos"
-                android:textAlignment="center"
+                android:textAlignment="textStart"
                 android:textColor="@android:color/black"
                 android:textSize="25sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:paddingHorizontal="10dp"/>
 
             <RadioGroup
                 android:layout_width="wrap_content"

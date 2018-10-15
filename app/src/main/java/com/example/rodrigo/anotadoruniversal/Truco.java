@@ -58,7 +58,7 @@ public class Truco extends AppCompatActivity {
 
     }
 
-    public void reiniciarPartido(View vista){
+    public void reiniciarPartido(){
         jugador1.setPuntos(0);
         jugador2.setPuntos(0);
         byM(BoM1,puntos1,jugador1);
@@ -155,8 +155,21 @@ public class Truco extends AppCompatActivity {
             alertialog.show();
         }
         if(id==R.id.Reiniciar){
+            AlertDialog.Builder alertdialog =new AlertDialog.Builder(this);
+            alertdialog.setTitle("Reiniciar?");
+            alertdialog.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                    reiniciarPartido();
+                }
+            });
+            alertdialog.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
 
-            reiniciarPartido(null);
+                }
+            });
+            alertdialog.create().show();
         }
 
         return super.onOptionsItemSelected(item);

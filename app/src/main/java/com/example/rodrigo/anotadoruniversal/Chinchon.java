@@ -18,10 +18,10 @@ public class Chinchon extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.chinchon_activity);
         jugador1=new Jugador(0);
-        jugadoruno=findViewById(R.id.jugadoruno);
-        jugadordos=findViewById(R.id.jugadordos);
-        jugadortres=findViewById(R.id.jugadortres);
-        jugadorcuatro=findViewById(R.id.jugadorcuatro);
+        jugadoruno=findViewById(R.id.equipo1);
+        jugadordos=findViewById(R.id.equipo2);
+        jugadortres=findViewById(R.id.equipo3);
+        jugadorcuatro=findViewById(R.id.equipo4);
         jugador2=new Jugador(0);
         jugador3=new Jugador(0);
         jugador4=new Jugador(0);

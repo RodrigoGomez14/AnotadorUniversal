@@ -49,6 +49,7 @@ public class ConfiguracionTruco extends AppCompatActivity {
             Intent i=new Intent(this,TrucoGallo.class);
             i.putExtra("cantidadDePuntos", String.valueOf(cantidadDePuntos) );
             startActivity(i);
+            finish();
         }
         else if(!switchgallo.isChecked()){
             if(puntos_15.isChecked()){
@@ -60,6 +61,7 @@ public class ConfiguracionTruco extends AppCompatActivity {
             Intent i =new Intent(this,Truco.class);
             i.putExtra("cantidadDePuntos",String.valueOf(cantidadDePuntos));
             startActivity(i);
+            finish();
         }
 
         super.onBackPressed();
