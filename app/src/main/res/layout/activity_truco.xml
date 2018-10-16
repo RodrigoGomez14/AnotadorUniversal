@@ -18,241 +18,173 @@
             android:id="@+id/linea1_1"
             android:layout_width="85dp"
             android:layout_height="85dp"
-            android:layout_marginStart="100dp"
-            android:layout_marginTop="100dp"
+            android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/linea1_3"
+            app:layout_constraintEnd_toStartOf="@+id/linea1_4"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintTop_toBottomOf="@+id/linea1_3"
+            app:layout_constraintVertical_bias="0.435"
             app:srcCompat="@drawable/lineaparada" />
 
         <ImageView
             android:id="@+id/linea1_2"
             android:layout_width="85dp"
             android:layout_height="85dp"
-            android:layout_marginStart="56dp"
-            android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.264"
-            app:srcCompat="@drawable/lineaacostada" />
+            app:layout_constraintEnd_toStartOf="@+id/linea1_4"
+            app:layout_constraintHorizontal_bias="0.451"
+            app:layout_constraintStart_toStartOf="@+id/linea1_4"
+            app:srcCompat="@drawable/lineaacostada"
+            tools:layout_editor_absoluteY="158dp" />
 
         <ImageView
             android:id="@+id/linea1_3"
             android:layout_width="85dp"
             android:layout_height="85dp"
-            android:layout_marginStart="56dp"
-            android:layout_marginTop="56dp"
-            android:layout_marginEnd="8dp"
+            android:layout_marginTop="16dp"
             android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/linea1_2"
+            app:layout_constraintEnd_toEndOf="@+id/linea1_1"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toEndOf="@+id/linea1_1"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0"
             app:srcCompat="@drawable/lineaacostada" />
 
         <ImageView
             android:id="@+id/linea1_4"
             android:layout_width="85dp"
             android:layout_height="85dp"
-            android:layout_marginStart="12dp"
-            android:layout_marginTop="100dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0"
-            app:srcCompat="@drawable/lineaparada" />
+            android:adjustViewBounds="false"
+            app:layout_constraintBottom_toTopOf="@+id/linea1_2"
+            app:layout_constraintTop_toTopOf="@+id/linea1_2"
+            app:layout_constraintVertical_bias="0.458"
+            app:srcCompat="@drawable/lineaparada"
+            tools:layout_editor_absoluteX="106dp" />
 
 
         <ImageView
             android:id="@+id/linea1_5"
             android:layout_width="85dp"
             android:layout_height="85dp"
-            android:layout_marginStart="56dp"
-            android:layout_marginTop="100dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="40dp"
+            app:layout_constraintStart_toStartOf="@+id/linea1_1"
+            app:layout_constraintTop_toTopOf="@+id/linea1_3"
             app:srcCompat="@drawable/diagonal" />
 
         <ImageView
             android:id="@+id/linea1_6"
             android:layout_width="85dp"
             android:layout_height="85dp"
-            android:layout_marginStart="100dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.004"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.48"
-            app:srcCompat="@drawable/lineaparada" />
+            app:srcCompat="@drawable/lineaparada"
+            tools:layout_editor_absoluteX="177dp"
+            tools:layout_editor_absoluteY="303dp" />
 
         <ImageView
             android:id="@+id/linea1_7"
             android:layout_width="85dp"
             android:layout_height="85dp"
-            android:layout_marginStart="56dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.003"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.561"
-            app:srcCompat="@drawable/lineaacostada" />
+            app:srcCompat="@drawable/lineaacostada"
+            tools:layout_editor_absoluteX="248dp"
+            tools:layout_editor_absoluteY="289dp" />
 
         <ImageView
             android:id="@+id/linea1_8"
             android:layout_width="85dp"
             android:layout_height="85dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="268dp"
-            android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.39"
-            app:srcCompat="@drawable/lineaacostada" />
+            app:srcCompat="@drawable/lineaacostada"
+            tools:layout_editor_absoluteX="262dp"
+            tools:layout_editor_absoluteY="143dp" />
 
         <ImageView
             android:id="@+id/linea1_9"
             android:layout_width="85dp"
             android:layout_height="85dp"
-            android:layout_marginStart="12dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.013"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.48"
-            app:srcCompat="@drawable/lineaparada" />
+            app:srcCompat="@drawable/lineaparada"
+            tools:layout_editor_absoluteX="310dp"
+            tools:layout_editor_absoluteY="220dp" />
 
         <ImageView
             android:id="@+id/linea1_10"
             android:layout_width="85dp"
             android:layout_height="85dp"
-            android:layout_marginStart="56dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
+            android:layout_marginBottom="184dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.007"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.48"
-            app:srcCompat="@drawable/diagonal" />
+            app:srcCompat="@drawable/diagonal"
+            tools:layout_editor_absoluteX="76dp" />
 
         <ImageView
             android:id="@+id/linea1_11"
             android:layout_width="85dp"
             android:layout_height="85dp"
-            android:layout_marginStart="100dp"
+            android:layout_marginStart="4dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
-            android:layout_marginBottom="100dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/linea1_12"
+            app:layout_constraintEnd_toStartOf="@+id/linea1_14"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0"
+            app:layout_constraintTop_toTopOf="@+id/linea1_13"
+            app:layout_constraintVertical_bias="0.492"
             app:srcCompat="@drawable/lineaparada" />
 
         <ImageView
             android:id="@+id/linea1_12"
             android:layout_width="85dp"
             android:layout_height="85dp"
-            android:layout_marginStart="56dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="60dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0"
-            app:srcCompat="@drawable/lineaacostada" />
-
-        <ImageView
-            android:id="@+id/linea1_13"
-            android:layout_width="86dp"
-            android:layout_height="88dp"
-            android:layout_marginStart="56dp"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/linea1_14"
+            app:layout_constraintStart_toStartOf="@+id/linea1_14"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.733"
+            app:layout_constraintVertical_bias="0.968"
+            app:srcCompat="@drawable/lineaacostada" />
+
+        <ImageView
+            android:id="@+id/linea1_13"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="108dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/linea1_14"
+            app:layout_constraintHorizontal_bias="0.763"
+            app:layout_constraintStart_toStartOf="@+id/linea1_14"
             app:srcCompat="@drawable/lineaacostada" />
 
         <ImageView
             android:id="@+id/linea1_14"
             android:layout_width="85dp"
             android:layout_height="85dp"
-            android:layout_marginStart="12dp"
             android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginEnd="208dp"
+            android:layout_marginBottom="28dp"
+            app:layout_constraintBottom_toBottomOf="@+id/linea1_12"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.013"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.814"
+            app:layout_constraintTop_toTopOf="@+id/linea1_13"
+            app:layout_constraintVertical_bias="0.693"
             app:srcCompat="@drawable/lineaparada" />
 
         <ImageView
             android:id="@+id/linea1_15"
             android:layout_width="85dp"
             android:layout_height="85dp"
-            android:layout_marginStart="56dp"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
-            android:layout_marginBottom="100dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/linea1_12"
+            app:layout_constraintEnd_toEndOf="@+id/linea1_11"
+            app:layout_constraintHorizontal_bias="0.477"
+            app:layout_constraintStart_toStartOf="@+id/linea1_14"
+            app:layout_constraintTop_toTopOf="@+id/linea1_13"
+            app:layout_constraintVertical_bias="0.493"
             app:srcCompat="@drawable/diagonal" />
 
 
@@ -262,7 +194,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true">
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp">
 
         <TableRow
             android:layout_width="match_parent"
@@ -349,6 +283,7 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_alignStart="@+id/null"
             android:layout_weight="1">
 
         </TableRow>
