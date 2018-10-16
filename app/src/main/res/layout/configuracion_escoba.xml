@@ -47,6 +47,17 @@
                     android:textAlignment="textStart"
                     android:textSize="20sp"
                     android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/cuatrojugadores"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:text="@string/numeroCuatro"
+                    android:textAlignment="textStart"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
             </RadioGroup>
         </LinearLayout>
 

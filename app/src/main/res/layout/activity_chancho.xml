@@ -3,139 +3,603 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
+    <TableLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/letra_C"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:clickable="true"
-            android:onClick="capturarToque"
-            android:paddingHorizontal="10dp"
-            android:text="@string/letra_C"
-            android:textAlignment="center"
-            android:textColor="@color/GrisClaro"
-            android:textSize="45sp"
-            android:textStyle="bold" />
-
-        <Space
-            android:layout_width="wrap_content"
-            android:layout_height="10dp" />
-
-        <TextView
-            android:id="@+id/letra_H"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:clickable="true"
-            android:onClick="capturarToque"
-            android:paddingHorizontal="10dp"
-            android:text="@string/letra_H"
-            android:textAlignment="center"
-            android:textColor="@color/GrisClaro"
-            android:textSize="45sp"
-            android:textStyle="bold" />
-
-        <Space
-            android:layout_width="wrap_content"
-            android:layout_height="10dp" />
-
-        <TextView
-            android:id="@+id/letra_A"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:clickable="true"
-            android:onClick="capturarToque"
-            android:paddingHorizontal="10dp"
-            android:text="A"
-            android:textAlignment="center"
-            android:textColor="@color/GrisClaro"
-            android:textSize="45sp"
-            android:textStyle="bold" />
-
-        <Space
-            android:layout_width="wrap_content"
-            android:layout_height="10dp" />
-
-        <TextView
-            android:id="@+id/letra_N"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:clickable="true"
-            android:onClick="capturarToque"
-            android:paddingHorizontal="10dp"
-            android:text="@string/letra_N"
-            android:textAlignment="center"
-            android:textColor="@color/GrisClaro"
-            android:textSize="45sp"
-            android:textStyle="bold" />
-
-        <Space
-            android:layout_width="wrap_content"
-            android:layout_height="10dp" />
-
-        <TextView
-            android:id="@+id/letra_C2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:clickable="true"
-            android:onClick="capturarToque"
-            android:paddingHorizontal="10dp"
-            android:text="@string/letra_C2"
-            android:textAlignment="center"
-            android:textColor="@color/GrisClaro"
-            android:textSize="45sp"
-            android:textStyle="bold" />
-
-        <Space
-            android:layout_width="wrap_content"
-            android:layout_height="10dp" />
-
-        <TextView
-            android:id="@+id/letra_H2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:clickable="true"
-            android:onClick="capturarToque"
-            android:paddingHorizontal="10dp"
-            android:text="@string/letra_H2"
-            android:textAlignment="center"
-            android:textColor="@color/GrisClaro"
-            android:textSize="45sp"
-            android:textStyle="bold" />
-
-        <Space
+        <TableRow
             android:layout_width="match_parent"
-            android:layout_height="10dp" />
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical">
 
-        <TextView
-            android:id="@+id/letra_O"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:clickable="true"
-            android:onClick="capturarToque"
-            android:paddingHorizontal="10dp"
-            android:text="@string/letra_O"
-            android:textAlignment="center"
-            android:textColor="@color/GrisClaro"
-            android:textSize="45sp"
-            android:textStyle="bold" />
+            <TextView
+                android:id="@+id/letraC1_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:clickable="true"
+                android:onClick="sumarPuntos"
+                android:paddingHorizontal="10dp"
+                android:text="@string/letra_C"
+                android:textAlignment="center"
+                android:textColor="@color/GrisClaro"
+                android:textSize="45sp"
+                android:textStyle="bold" />
 
-        <Space
+            <TextView
+                android:id="@+id/letraC1_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:onClick="sumarPuntos"
+                android:paddingHorizontal="10dp"
+                android:text="@string/letra_C"
+                android:textAlignment="center"
+                android:textColor="@color/GrisClaro"
+                android:textSize="45sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/letraC1_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:onClick="sumarPuntos"
+                android:paddingHorizontal="10dp"
+                android:text="@string/letra_C"
+                android:textAlignment="center"
+                android:textColor="@color/GrisClaro"
+                android:textSize="45sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/letraC1_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:onClick="sumarPuntos"
+                android:paddingHorizontal="10dp"
+                android:text="@string/letra_C"
+                android:textAlignment="center"
+                android:textColor="@color/GrisClaro"
+                android:textSize="45sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/letraC1_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:onClick="sumarPuntos"
+                android:paddingHorizontal="10dp"
+                android:text="@string/letra_C"
+                android:textAlignment="center"
+                android:textColor="@color/GrisClaro"
+                android:textSize="45sp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
             android:layout_width="match_parent"
-            android:layout_height="40dp" />
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="fill_vertical">
 
-        <Button
-            android:id="@+id/botonrestar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/button8"
-            android:layout_alignParentTop="true"
-            android:onClick="restarPuntos"
-            android:text="Restar" />
+            <TextView
+                android:id="@+id/letraH1_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:clickable="true"
+                android:onClick="sumarPuntos"
+                android:paddingHorizontal="10dp"
+                android:text="@string/letra_H"
+                android:textAlignment="center"
+                android:textColor="@color/GrisClaro"
+                android:textSize="45sp"
+                android:textStyle="bold" />
 
-    </LinearLayout>
+            <TextView
+                android:id="@+id/letraH1_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:onClick="sumarPuntos"
+                android:paddingHorizontal="10dp"
+                android:text="@string/letra_H"
+                android:textAlignment="center"
+                android:textColor="@color/GrisClaro"
+                android:textSize="45sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/letraH1_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:onClick="sumarPuntos"
+                android:paddingHorizontal="10dp"
+                android:text="@string/letra_H"
+                android:textAlignment="center"
+                android:textColor="@color/GrisClaro"
+                android:textSize="45sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/letraH1_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:onClick="sumarPuntos"
+                android:paddingHorizontal="10dp"
+                android:text="@string/letra_H"
+                android:textAlignment="center"
+                android:textColor="@color/GrisClaro"
+                android:textSize="45sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/letraH1_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:onClick="sumarPuntos"
+                android:paddingHorizontal="10dp"
+                android:text="@string/letra_H"
+                android:textAlignment="center"
+                android:textColor="@color/GrisClaro"
+                android:textSize="45sp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/letra_A"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:clickable="true"
+                android:onClick="sumarPuntos"
+                android:paddingHorizontal="10dp"
+                android:text="A"
+                android:textAlignment="center"
+                android:textColor="@color/GrisClaro"
+                android:textSize="45sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/letra_A2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:onClick="sumarPuntos"
+                android:paddingHorizontal="10dp"
+                android:text="A"
+                android:textAlignment="center"
+                android:textColor="@color/GrisClaro"
+                android:textSize="45sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/letra_A3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:onClick="sumarPuntos"
+                android:paddingHorizontal="10dp"
+                android:text="A"
+                android:textAlignment="center"
+                android:textColor="@color/GrisClaro"
+                android:textSize="45sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/letra_A4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:onClick="sumarPuntos"
+                android:paddingHorizontal="10dp"
+                android:text="A"
+                android:textAlignment="center"
+                android:textColor="@color/GrisClaro"
+                android:textSize="45sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/letra_A5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:onClick="sumarPuntos"
+                android:paddingHorizontal="10dp"
+                android:text="A"
+                android:textAlignment="center"
+                android:textColor="@color/GrisClaro"
+                android:textSize="45sp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/letra_N"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="sumarPuntos"
+                android:paddingHorizontal="10dp"
+                android:text="@string/letra_N"
+                android:textAlignment="center"
+                android:textColor="@color/GrisClaro"
+                android:textSize="45sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/letra_N2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:onClick="sumarPuntos"
+                android:paddingHorizontal="10dp"
+                android:text="@string/letra_N"
+                android:textAlignment="center"
+                android:textColor="@color/GrisClaro"
+                android:textSize="45sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/letra_N3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:onClick="sumarPuntos"
+                android:paddingHorizontal="10dp"
+                android:text="@string/letra_N"
+                android:textAlignment="center"
+                android:textColor="@color/GrisClaro"
+                android:textSize="45sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/letra_N4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:onClick="sumarPuntos"
+                android:paddingHorizontal="10dp"
+                android:text="@string/letra_N"
+                android:textAlignment="center"
+                android:textColor="@color/GrisClaro"
+                android:textSize="45sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/letra_N5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:onClick="sumarPuntos"
+                android:paddingHorizontal="10dp"
+                android:text="@string/letra_N"
+                android:textAlignment="center"
+                android:textColor="@color/GrisClaro"
+                android:textSize="45sp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/letraC2_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="sumarPuntos"
+                android:paddingHorizontal="10dp"
+                android:text="@string/letra_C2"
+                android:textAlignment="center"
+                android:textColor="@color/GrisClaro"
+                android:textSize="45sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/letraC2_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:onClick="sumarPuntos"
+                android:paddingHorizontal="10dp"
+                android:text="@string/letra_C2"
+                android:textAlignment="center"
+                android:textColor="@color/GrisClaro"
+                android:textSize="45sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/letraC2_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:onClick="sumarPuntos"
+                android:paddingHorizontal="10dp"
+                android:text="@string/letra_C2"
+                android:textAlignment="center"
+                android:textColor="@color/GrisClaro"
+                android:textSize="45sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/letraC2_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:onClick="sumarPuntos"
+                android:paddingHorizontal="10dp"
+                android:text="@string/letra_C2"
+                android:textAlignment="center"
+                android:textColor="@color/GrisClaro"
+                android:textSize="45sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/letraC2_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:onClick="sumarPuntos"
+                android:paddingHorizontal="10dp"
+                android:text="@string/letra_C2"
+                android:textAlignment="center"
+                android:textColor="@color/GrisClaro"
+                android:textSize="45sp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/letraH2_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="sumarPuntos"
+                android:paddingHorizontal="10dp"
+                android:text="@string/letra_H2"
+                android:textAlignment="center"
+                android:textColor="@color/GrisClaro"
+                android:textSize="45sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/letraH2_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:onClick="sumarPuntos"
+                android:paddingHorizontal="10dp"
+                android:text="@string/letra_H2"
+                android:textAlignment="center"
+                android:textColor="@color/GrisClaro"
+                android:textSize="45sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/letraH2_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:onClick="sumarPuntos"
+                android:paddingHorizontal="10dp"
+                android:text="@string/letra_H2"
+                android:textAlignment="center"
+                android:textColor="@color/GrisClaro"
+                android:textSize="45sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/letraH2_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:onClick="sumarPuntos"
+                android:paddingHorizontal="10dp"
+                android:text="@string/letra_H2"
+                android:textAlignment="center"
+                android:textColor="@color/GrisClaro"
+                android:textSize="45sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/letraH2_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:onClick="sumarPuntos"
+                android:paddingHorizontal="10dp"
+                android:text="@string/letra_H2"
+                android:textAlignment="center"
+                android:textColor="@color/GrisClaro"
+                android:textSize="45sp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/letra_O"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="sumarPuntos"
+                android:paddingHorizontal="10dp"
+                android:text="@string/letra_O"
+                android:textAlignment="center"
+                android:textColor="@color/GrisClaro"
+                android:textSize="45sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/letra_O2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:onClick="sumarPuntos"
+                android:paddingHorizontal="10dp"
+                android:text="@string/letra_O"
+                android:textAlignment="center"
+                android:textColor="@color/GrisClaro"
+                android:textSize="45sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/letra_O3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:onClick="sumarPuntos"
+                android:paddingHorizontal="10dp"
+                android:text="@string/letra_O"
+                android:textAlignment="center"
+                android:textColor="@color/GrisClaro"
+                android:textSize="45sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/letra_O4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:onClick="sumarPuntos"
+                android:paddingHorizontal="10dp"
+                android:text="@string/letra_O"
+                android:textAlignment="center"
+                android:textColor="@color/GrisClaro"
+                android:textSize="45sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/letra_O5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:onClick="sumarPuntos"
+                android:paddingHorizontal="10dp"
+                android:text="@string/letra_O"
+                android:textAlignment="center"
+                android:textColor="@color/GrisClaro"
+                android:textSize="45sp"
+                android:textStyle="bold" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical">
+
+            <Button
+                android:id="@+id/botonrestar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/button8"
+                android:layout_alignParentTop="true"
+                android:layout_weight="0"
+                android:onClick="restarPuntos"
+                android:text="Restar" />
+
+            <Button
+                android:id="@+id/botonrestar2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/button8"
+                android:layout_alignParentTop="true"
+                android:layout_weight="1"
+                android:onClick="restarPuntos"
+                android:text="Restar" />
+
+            <Button
+                android:id="@+id/botonrestar3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/button8"
+                android:layout_alignParentTop="true"
+                android:layout_weight="1"
+                android:onClick="restarPuntos"
+                android:text="Restar" />
+
+            <Button
+                android:id="@+id/botonrestar4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/button8"
+                android:layout_alignParentTop="true"
+                android:layout_weight="1"
+                android:onClick="restarPuntos"
+                android:text="Restar" />
+
+            <Button
+                android:id="@+id/botonrestar5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/button8"
+                android:layout_alignParentTop="true"
+                android:layout_weight="1"
+                android:onClick="restarPuntos"
+                android:text="Restar" />
+        </TableRow>
+
+    </TableLayout>
 
 </RelativeLayout>

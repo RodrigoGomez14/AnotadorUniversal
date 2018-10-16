@@ -9,7 +9,7 @@ import android.view.MenuItem;
 import android.widget.RadioButton;
 
 public class configuracionEscoba extends AppCompatActivity {
-    private RadioButton dosjugadores,tresjugadores;
+    private RadioButton dosjugadores,tresjugadores,cuatrojugadores;
     private int jugadores;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,12 +17,16 @@ public class configuracionEscoba extends AppCompatActivity {
         setContentView(R.layout.configuracion_escoba);
         dosjugadores=findViewById(R.id.dosjugadores);
         tresjugadores=findViewById(R.id.tresjugadores);
+        cuatrojugadores=findViewById(R.id.cuatrojugadores);
         jugadores=getIntent().getExtras().getInt("jugadores");
         if(jugadores==2){
             dosjugadores.setChecked(true);
         }
         else if(jugadores==3){
             tresjugadores.setChecked(true);
+        }
+        else if(jugadores==4){
+            cuatrojugadores.setChecked(true);
         }
 
     }
@@ -53,6 +57,11 @@ public class configuracionEscoba extends AppCompatActivity {
             }
             else if(tresjugadores.isChecked()){
                 Intent j = new Intent(this,Escoba_3_jug.class);
+                startActivity(j);
+                finish();
+            }
+            else if(cuatrojugadores.isChecked()){
+                Intent j = new Intent(this,Escoba_4_jug.class);
                 startActivity(j);
                 finish();
             }
