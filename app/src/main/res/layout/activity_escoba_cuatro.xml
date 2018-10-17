@@ -19,13 +19,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:clickable="true"
-                android:onClick="alertNombre"
                 android:text="@string/jugadoruno"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
-                android:textSize="18sp"
-                android:textStyle="bold" />
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="alertNombre"/>
 
             <TextView
                 android:id="@+id/equipo2"
@@ -35,9 +36,10 @@
                 android:text="@string/jugadordos"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
-                android:textSize="18sp"
+                android:textSize="20sp"
                 android:textStyle="bold"
                 android:clickable="true"
+                android:focusable="true"
                 android:onClick="alertNombre"/>
 
             <TextView
@@ -48,9 +50,10 @@
                 android:text="@string/jugadortres"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
-                android:textSize="18sp"
+                android:textSize="20sp"
                 android:textStyle="bold"
                 android:clickable="true"
+                android:focusable="true"
                 android:onClick="alertNombre"/>
 
             <TextView
@@ -61,9 +64,10 @@
                 android:text="@string/jugadorcuatro"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
-                android:textSize="18sp"
+                android:textSize="20sp"
                 android:textStyle="bold"
                 android:clickable="true"
+                android:focusable="true"
                 android:onClick="alertNombre"/>
         </TableRow>
 
@@ -74,34 +78,37 @@
             android:gravity="center">
 
             <TextView
-                android:id="@+id/TextView1"
+                android:id="@+id/textView1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
-                android:textSize="18sp" />
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/TextView2"
+                android:id="@+id/textView2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
-                android:textSize="18sp" />
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/TextView3"
+                android:id="@+id/textView3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
-                android:textSize="18sp" />
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textView4"
@@ -111,7 +118,8 @@
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
-                android:textSize="18sp" />
+                android:textSize="20sp"
+                android:textStyle="bold" />
         </TableRow>
 
         <TableRow
@@ -128,7 +136,8 @@
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
-                android:textSize="18sp" />
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textView6"
@@ -138,7 +147,8 @@
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
-                android:textSize="18sp" />
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textView7"
@@ -148,7 +158,8 @@
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
-                android:textSize="18sp" />
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textView8"
@@ -158,7 +169,8 @@
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
-                android:textSize="18sp" />
+                android:textSize="20sp"
+                android:textStyle="bold" />
         </TableRow>
 
         <TableRow
@@ -175,7 +187,8 @@
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
-                android:textSize="18sp" />
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textView10"
@@ -185,7 +198,8 @@
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
-                android:textSize="18sp" />
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textView11"
@@ -195,7 +209,8 @@
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
-                android:textSize="18sp" />
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textView12"
@@ -205,7 +220,8 @@
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
-                android:textSize="18sp" />
+                android:textSize="20sp"
+                android:textStyle="bold" />
         </TableRow>
 
         <TableRow
@@ -222,7 +238,8 @@
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
-                android:textSize="18sp" />
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textView14"
@@ -232,7 +249,8 @@
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
-                android:textSize="18sp" />
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textView15"
@@ -242,7 +260,8 @@
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
-                android:textSize="18sp" />
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textView16"
@@ -252,7 +271,8 @@
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
-                android:textSize="18sp" />
+                android:textSize="20sp"
+                android:textStyle="bold" />
         </TableRow>
 
         <TableRow
@@ -269,7 +289,8 @@
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
-                android:textSize="18sp" />
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textView18"
@@ -279,7 +300,8 @@
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
-                android:textSize="18sp" />
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textView19"
@@ -289,7 +311,8 @@
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
-                android:textSize="18sp" />
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textView20"
@@ -299,7 +322,8 @@
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
-                android:textSize="18sp" />
+                android:textSize="20sp"
+                android:textStyle="bold" />
         </TableRow>
 
         <TableRow
@@ -316,7 +340,8 @@
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
-                android:textSize="18sp" />
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textView22"
@@ -326,7 +351,8 @@
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
-                android:textSize="18sp" />
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textView23"
@@ -336,7 +362,8 @@
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
-                android:textSize="18sp" />
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textView24"
@@ -346,21 +373,7 @@
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
-                android:textSize="18sp" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/Total"
-                android:textAlignment="center"
-                android:textColor="@android:color/black"
-                android:textSize="18sp"
+                android:textSize="20sp"
                 android:textStyle="bold" />
         </TableRow>
 
@@ -371,6 +384,23 @@
             android:gravity="center">
 
             <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:text="@string/Total"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="top|center">
+
+            <TextView
                 android:id="@+id/total1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -378,7 +408,8 @@
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
-                android:textSize="18sp" />
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/total2"
@@ -388,7 +419,8 @@
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
-                android:textSize="18sp" />
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/total3"
@@ -398,7 +430,8 @@
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
-                android:textSize="18sp" />
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/total4"
@@ -408,21 +441,28 @@
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
-                android:textSize="18sp" />
+                android:textSize="20sp"
+                android:textStyle="bold" />
         </TableRow>
+
+    </TableLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom">
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent">
 
             <Button
-                android:id="@+id/button5"
+                android:id="@+id/button6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:onClick="mano"
-                android:text="@string/Mano_terminada_chinchon" />
+                android:text="@string/Mano_terminada_chinchon"
+                android:onClick="mano"/>
         </TableRow>
-
     </TableLayout>
 </RelativeLayout>

@@ -15,7 +15,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class Escoba_4_jug extends AppCompatActivity {
-    private TextView equipo1,equipo2,equipo3,equipo4,textView1,textView2,textView3,textView4,textView5,textView6,textView7,textView8,textView9,textView10,textView11,textView12,textView13,textView14,textView15,textView16,textView17,textView18,textView19,textView20,textView21,textView22,textView23,textView24,total1,total2,total3,total4;
+    private TextView equipo1,equipo2,equipo3,equipo4,textView1,textView2,textView3,textView4,textView5,textView6,
+            textView7,textView8,textView9,textView10,textView11,textView12,textView13,textView14,textView15,textView16,
+            textView17,textView18,textView19,textView20,textView21,textView22,textView23,textView24,total1,total2,total3,total4;
     private Jugador jugador1,jugador2,jugador3,jugador4;
     private int cuentaManos;
 
@@ -27,9 +29,9 @@ public class Escoba_4_jug extends AppCompatActivity {
         equipo2=findViewById(R.id.equipo2);
         equipo3=findViewById(R.id.equipo3);
         equipo4=findViewById(R.id.equipo4);
-        textView1=findViewById(R.id.TextView1);
-        textView2=findViewById(R.id.TextView2);
-        textView3=findViewById(R.id.TextView3);
+        textView1=findViewById(R.id.textView1);
+        textView2=findViewById(R.id.textView2);
+        textView3=findViewById(R.id.textView3);
         textView4=findViewById(R.id.textView4);
         textView5=findViewById(R.id.textView5);
         textView6=findViewById(R.id.textView6);
@@ -56,9 +58,13 @@ public class Escoba_4_jug extends AppCompatActivity {
         total3=findViewById(R.id.total3);
         total4=findViewById(R.id.total4);
         jugador1=new Jugador(0);
+        jugador1.setNombre("Jugador 1");
         jugador2=new Jugador(0);
+        jugador2.setNombre("Jugador 2");
         jugador3=new Jugador(0);
+        jugador3.setNombre("Jugador 3");
         jugador4=new Jugador(0);
+        jugador4.setNombre("Jugador 4");
         cuentaManos=0;
     }
     @Override
@@ -249,7 +255,7 @@ public class Escoba_4_jug extends AppCompatActivity {
 
     public void alertNombre(View vista){
         final EditText juguno=new EditText(this);
-        juguno.setHint(jugador2.getNombre());
+        juguno.setHint(jugador1.getNombre());
         final EditText jugdos=new EditText(this);
         jugdos.setHint(jugador2.getNombre());
         final EditText jugtres=new EditText(this);

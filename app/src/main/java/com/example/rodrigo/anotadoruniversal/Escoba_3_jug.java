@@ -49,8 +49,11 @@ public class Escoba_3_jug extends AppCompatActivity {
         total2=findViewById(R.id.total2);
         total3=findViewById(R.id.total3);
         jugador1=new Jugador(0);
+        jugador1.setNombre("Jugador 1");
         jugador2=new Jugador(0);
+        jugador2.setNombre("Jugador 2");
         jugador3=new Jugador(0);
+        jugador3.setNombre("Jugador 3");
         cuentaManos=0;
     }
     @Override
@@ -225,7 +228,7 @@ public class Escoba_3_jug extends AppCompatActivity {
 
     public void alertNombre(View vista){
         final EditText juguno=new EditText(this);
-        juguno.setHint(jugador2.getNombre());
+        juguno.setHint(jugador1.getNombre());
         final EditText jugdos=new EditText(this);
         jugdos.setHint(jugador2.getNombre());
         final EditText jugtres=new EditText(this);

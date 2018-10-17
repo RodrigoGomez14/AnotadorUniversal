@@ -28,7 +28,9 @@ public class Escoba extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_escoba);
         jugador1=new Jugador(0);
+        jugador1.setNombre("Jugador 1");
         jugador2=new Jugador(0);
+        jugador2.setNombre("Jugador 2");
         equipo1=findViewById(R.id.equipo1);
         equipo2=findViewById(R.id.equipo2);
         boton1=findViewById(R.id.boton1);
@@ -68,7 +70,8 @@ public class Escoba extends AppCompatActivity {
             alertdialog.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialogInterface, int i) {
-                    organizarManos(juguno,jugdos);
+                    organizarManos(juguno,jugdos,jugador1);
+
                 }
             });
             alertdialog.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
@@ -115,7 +118,8 @@ public class Escoba extends AppCompatActivity {
         alertdialog.create().show();
 
     }
-    public void organizarManos(EditText jug1,EditText jug2){
+    public void organizarManos(EditText jug1,EditText jug2, Jugador jugador){
+
         if(jug1.getText().toString().equals("")||jug2.getText().toString().equals("")){
             Toast.makeText(this, "Ingresar puntaje de todos los jugadores", Toast.LENGTH_SHORT).show();
         }
@@ -152,6 +156,9 @@ public class Escoba extends AppCompatActivity {
                     cuentaManos++;
                     break;
             }
+            if(jugador.getPuntos()>=15){
+                Toast.makeText(this, "Partido Terminado", Toast.LENGTH_SHORT).show();
+            }
         }
 
     }
@@ -162,11 +169,9 @@ public class Escoba extends AppCompatActivity {
             parcial.setText(String.valueOf(puntos));
             total.setText(String.valueOf(jugador.getPuntos()));
         }
-        else if(jugador.getPuntos()>=15){
-            jugador.setPuntos(15);
-            Toast.makeText(this, "Partido Finalizado", Toast.LENGTH_SHORT).show();
+        if(jugador.getPuntos()>=15){
+            Toast.makeText(this, "Partido Terminado", Toast.LENGTH_SHORT).show();
         }
-
     }
 
     public void cambiarNombre(EditText Nombre,TextView Equipo,Jugador Jugador){

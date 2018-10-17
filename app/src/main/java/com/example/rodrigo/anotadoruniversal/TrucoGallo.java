@@ -11,6 +11,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -20,6 +21,10 @@ public class TrucoGallo extends AppCompatActivity {
     private int cantidadDePuntos;
     private TextView equipo1,equipo2,equipo3,puntos1,puntos2,puntos3,BoM1,BoM2,BoM3;
     private Button boton1,boton2,boton3,boton4,boton5,boton6;
+    private ImageView linea1_1,linea1_2,linea1_3,linea1_4,linea1_5,linea1_6,linea1_7,linea1_8,linea1_9,linea1_10,
+            linea1_11,linea1_12,linea1_13,linea1_14,linea1_15,linea2_1,linea2_2,linea2_3,linea2_4,linea2_5,linea2_6,linea2_7,
+            linea2_8,linea2_9,linea2_10,linea2_11,linea2_12,linea2_13,linea2_14,linea2_15,linea3_1,linea3_2,linea3_3,linea3_4,linea3_5,linea3_6,linea3_7,
+            linea3_8,linea3_9,linea3_10,linea3_11,linea3_12,linea3_13,linea3_14,linea3_15;;
     @Override
     protected void onCreate( Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,6 +48,51 @@ public class TrucoGallo extends AppCompatActivity {
         BoM1=findViewById(R.id.BoM1);
         BoM2=findViewById(R.id.BoM2);
         BoM3=findViewById(R.id.BoM3);
+        linea1_1=findViewById(R.id.linea1_1);
+        linea1_2=findViewById(R.id.linea1_1);
+        linea1_3=findViewById(R.id.linea1_1);
+        linea1_4=findViewById(R.id.linea1_1);
+        linea1_5=findViewById(R.id.linea1_1);
+        linea1_6=findViewById(R.id.linea1_1);
+        linea1_7=findViewById(R.id.linea1_1);
+        linea1_8=findViewById(R.id.linea1_1);
+        linea1_9=findViewById(R.id.linea1_1);
+        linea1_10=findViewById(R.id.linea1_1);
+        linea1_11=findViewById(R.id.linea1_1);
+        linea1_12=findViewById(R.id.linea1_1);
+        linea1_13=findViewById(R.id.linea1_1);
+        linea1_14=findViewById(R.id.linea1_1);
+        linea1_15=findViewById(R.id.linea1_1);
+        linea_1=findViewById(R.id.linea1_1);
+        linea1_17=findViewById(R.id.linea1_1);
+        linea1_18=findViewById(R.id.linea1_1);
+        linea1_19=findViewById(R.id.linea1_1);
+        linea1_10=findViewById(R.id.linea1_1);
+        linea1_1=findViewById(R.id.linea1_1);
+        linea1_1=findViewById(R.id.linea1_1);
+        linea1_1=findViewById(R.id.linea1_1);
+        linea1_1=findViewById(R.id.linea1_1);
+        linea1_1=findViewById(R.id.linea1_1);
+        linea1_1=findViewById(R.id.linea1_1);
+        linea1_1=findViewById(R.id.linea1_1);
+        linea1_1=findViewById(R.id.linea1_1);
+        linea1_1=findViewById(R.id.linea1_1);
+        linea1_1=findViewById(R.id.linea1_1);
+        linea1_1=findViewById(R.id.linea1_1);
+        linea1_1=findViewById(R.id.linea1_1);
+        linea1_1=findViewById(R.id.linea1_1);
+        linea1_1=findViewById(R.id.linea1_1);
+        linea1_1=findViewById(R.id.linea1_1);
+        linea1_1=findViewById(R.id.linea1_1);
+        linea1_1=findViewById(R.id.linea1_1);
+        linea1_1=findViewById(R.id.linea1_1);
+        linea1_1=findViewById(R.id.linea1_1);
+        linea1_1=findViewById(R.id.linea1_1);
+        linea1_1=findViewById(R.id.linea1_1);
+        linea1_1=findViewById(R.id.linea1_1);
+        linea1_1=findViewById(R.id.linea1_1);
+        linea1_1=findViewById(R.id.linea1_1);
+        linea1_1=findViewById(R.id.linea1_1);
 
 
     }

@@ -22,13 +22,17 @@ public class Truco extends AppCompatActivity {
     private TextView puntos1, puntos2,equipo1,equipo2,BoM1,BoM2;
     private Button boton1,boton2,boton3,boton4;
     private int cantidadDePuntos;
-    private ImageView linea1_1,linea1_2,linea1_3,linea1_4,linea1_5,linea1_6,linea1_7,linea1_8,linea1_9,linea1_10,linea1_11,linea1_12,linea1_13,linea1_14,linea1_15;
+    private ImageView linea1_1,linea1_2,linea1_3,linea1_4,linea1_5,linea1_6,linea1_7,linea1_8,linea1_9,linea1_10,
+    linea1_11,linea1_12,linea1_13,linea1_14,linea1_15,linea2_1,linea2_2,linea2_3,linea2_4,linea2_5,linea2_6,linea2_7,
+    linea2_8,linea2_9,linea2_10,linea2_11,linea2_12,linea2_13,linea2_14,linea2_15;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_truco);
         cantidadDePuntos= Integer.parseInt(getIntent().getExtras().getString("cantidadDePuntos"));
         jugador1=new Jugador(0);
+        jugador1.setNombre("Jugador 1");
         jugador2=new Jugador(0);
+        jugador2.setNombre("Jugador 2");
         puntos1= findViewById(R.id.puntos1);
         puntos2=findViewById(R.id.puntos2);
         equipo1=findViewById(R.id.equipo1);
@@ -52,9 +56,25 @@ public class Truco extends AppCompatActivity {
         linea1_13=findViewById(R.id.linea1_13);
         linea1_14=findViewById(R.id.linea1_14);
         linea1_15=findViewById(R.id.linea1_15);
+        linea2_1=findViewById(R.id.linea2_1);
+        linea2_2=findViewById(R.id.linea2_2);
+        linea2_3=findViewById(R.id.linea2_3);
+        linea2_4=findViewById(R.id.linea2_4);
+        linea2_5=findViewById(R.id.linea2_5);
+        linea2_6=findViewById(R.id.linea2_6);
+        linea2_7=findViewById(R.id.linea2_7);
+        linea2_8=findViewById(R.id.linea2_8);
+        linea2_9=findViewById(R.id.linea2_9);
+        linea2_10=findViewById(R.id.linea2_10);
+        linea2_11=findViewById(R.id.linea2_11);
+        linea2_12=findViewById(R.id.linea2_12);
+        linea2_13=findViewById(R.id.linea2_13);
+        linea2_14=findViewById(R.id.linea2_14);
+        linea2_15=findViewById(R.id.linea2_15);
         BoM1=findViewById(R.id.BoM1);
         BoM2=findViewById(R.id.BoM2);
-        lineas();
+        lineas(jugador1);
+        lineas(jugador2);
 
     }
 
@@ -63,7 +83,8 @@ public class Truco extends AppCompatActivity {
         jugador2.setPuntos(0);
         byM(BoM1,puntos1,jugador1);
         byM(BoM2,puntos2,jugador2);
-        lineas();
+        lineas(jugador1);
+        lineas(jugador2);
     }
     public void sumar(View vista, Jugador jugador){
             TextView resultado = (TextView)vista;
@@ -101,25 +122,40 @@ public class Truco extends AppCompatActivity {
     }
 
     public void capturarBoton(View vista){
+        Jugador jugador = capturarJugador(vista);
         Button boton=(Button)vista;
         if(boton.equals(boton1)){
-            sumar(puntos1,jugador1);
-            actualizarLineas(jugador1,boton);
+                sumar(puntos1,jugador1);
+                actualizarLineas(jugador1,boton);
         }
         else if(boton.equals(boton2)){
-            restar(puntos1,jugador1);
-            actualizarLineas(jugador1,boton);
+                restar(puntos1,jugador1);
+                actualizarLineas(jugador1,boton);
         }
         else if(boton.equals(boton3)){
-            sumar(puntos2,jugador2);
-            actualizarLineas(jugador2,boton);
+                sumar(puntos2,jugador2);
+                actualizarLineas2(jugador2,boton);
         }
         else if(boton.equals(boton4)){
-            restar(puntos2,jugador2);
-            actualizarLineas(jugador2,boton);
+                restar(puntos2,jugador2);
+                actualizarLineas2(jugador2,boton);
         }
-
-
+    }
+    public Jugador capturarJugador(View vista){
+        Button boton=(Button)vista;
+        if(boton.equals(boton1)){
+            return jugador1;
+        }
+        else if (boton.equals(boton2)){
+            return jugador1;
+        }
+        else if (boton.equals(boton3)){
+            return jugador2;
+        }
+        else if (boton.equals(boton4)){
+            return jugador2;
+        }
+        return null;
     }
 
     @Override
@@ -244,120 +280,227 @@ public class Truco extends AppCompatActivity {
         jug.setNombre(nombreNuevo);
     }
 
-    public void actualizarLineas(Jugador jugador,Button boton){
+    public void actualizarLineas(Jugador jugador,Button boton) {
+            switch (jugador.getPuntos()) {
+                case 0:
+                    mostrarLinea(null, linea1_1, boton);
+                case 1:
+                    mostrarLinea(linea1_1, linea1_2, boton);
+                    break;
+                case 2:
+                    mostrarLinea(linea1_2, linea1_3, boton);
+                    break;
+                case 3:
+                    mostrarLinea(linea1_3, linea1_4, boton);
+                    break;
+                case 4:
+                    mostrarLinea(linea1_4, linea1_5, boton);
+                    break;
+                case 5:
+                    mostrarLinea(linea1_5, linea1_6, boton);
+                    break;
+                case 6:
+                    mostrarLinea(linea1_6, linea1_7, boton);
+                    break;
+                case 7:
+                    mostrarLinea(linea1_7, linea1_8, boton);
+                    break;
+                case 8:
+                    mostrarLinea(linea1_8, linea1_9, boton);
+                    break;
+                case 9:
+                    mostrarLinea(linea1_9, linea1_10, boton);
+                    break;
+                case 10:
+                    mostrarLinea(linea1_10, linea1_11, boton);
+                    break;
+                case 11:
+                    mostrarLinea(linea1_11, linea1_12, boton);
+                    break;
+                case 12:
+                    mostrarLinea(linea1_12, linea1_13, boton);
+                    break;
+                case 13:
+                    mostrarLinea(linea1_13, linea1_14, boton);
+                    break;
+                case 14:
+                    mostrarLinea(linea1_14, linea1_15, boton);
+                    break;
+                case 15:
+                    if (boton.equals(boton1) || boton.equals(boton3)) {
+                        mostrarLinea(linea1_15, null, boton);
+                    } else if (boton.equals(boton2) || boton.equals(boton4)) {
+                        medioPartido(boton);
+                    }
+                    break;
+                case 16:
+                    if (boton.equals(boton1) || boton.equals(boton3)) {
+                        medioPartido(boton);
+                    }
+                    mostrarLinea(linea1_1, linea1_2, boton);
+                    break;
+                case 17:
+                    mostrarLinea(linea1_2, linea1_3, boton);
+                    break;
+                case 18:
+                    mostrarLinea(linea1_3, linea1_4, boton);
+                    break;
+                case 19:
+                    mostrarLinea(linea1_4, linea1_5, boton);
+                    break;
+                case 20:
+                    mostrarLinea(linea1_5, linea1_6, boton);
+                    break;
+                case 21:
+                    mostrarLinea(linea1_6, linea1_7, boton);
+                    break;
+                case 22:
+                    mostrarLinea(linea1_7, linea1_8, boton);
+                    break;
+                case 23:
+                    mostrarLinea(linea1_8, linea1_9, boton);
+                    break;
+                case 24:
+                    mostrarLinea(linea1_9, linea1_10, boton);
+                    break;
+                case 25:
+                    mostrarLinea(linea1_10, linea1_11, boton);
+                    break;
+                case 26:
+                    mostrarLinea(linea1_11, linea1_12, boton);
+                    break;
+                case 27:
+                    mostrarLinea(linea1_12, linea1_13, boton);
+                    break;
+                case 28:
+                    mostrarLinea(linea1_13, linea1_14, boton);
+                    break;
+                case 29:
+                    mostrarLinea(linea1_14, linea1_15, boton);
+                    break;
+                case 30:
+                    mostrarLinea(linea1_15, null, boton);
+                    break;
+
+            }
+        }
+    public void actualizarLineas2(Jugador jugador,Button boton) {
+
         switch (jugador.getPuntos()){
             case 0:
-                mostrarLinea(null,linea1_1,boton);
+                mostrarLinea(null,linea2_1,boton);
             case 1:
-                mostrarLinea(linea1_1,linea1_2,boton);
+                mostrarLinea(linea2_1,linea2_2,boton);
                 break;
             case 2:
-                mostrarLinea(linea1_2,linea1_3,boton);
+                mostrarLinea(linea2_2,linea2_3,boton);
                 break;
             case 3:
-                mostrarLinea(linea1_3,linea1_4,boton);
+                mostrarLinea(linea2_3,linea2_4,boton);
                 break;
             case 4:
-                mostrarLinea(linea1_4,linea1_5,boton);
+                mostrarLinea(linea2_4,linea2_5,boton);
                 break;
             case 5:
-                mostrarLinea(linea1_5,linea1_6,boton);
+                mostrarLinea(linea2_5,linea2_6,boton);
                 break;
             case 6:
-                mostrarLinea(linea1_6,linea1_7,boton);
+                mostrarLinea(linea2_6,linea2_7,boton);
                 break;
             case 7:
-                mostrarLinea(linea1_7,linea1_8,boton);
+                mostrarLinea(linea2_7,linea2_8,boton);
                 break;
             case 8:
-                mostrarLinea(linea1_8,linea1_9,boton);
+                mostrarLinea(linea2_8,linea2_9,boton);
                 break;
             case 9:
-                mostrarLinea(linea1_9,linea1_10,boton);
+                mostrarLinea(linea2_9,linea2_10,boton);
                 break;
             case 10:
-                mostrarLinea(linea1_10,linea1_11,boton);
+                mostrarLinea(linea2_10,linea2_11,boton);
                 break;
             case 11:
-                mostrarLinea(linea1_11,linea1_12,boton);
+                mostrarLinea(linea2_11,linea2_12,boton);
                 break;
             case 12:
-                mostrarLinea(linea1_12,linea1_13,boton);
+                mostrarLinea(linea2_12,linea2_13,boton);
                 break;
             case 13:
-                mostrarLinea(linea1_13,linea1_14,boton);
+                mostrarLinea(linea2_13,linea2_14,boton);
                 break;
             case 14:
-                mostrarLinea(linea1_14,linea1_15,boton);
+                mostrarLinea(linea2_14,linea2_15,boton);
                 break;
             case 15:
                 if(boton.equals(boton1)||boton.equals(boton3)) {
-                    mostrarLinea(linea1_15, null, boton);
+                    mostrarLinea(linea2_15, null, boton);
                 }
                 else if(boton.equals(boton2)||boton.equals(boton4)){
                     medioPartido(boton);
-            }
+                }
                 break;
             case 16:
                 if(boton.equals(boton1)||boton.equals(boton3)){
                     medioPartido(boton);
                 }
-                mostrarLinea(linea1_1,linea1_2,boton);
+                mostrarLinea(linea2_1,linea2_2,boton);
                 break;
             case 17:
-                mostrarLinea(linea1_2,linea1_3,boton);
+                mostrarLinea(linea2_2,linea2_3,boton);
                 break;
             case 18:
-                mostrarLinea(linea1_3,linea1_4,boton);
+                mostrarLinea(linea2_3,linea2_4,boton);
                 break;
             case 19:
-                mostrarLinea(linea1_4,linea1_5,boton);
+                mostrarLinea(linea2_4,linea2_5,boton);
                 break;
             case 20:
-                mostrarLinea(linea1_5,linea1_6,boton);
+                mostrarLinea(linea2_5,linea2_6,boton);
                 break;
             case 21:
-                mostrarLinea(linea1_6,linea1_7,boton);
+                mostrarLinea(linea2_6,linea2_7,boton);
                 break;
             case 22:
-                mostrarLinea(linea1_7,linea1_8,boton);
+                mostrarLinea(linea2_7,linea2_8,boton);
                 break;
             case 23:
-                mostrarLinea(linea1_8,linea1_9,boton);
+                mostrarLinea(linea2_8,linea2_9,boton);
                 break;
             case 24:
-                mostrarLinea(linea1_9,linea1_10,boton);
+                mostrarLinea(linea2_9,linea2_10,boton);
                 break;
             case 25:
-                mostrarLinea(linea1_10,linea1_11,boton);
+                mostrarLinea(linea2_10,linea2_11,boton);
                 break;
             case 26:
-                mostrarLinea(linea1_11,linea1_12,boton);
+                mostrarLinea(linea2_11,linea2_12,boton);
                 break;
             case 27:
-                mostrarLinea(linea1_12,linea1_13,boton);
+                mostrarLinea(linea2_12,linea2_13,boton);
                 break;
             case 28:
-                mostrarLinea(linea1_13,linea1_14,boton);
+                mostrarLinea(linea2_13,linea2_14,boton);
                 break;
             case 29:
-                mostrarLinea(linea1_14,linea1_15,boton);
+                mostrarLinea(linea2_14,linea2_15,boton);
                 break;
             case 30:
-                mostrarLinea(linea1_15,null,boton);
+                mostrarLinea(linea2_15,null,boton);
                 break;
         }
     }
 
     public void mostrarLinea(ImageView linea,ImageView siguiente, Button boton){
-        if(boton.equals(boton1) || boton.equals(boton3)){
+        if(boton.equals(boton1)||boton.equals(boton3)){
             linea.setVisibility(View.VISIBLE);
         }
-        else if(boton.equals(boton2) || boton.equals(boton4)){
+        else if(boton.equals(boton2)||boton.equals(boton4)){
             siguiente.setVisibility(View.INVISIBLE);
         }
 
     }
+
+
     public void cambioDePuntaje (ImageView linea,Button boton){
         if(boton.equals(boton1) || boton.equals(boton3)){
             linea.setVisibility(View.INVISIBLE);
@@ -367,40 +510,78 @@ public class Truco extends AppCompatActivity {
         }
     }
     public void medioPartido(Button boton){
-        cambioDePuntaje(linea1_1,boton);
-        cambioDePuntaje(linea1_2,boton);
-        cambioDePuntaje(linea1_3,boton);
-        cambioDePuntaje(linea1_4,boton);
-        cambioDePuntaje(linea1_5,boton);
-        cambioDePuntaje(linea1_6,boton);
-        cambioDePuntaje(linea1_7,boton);
-        cambioDePuntaje(linea1_8,boton);
-        cambioDePuntaje(linea1_9,boton);
-        cambioDePuntaje(linea1_10,boton);
-        cambioDePuntaje(linea1_11,boton);
-        cambioDePuntaje(linea1_12,boton);
-        cambioDePuntaje(linea1_13,boton);
-        cambioDePuntaje(linea1_14,boton);
-        cambioDePuntaje(linea1_15,boton);
+        if(boton.equals(boton1)||boton.equals(boton2)){
+            cambioDePuntaje(linea1_1,boton);
+            cambioDePuntaje(linea1_2,boton);
+            cambioDePuntaje(linea1_3,boton);
+            cambioDePuntaje(linea1_4,boton);
+            cambioDePuntaje(linea1_5,boton);
+            cambioDePuntaje(linea1_6,boton);
+            cambioDePuntaje(linea1_7,boton);
+            cambioDePuntaje(linea1_8,boton);
+            cambioDePuntaje(linea1_9,boton);
+            cambioDePuntaje(linea1_10,boton);
+            cambioDePuntaje(linea1_11,boton);
+            cambioDePuntaje(linea1_12,boton);
+            cambioDePuntaje(linea1_13,boton);
+            cambioDePuntaje(linea1_14,boton);
+            cambioDePuntaje(linea1_15,boton);
+        }
+        else if(boton.equals(boton3)||boton.equals(boton4)){
+            cambioDePuntaje(linea2_1,boton);
+            cambioDePuntaje(linea2_2,boton);
+            cambioDePuntaje(linea2_3,boton);
+            cambioDePuntaje(linea2_4,boton);
+            cambioDePuntaje(linea2_5,boton);
+            cambioDePuntaje(linea2_6,boton);
+            cambioDePuntaje(linea2_7,boton);
+            cambioDePuntaje(linea2_8,boton);
+            cambioDePuntaje(linea2_9,boton);
+            cambioDePuntaje(linea2_10,boton);
+            cambioDePuntaje(linea2_11,boton);
+            cambioDePuntaje(linea2_12,boton);
+            cambioDePuntaje(linea2_13,boton);
+            cambioDePuntaje(linea2_14,boton);
+            cambioDePuntaje(linea2_15,boton);
 
+        }
     }
 
 
-    public void lineas(){
-        linea1_1.setVisibility(View.INVISIBLE);
-        linea1_2.setVisibility(View.INVISIBLE);
-        linea1_3.setVisibility(View.INVISIBLE);
-        linea1_4.setVisibility(View.INVISIBLE);
-        linea1_5.setVisibility(View.INVISIBLE);
-        linea1_6.setVisibility(View.INVISIBLE);
-        linea1_7.setVisibility(View.INVISIBLE);
-        linea1_8.setVisibility(View.INVISIBLE);
-        linea1_9.setVisibility(View.INVISIBLE);
-        linea1_10.setVisibility(View.INVISIBLE);
-        linea1_11.setVisibility(View.INVISIBLE);
-        linea1_12.setVisibility(View.INVISIBLE);
-        linea1_13.setVisibility(View.INVISIBLE);
-        linea1_14.setVisibility(View.INVISIBLE);
-        linea1_15.setVisibility(View.INVISIBLE);
+    public void lineas(Jugador jugador){
+        if(jugador.equals(jugador1)){
+            linea1_1.setVisibility(View.INVISIBLE);
+            linea1_2.setVisibility(View.INVISIBLE);
+            linea1_3.setVisibility(View.INVISIBLE);
+            linea1_4.setVisibility(View.INVISIBLE);
+            linea1_5.setVisibility(View.INVISIBLE);
+            linea1_6.setVisibility(View.INVISIBLE);
+            linea1_7.setVisibility(View.INVISIBLE);
+            linea1_8.setVisibility(View.INVISIBLE);
+            linea1_9.setVisibility(View.INVISIBLE);
+            linea1_10.setVisibility(View.INVISIBLE);
+            linea1_11.setVisibility(View.INVISIBLE);
+            linea1_12.setVisibility(View.INVISIBLE);
+            linea1_13.setVisibility(View.INVISIBLE);
+            linea1_14.setVisibility(View.INVISIBLE);
+            linea1_15.setVisibility(View.INVISIBLE);
+        }
+        else if (jugador.equals(jugador2)){
+            linea2_1.setVisibility(View.INVISIBLE);
+            linea2_2.setVisibility(View.INVISIBLE);
+            linea2_3.setVisibility(View.INVISIBLE);
+            linea2_4.setVisibility(View.INVISIBLE);
+            linea2_5.setVisibility(View.INVISIBLE);
+            linea2_6.setVisibility(View.INVISIBLE);
+            linea2_7.setVisibility(View.INVISIBLE);
+            linea2_8.setVisibility(View.INVISIBLE);
+            linea2_9.setVisibility(View.INVISIBLE);
+            linea2_10.setVisibility(View.INVISIBLE);
+            linea2_11.setVisibility(View.INVISIBLE);
+            linea2_12.setVisibility(View.INVISIBLE);
+            linea2_13.setVisibility(View.INVISIBLE);
+            linea2_14.setVisibility(View.INVISIBLE);
+            linea2_15.setVisibility(View.INVISIBLE);
+        }
     }
 }
