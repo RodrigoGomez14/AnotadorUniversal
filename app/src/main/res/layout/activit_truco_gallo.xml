@@ -696,28 +696,7 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="0"><![CDATA[
-
-            20sp />
-
-
-
-
-
-
-
-            ]]>
-
-            <Button
-                android:id="@+id/boton6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:onClick="capturarBoton"
-                android:text="@string/Restar_Puntos"
-                android:textColor="@android:color/black"
-                android:textSize="25sp" />
-
+            android:layout_weight="0">
             <Button
                 android:id="@+id/boton1"
                 android:layout_width="wrap_content"
@@ -729,7 +708,7 @@
                 android:textSize="25sp" />
 
             <Button
-                android:id="@+id/boton4"
+                android:id="@+id/boton2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -749,6 +728,16 @@
                 android:textSize="25sp" />
 
             <Button
+                android:id="@+id/boton4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="capturarBoton"
+                android:text="@string/Restar_Puntos"
+                android:textColor="@android:color/black"
+                android:textSize="25sp" />
+
+            <Button
                 android:id="@+id/boton5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -759,7 +748,7 @@
                 android:textSize="25sp" />
 
             <Button
-                android:id="@+id/boton2"
+                android:id="@+id/boton6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -767,6 +756,7 @@
                 android:text="@string/Restar_Puntos"
                 android:textColor="@android:color/black"
                 android:textSize="25sp" />
+
         </TableRow>
 
     </TableLayout>
