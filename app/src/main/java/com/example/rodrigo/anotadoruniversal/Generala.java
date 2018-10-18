@@ -5,6 +5,9 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.text.InputType;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -23,6 +26,7 @@ public class Generala extends AppCompatActivity  {
             fullcuatro, pokeruno, pokerdos, pokertres, pokercuatro, generalauno, generalados, generalatres, generalacuatro, generala2uno, generala2dos, generala2tres, generala2cuatro,
             total1, total2, total3, total4, txt1, txt2, txt3, txt4, txt5, txt6, txtescalera, txtfull, txtpoker, txtgenerala, txtgeneralados;
     private Jugador jugador1, jugador2, jugador3, jugador4;
+    private RadioButton boton1,boton2,boton3,boton4,boton5,boton6,boton7;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -93,9 +97,28 @@ public class Generala extends AppCompatActivity  {
         total3 = findViewById(R.id.Total3);
         total4 = findViewById(R.id.Total4);
         jugador1 = new Jugador(0);
+        jugador1.setNombre("Jugador 1");
         jugador2 = new Jugador(0);
+        jugador2.setNombre("Jugador 2");
         jugador3 = new Jugador(0);
+        jugador3.setNombre("Jugador 3");
         jugador4 = new Jugador(0);
+        jugador4.setNombre("Jugador 4");
+        boton1=new RadioButton(this);
+        boton1.setId(Integer.parseInt(getResources().getString(R.string.numeroUno)));
+        boton2=new RadioButton(this);
+        boton1.setId(Integer.parseInt(getResources().getString(R.string.numeroDos)));
+        boton3=new RadioButton(this);
+        boton1.setId(Integer.parseInt(getResources().getString(R.string.numeroTres)));
+        boton4=new RadioButton(this);
+        boton1.setId(Integer.parseInt(getResources().getString(R.string.numeroCuatro)));
+        boton5=new RadioButton(this);
+        boton1.setId(Integer.parseInt(getResources().getString(R.string.numeroCinco)));
+        boton6=new RadioButton(this);
+        boton1.setId(Integer.parseInt(getResources().getString(R.string.numeroSeis)));
+        boton7=new RadioButton(this);
+        boton1.setId(Integer.parseInt(getResources().getString(R.string.numeroSiete)));
+
     }
 
     @Override
@@ -157,7 +180,8 @@ public class Generala extends AppCompatActivity  {
 
     }
 
-    public void elegirPuntaje(View vista) {
+
+    public void elegirPuntajeVERDADERO(View vista) {
         final TextView casillero = (TextView) vista;
         final AlertDialog.Builder alertdialog = new AlertDialog.Builder(this);
         alertdialog.setTitle(" Ingrese puntaje\nJugada: " + Jugada(casillero));
@@ -165,6 +189,7 @@ public class Generala extends AppCompatActivity  {
         layout.setOrientation(LinearLayout.VERTICAL);
         final EditText puntaje = new EditText(this);
         puntaje.setHint(capturarJugador(vista).getNombre());
+        puntaje.setInputType(InputType.TYPE_CLASS_NUMBER);
         layout.addView(puntaje);
         alertdialog.setView(layout);
         alertdialog.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
@@ -179,6 +204,47 @@ public class Generala extends AppCompatActivity  {
             }
         });
         alertdialog.create().show();
+    }
+
+    public void elegirPuntaje(View vista) {
+        final TextView casillero = (TextView) vista;
+        final AlertDialog.Builder alertdialog = new AlertDialog.Builder(this);
+        final String jugada=Jugada(casillero);
+        alertdialog.setTitle(" Ingrese puntaje\nJugada: " + jugada);
+        alertdialog.setItems(R.array.puntos_dado_uno, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                Jugador jugador =capturarJugador(casillero);
+                jugador.sumarPuntos(puntosPorMano(i,jugada));
+                total1.setText(jugador.getPuntos());
+            }
+        });
+        alertdialog.create().show();
+
+    }
+    public int puntosPorMano(int id,String jugada){
+        if(jugada.equals("1")){
+            if(id==1){
+                return 0;
+            }
+            else if(id==2){
+                return 1;
+            }
+            else if(id==3){
+                return 2;
+            }
+            else if(id==4){
+                return 3;
+            }
+            else if(id==5){
+                return 4;
+            }
+            else if(id==6){
+                return 5;
+            }
+
+        }
+        return 0;
     }
 
 
@@ -296,6 +362,89 @@ public class Generala extends AppCompatActivity  {
             }
         });
         alertialog.show();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_generala,menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id=item.getItemId();
+        if(id==R.id.Reiniciar){
+        AlertDialog.Builder alertdialog=new AlertDialog.Builder(this);
+        alertdialog.setTitle("Reiniciar?");
+        alertdialog.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                resetearJuego();
+            }
+        });
+        alertdialog.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+
+            }
+        });
+        alertdialog.create().show();
+        }
+        return super.onOptionsItemSelected(item);
+    }
+    public void resetearJuego(){
+        jugador1.setPuntos(0);
+        jugador2.setPuntos(0);
+        jugador3.setPuntos(0);
+        jugador4.setPuntos(0);
+        unouno.setText(R.string.Puntaje_en_0);
+        unodos.setText(R.string.Puntaje_en_0);
+        unotres.setText(R.string.Puntaje_en_0);
+        unocuatro.setText(R.string.Puntaje_en_0);
+        dosuno.setText(R.string.Puntaje_en_0);
+        dosdos.setText(R.string.Puntaje_en_0);
+        dostres.setText(R.string.Puntaje_en_0);
+        doscuatro.setText(R.string.Puntaje_en_0);
+        tresuno.setText(R.string.Puntaje_en_0);
+        tresdos.setText(R.string.Puntaje_en_0);
+        trestres.setText(R.string.Puntaje_en_0);
+        trescuatro.setText(R.string.Puntaje_en_0);
+        cuatrouno.setText(R.string.Puntaje_en_0);
+        cuatrodos.setText(R.string.Puntaje_en_0);
+        cuatrotres.setText(R.string.Puntaje_en_0);
+        cuatrocuatro.setText(R.string.Puntaje_en_0);
+        cincouno.setText(R.string.Puntaje_en_0);
+        cincodos.setText(R.string.Puntaje_en_0);
+        cincotres.setText(R.string.Puntaje_en_0);
+        cincocuatro.setText(R.string.Puntaje_en_0);
+        seisuno.setText(R.string.Puntaje_en_0);
+        seisdos.setText(R.string.Puntaje_en_0);
+        seistres.setText(R.string.Puntaje_en_0);
+        seiscuatro.setText(R.string.Puntaje_en_0);
+        escalerauno.setText(R.string.Puntaje_en_0);
+        escalerados.setText(R.string.Puntaje_en_0);
+        escaleratres.setText(R.string.Puntaje_en_0);
+        escaleracuatro.setText(R.string.Puntaje_en_0);
+        fulluno.setText(R.string.Puntaje_en_0);
+        fulldos.setText(R.string.Puntaje_en_0);
+        fulltres.setText(R.string.Puntaje_en_0);
+        fullcuatro.setText(R.string.Puntaje_en_0);
+        pokeruno.setText(R.string.Puntaje_en_0);
+        pokerdos.setText(R.string.Puntaje_en_0);
+        pokertres.setText(R.string.Puntaje_en_0);
+        pokercuatro.setText(R.string.Puntaje_en_0);
+        generalauno.setText(R.string.Puntaje_en_0);
+        generalados.setText(R.string.Puntaje_en_0);
+        generalatres.setText(R.string.Puntaje_en_0);
+        generalacuatro.setText(R.string.Puntaje_en_0);
+        generala2uno.setText(R.string.Puntaje_en_0);
+        generala2dos.setText(R.string.Puntaje_en_0);
+        generala2tres.setText(R.string.Puntaje_en_0);
+        generala2cuatro.setText(R.string.Puntaje_en_0);
+        total1.setText(R.string.Puntaje_en_0);
+        total2.setText(R.string.Puntaje_en_0);
+        total3.setText(R.string.Puntaje_en_0);
+        total4.setText(R.string.Puntaje_en_0);
     }
 }
 

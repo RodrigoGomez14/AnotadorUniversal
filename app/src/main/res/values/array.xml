@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <integer-array name="puntos_dado_uno">
+    <string-array name="puntos_dado_uno">
         <item>0</item>
         <item>1</item>
         <item>2</item>
         <item>3</item>
         <item>4</item>
         <item>5</item>
-    </integer-array>
+    </string-array>
 
     <integer-array name="puntos_dado_dos">
         <item>0</item>
