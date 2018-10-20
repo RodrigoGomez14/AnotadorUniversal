@@ -6,26 +6,39 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.TableLayout;
+import android.widget.TableRow;
 import android.widget.TextView;
 
 public class Chinchon extends AppCompatActivity {
-    private TextView jugadoruno,jugadordos,jugadortres,jugadorcuatro;
+    private TextView juguno,jugdos,jugtres,jugcuatro;
     private Jugador jugador1,jugador2,jugador3,jugador4;
+    private TableLayout tabla;
+    private TableRow jugadores,boton;
+    private Button manoFinalizada;
     @Override
     protected void onCreate( Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.chinchon_activity);
+        juguno=new TextView(this);
+        juguno.setText(R.string.jugadoruno);
+        jugdos=new TextView(this);
+        jugdos.setText(R.string.jugadordos);
+        jugtres=new TextView(this);
+        jugtres.setText(R.string.jugadortres);
+        jugcuatro=new TextView(this);
+        jugcuatro.setText(R.string.jugadorcuatro);
         jugador1=new Jugador(0);
-        jugadoruno=findViewById(R.id.equipo1);
-        jugadordos=findViewById(R.id.equipo2);
-        jugadortres=findViewById(R.id.equipo3);
-        jugadorcuatro=findViewById(R.id.equipo4);
         jugador2=new Jugador(0);
         jugador3=new Jugador(0);
         jugador4=new Jugador(0);
-
+        tabla=findViewById(R.id.tabla);
+        jugadores=findViewById(R.id.fila1);
+        boton=findViewById(R.id.fila2);
+        tabla.addView(jugadores);
     }
 
 
@@ -50,10 +63,10 @@ public class Chinchon extends AppCompatActivity {
         alertdialog.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                distribuirNombres(jugadoruno,nombre1,jugador1);
-                distribuirNombres(jugadordos,nombre2,jugador2);
-                distribuirNombres(jugadortres,nombre3,jugador3);
-                distribuirNombres(jugadorcuatro,nombre4,jugador4);
+                distribuirNombres(juguno,nombre1,jugador1);
+                distribuirNombres(jugdos,nombre2,jugador2);
+                distribuirNombres(jugtres,nombre3,jugador3);
+                distribuirNombres(jugcuatro,nombre4,jugador4);
             }
         });
         alertdialog.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
@@ -91,5 +104,15 @@ public class Chinchon extends AppCompatActivity {
             }
         });
         alertialog.show();
+    }
+
+    public class tabla{
+
+
+        public void crearTabla(){
+
+
+        }
+
     }
 }

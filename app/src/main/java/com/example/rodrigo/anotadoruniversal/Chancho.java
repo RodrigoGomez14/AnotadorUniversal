@@ -1,10 +1,13 @@
 package com.example.rodrigo.anotadoruniversal;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -373,6 +376,84 @@ public class Chancho extends AppCompatActivity {
         alertialog.show();
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_chancho,menu);
+        return super.onCreateOptionsMenu(menu);
+    }
 
+    public void reiniciarPartido(Jugador jugador){
+            if(jugador.equals(jugador1)){
+                restarPunto(letraC1_1,jugador);
+                restarPunto(letraH1_1,jugador);
+                restarPunto(letra_A,jugador);
+                restarPunto(letra_N,jugador);
+                restarPunto(letraC2_1,jugador);
+                restarPunto(letraH2_1,jugador);
+                restarPunto(letra_O,jugador);
+            }
+            else if (jugador.equals(jugador2)){
+                restarPunto(letraC1_2,jugador);
+                restarPunto(letraH1_2,jugador);
+                restarPunto(letra_A2,jugador);
+                restarPunto(letra_N2,jugador);
+                restarPunto(letraC2_2,jugador);
+                restarPunto(letraH2_2,jugador);
+                restarPunto(letra_O2,jugador);
+            }
+            else if (jugador.equals(jugador3)){
+                restarPunto(letraC1_3,jugador);
+                restarPunto(letraH1_3,jugador);
+                restarPunto(letra_A3,jugador);
+                restarPunto(letra_N3,jugador);
+                restarPunto(letraC2_3,jugador);
+                restarPunto(letraH2_3,jugador);
+                restarPunto(letra_O3,jugador);
+            }
+            else if (jugador.equals(jugador4)){
+                restarPunto(letraC1_4,jugador);
+                restarPunto(letraH1_4,jugador);
+                restarPunto(letra_A4,jugador);
+                restarPunto(letra_N4,jugador);
+                restarPunto(letraC2_4,jugador);
+                restarPunto(letraH2_4,jugador);
+                restarPunto(letra_O4,jugador);
+            }
+            else if (jugador.equals(jugador5)){
+                restarPunto(letraC1_5,jugador);
+                restarPunto(letraH1_5,jugador);
+                restarPunto(letra_A5,jugador);
+                restarPunto(letra_N5,jugador);
+                restarPunto(letraC2_5,jugador);
+                restarPunto(letraH2_5,jugador);
+                restarPunto(letra_O5,jugador);
+            }
 
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id=item.getItemId();
+        if(id==R.id.Reiniciar){
+            final AlertDialog.Builder alertdialog= new AlertDialog.Builder(this);
+            alertdialog.setTitle("Reiniciar?");
+            alertdialog.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                    reiniciarPartido(jugador1);
+                    reiniciarPartido(jugador2);
+                    reiniciarPartido(jugador3);
+                    reiniciarPartido(jugador4);
+                    reiniciarPartido(jugador5);
+                }
+            });
+            alertdialog.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                }
+            });
+            alertdialog.create().show();
+        }
+        return super.onOptionsItemSelected(item);
+    }
 }

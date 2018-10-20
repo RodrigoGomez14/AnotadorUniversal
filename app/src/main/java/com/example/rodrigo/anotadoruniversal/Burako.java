@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.text.InputType;
 import android.text.Layout;
 import android.view.View;
 import android.widget.EditText;
@@ -50,7 +51,9 @@ public class Burako extends AppCompatActivity {
         final EditText jugadorUno = new EditText(this);
         final EditText jugadorDos = new EditText(this);
         jugadorUno.setHint("Jugador1");
+        jugadorUno.setInputType(InputType.TYPE_CLASS_NUMBER);
         jugadorDos.setHint("Jugador 2");
+        jugadorDos.setInputType(InputType.TYPE_CLASS_NUMBER);
         LinearLayout layout = new LinearLayout(this);
         layout.setOrientation(LinearLayout.VERTICAL);
         layout.addView(jugadorUno);

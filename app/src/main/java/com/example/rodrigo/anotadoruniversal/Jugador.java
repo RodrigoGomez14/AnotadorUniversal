@@ -13,6 +13,9 @@ public class Jugador {
     public void restarPuntos(int puntos){
 
         this.puntos-=puntos;
+        if(this.puntos<0){
+            this.puntos=0;
+        }
     }
     public Jugador(int puntos) {
         this.puntos = puntos;
