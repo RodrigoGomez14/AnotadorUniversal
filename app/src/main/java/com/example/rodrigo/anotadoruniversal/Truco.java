@@ -10,6 +10,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -75,6 +76,7 @@ public class Truco extends AppCompatActivity {
         BoM2=findViewById(R.id.BoM2);
         lineas(jugador1);
         lineas(jugador2);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
     }
 
@@ -160,7 +162,7 @@ public class Truco extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_truco,menu);
+        getMenuInflater().inflate(R.menu.menu_reinicio_configuracion,menu);
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -219,6 +221,7 @@ public class Truco extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 try {
+                    getWindow().clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
                     finish();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
@@ -263,8 +266,10 @@ public class Truco extends AppCompatActivity {
         alertialog.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                cambiarNombre(equipo1,equipouno,jugador1);
-                cambiarNombre(equipo2,equipodos,jugador2);
+                if(!equipouno.getText().toString().equals(""))
+                    cambiarNombre(equipo1,equipouno,jugador1);
+                if((!equipodos.getText().toString().equals("")))
+                    cambiarNombre(equipo2,equipodos,jugador2);
             }
         });
         alertialog.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {

@@ -1,17 +1,15 @@
 package com.example.rodrigo.anotadoruniversal;
 
 import android.content.DialogInterface;
-import android.content.Intent;
-import android.content.res.ColorStateList;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class Chancho extends AppCompatActivity {
     TextView letraC1_1,letraC1_2,letraC1_3,letraC1_4,letraC1_5,letraH1_1,letraH1_2,letraH1_3,letraH1_4,letraH1_5,letra_A,letra_A2,letra_A3,letra_A4,letra_A5,letra_N,letra_N1,
@@ -68,6 +66,7 @@ public class Chancho extends AppCompatActivity {
         jugador3=new Jugador(0);
         jugador4=new Jugador(0);
         jugador5=new Jugador(0);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
     }
 
     public Jugador capturarJugador(TextView jugador){
@@ -361,11 +360,8 @@ public class Chancho extends AppCompatActivity {
         alertialog.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                try {
+                    getWindow().clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
                     finish();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                }
             }
         });
         alertialog.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
@@ -378,7 +374,7 @@ public class Chancho extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_chancho,menu);
+        getMenuInflater().inflate(R.menu.menu_reinicio,menu);
         return super.onCreateOptionsMenu(menu);
     }
 

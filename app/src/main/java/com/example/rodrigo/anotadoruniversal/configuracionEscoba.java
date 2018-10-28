@@ -33,14 +33,14 @@ public class configuracionEscoba extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_configuracion_escoba,menu);
+        getMenuInflater().inflate(R.menu.enviar_configuracion,menu);
         return super.onCreateOptionsMenu(menu);
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id=item.getItemId();
-        if(id==R.id.aceptar) {
+        if(id==R.id.atras) {
             onBackPressed();
         }
         return super.onOptionsItemSelected(item);

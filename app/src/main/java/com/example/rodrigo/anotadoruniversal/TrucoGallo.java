@@ -3,12 +3,14 @@ package com.example.rodrigo.anotadoruniversal;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.preference.PreferenceScreen;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -96,6 +98,7 @@ public class TrucoGallo extends AppCompatActivity {
         lineas(jugador1);
         lineas(jugador2);
         lineas(jugador3);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
     }
     public void onBackPressed() {
@@ -106,6 +109,7 @@ public class TrucoGallo extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 try {
+                    getWindow().clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
                     finish();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
@@ -152,9 +156,12 @@ public class TrucoGallo extends AppCompatActivity {
         alertialog.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                cambiarNombre(equipo1, equipouno, jugador1);
-                cambiarNombre(equipo2, equipodos, jugador2);
-                cambiarNombre(equipo3, equipotres, jugador3);
+                if(!equipouno.getText().toString().equals(""))
+                    cambiarNombre(equipo1, equipouno, jugador1);
+                if(!equipodos.getText().toString().equals(""))
+                    cambiarNombre(equipo2, equipodos, jugador2);
+                if(!equipotres.getText().toString().equals(""))
+                    cambiarNombre(equipo3, equipotres, jugador3);
 
             }
         });
@@ -705,7 +712,7 @@ public class TrucoGallo extends AppCompatActivity {
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_truco,menu);
+        getMenuInflater().inflate(R.menu.menu_reinicio_configuracion,menu);
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -756,13 +763,14 @@ public class TrucoGallo extends AppCompatActivity {
     }
     public void reiniciarPartido(){
         jugador1.setPuntos(0);
-        puntos1.setText( String.valueOf(jugador1.getPuntos()));
         jugador2.setPuntos(0);
-        puntos2.setText(String.valueOf(jugador2.getPuntos()));
         jugador3.setPuntos(0);
-        puntos3.setText(String.valueOf(jugador3.getPuntos()));
+        byM(BoM1,puntos1,jugador1);
+        byM(BoM2,puntos2,jugador2);
+        byM(BoM3,puntos3,jugador3);
         lineas(jugador1);
         lineas(jugador2);
         lineas(jugador3);
+
     }
 }

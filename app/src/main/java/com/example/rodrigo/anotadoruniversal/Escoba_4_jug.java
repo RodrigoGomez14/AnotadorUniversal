@@ -9,6 +9,7 @@ import android.text.InputType;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -90,10 +91,11 @@ public class Escoba_4_jug extends AppCompatActivity {
         jugador4=new Jugador(0);
         jugador4.setNombre("Jugador 4");
         cuentaManos=0;
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_escoba,menu);
+        getMenuInflater().inflate(R.menu.menu_reinicio_configuracion,menu);
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -237,9 +239,9 @@ public class Escoba_4_jug extends AppCompatActivity {
             parcial.setText(String.valueOf(puntos));
             total.setText(String.valueOf(jugador.getPuntos()));
         }
-        else if(jugador.getPuntos()>=15){
+        if(jugador.getPuntos()>=15){
             jugador.setPuntos(15);
-            Toast.makeText(this, "Partido Finalizado", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Partido Finalizado, Ganador: "+jugador.getNombre(), Toast.LENGTH_SHORT).show();
         }
 
     }
@@ -321,5 +323,23 @@ public class Escoba_4_jug extends AppCompatActivity {
             Jugador.setNombre(nombrestring);
             Equipo.setText(nombrestring);
         }
+    }
+    public void onBackPressed() {
+        AlertDialog.Builder alertialog = new AlertDialog.Builder(this);
+        alertialog.setTitle("Salir?");
+        alertialog.setMessage("Se reiniciará la partida");
+        alertialog.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                getWindow().clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+                finish();
+            }
+        });
+        alertialog.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+            }
+        });
+        alertialog.show();
     }
 }

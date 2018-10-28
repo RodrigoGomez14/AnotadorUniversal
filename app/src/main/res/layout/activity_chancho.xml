@@ -11,13 +11,13 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:gravity="center_vertical">
+            android:gravity="center">
 
             <TextView
                 android:id="@+id/letraC1_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="0"
+                android:layout_weight="1"
                 android:clickable="true"
                 android:onClick="sumarPuntos"
                 android:paddingHorizontal="10dp"
@@ -88,13 +88,13 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:gravity="fill_vertical">
+            android:gravity="center">
 
             <TextView
                 android:id="@+id/letraH1_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="0"
+                android:layout_weight="1"
                 android:clickable="true"
                 android:onClick="sumarPuntos"
                 android:paddingHorizontal="10dp"
@@ -165,13 +165,13 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:gravity="center_vertical">
+            android:gravity="center">
 
             <TextView
                 android:id="@+id/letra_A"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="0"
+                android:layout_weight="1"
                 android:clickable="true"
                 android:onClick="sumarPuntos"
                 android:paddingHorizontal="10dp"
@@ -242,12 +242,13 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:gravity="center_vertical">
+            android:gravity="center">
 
             <TextView
                 android:id="@+id/letra_N"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:clickable="true"
                 android:onClick="sumarPuntos"
                 android:paddingHorizontal="10dp"
@@ -318,12 +319,13 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:gravity="center_vertical">
+            android:gravity="center">
 
             <TextView
                 android:id="@+id/letraC2_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:clickable="true"
                 android:onClick="sumarPuntos"
                 android:paddingHorizontal="10dp"
@@ -394,12 +396,13 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:gravity="center_vertical">
+            android:gravity="center">
 
             <TextView
                 android:id="@+id/letraH2_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:clickable="true"
                 android:onClick="sumarPuntos"
                 android:paddingHorizontal="10dp"
@@ -470,12 +473,13 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:gravity="center_vertical">
+            android:gravity="center">
 
             <TextView
                 android:id="@+id/letra_O"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:clickable="true"
                 android:onClick="sumarPuntos"
                 android:paddingHorizontal="10dp"
@@ -546,7 +550,7 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_weight="0"
             android:gravity="center_vertical">
 
             <Button
@@ -555,7 +559,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignStart="@+id/button8"
                 android:layout_alignParentTop="true"
-                android:layout_weight="0"
+                android:layout_weight="1"
                 android:onClick="restarPuntos"
                 android:text="Restar" />
 

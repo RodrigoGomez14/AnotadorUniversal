@@ -6,6 +6,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -39,6 +40,7 @@ public class Chinchon extends AppCompatActivity {
         jugadores=findViewById(R.id.fila1);
         boton=findViewById(R.id.fila2);
         tabla.addView(jugadores);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
     }
 
 
@@ -91,11 +93,8 @@ public class Chinchon extends AppCompatActivity {
         alertialog.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                try {
+                    getWindow().clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
                     finish();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                }
             }
         });
         alertialog.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {

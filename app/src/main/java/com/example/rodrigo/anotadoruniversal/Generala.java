@@ -9,6 +9,7 @@ import android.text.InputType;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -104,6 +105,7 @@ public class Generala extends AppCompatActivity  {
         jugador4 = new Jugador(0);
         jugador4.setNombre("Jugador 4");
         cambiarNombre(null);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
     }
 
@@ -527,11 +529,8 @@ public class Generala extends AppCompatActivity  {
         alertialog.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                try {
+                getWindow().clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
                     finish();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                }
             }
         });
         alertialog.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
@@ -544,7 +543,7 @@ public class Generala extends AppCompatActivity  {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_generala,menu);
+        getMenuInflater().inflate(R.menu.menu_reinicio,menu);
         return super.onCreateOptionsMenu(menu);
     }
 

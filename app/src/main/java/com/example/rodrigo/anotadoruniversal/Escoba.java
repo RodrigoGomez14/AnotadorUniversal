@@ -9,13 +9,11 @@ import android.text.InputType;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
+import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import org.w3c.dom.Text;
 
 
 public class Escoba extends AppCompatActivity {
@@ -59,6 +57,7 @@ public class Escoba extends AppCompatActivity {
         total1=findViewById(R.id.total1);
         total2=findViewById(R.id.total2);
         cuentaManos=0;
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
     }
     public void mano(View vista){
             final EditText juguno=new EditText(this);
@@ -178,13 +177,11 @@ public class Escoba extends AppCompatActivity {
             total.setText(String.valueOf(jugador.getPuntos()));
         }
         if(jugador.getPuntos()>=15){
-            Toast.makeText(this, "Partido Terminado", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Partido Terminado, Ganador: "+jugador.getNombre(), Toast.LENGTH_SHORT).show();
         }
     }
 
-    public void cambiarNombre(EditText Nombre,TextView Equipo,Jugador Jugador){
-        EditText nombre=(EditText)Nombre;
-        TextView equipo=(TextView)Equipo;
+    public void cambiarNombre(EditText nombre,TextView equipo,Jugador Jugador){
         if(!nombre.getText().toString().equals("")){
             String nombrestring=nombre.getText().toString();
             Jugador.setNombre(nombrestring);
@@ -198,11 +195,8 @@ public class Escoba extends AppCompatActivity {
         alertialog.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                try {
-                    finish();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                }
+                getWindow().clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+                finish();
             }
         });
         alertialog.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
@@ -215,7 +209,7 @@ public class Escoba extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_escoba,menu);
+        getMenuInflater().inflate(R.menu.menu_reinicio_configuracion,menu);
         return super.onCreateOptionsMenu(menu);
     }
 

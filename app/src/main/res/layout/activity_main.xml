@@ -11,9 +11,7 @@
     tools:context=".MainActivity">
 
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center_horizontal|center"
@@ -44,7 +42,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="anotadorGenerala"
-            android:text="@string/Generala"/>
+            android:text="@string/Generala" />
 
         <Button
             android:id="@+id/button10"
@@ -75,12 +73,18 @@
             android:text="@string/Jodete_Uno" />
 
         <Button
+            android:id="@+id/button5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="anotadorDiezMil"
+            android:text="@string/Diezmil" />
+
+        <Button
             android:id="@+id/button3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="anotadorChorizo"
-            android:text="Chorizo (a 50)" />
+            android:text="@string/Chorizo" />
 
     </LinearLayout>
-
 </LinearLayout>
