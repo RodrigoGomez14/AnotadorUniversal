@@ -21,7 +21,6 @@ import org.w3c.dom.Text;
 public class Escoba extends AppCompatActivity {
     private Jugador jugador1, jugador2;
     private TextView equipo1,equipo2,textView5,textView6,textView7,textView8,textView9,textView10,textView11,textView12,textView13,textView14,textView15,textView16,total1,total2;
-    private Button boton1,boton2,boton3,boton4;
     private int cuentaManos;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,22 +32,30 @@ public class Escoba extends AppCompatActivity {
         jugador2.setNombre("Jugador 2");
         equipo1=findViewById(R.id.equipo1);
         equipo2=findViewById(R.id.equipo2);
-        boton1=findViewById(R.id.boton1);
-        boton2=findViewById(R.id.boton2);
-        boton3=findViewById(R.id.boton3);
-        boton4=findViewById(R.id.boton4);
         textView5=findViewById(R.id.textView5);
+        textView5.setVisibility(View.INVISIBLE);
         textView6=findViewById(R.id.textView6);
+        textView6.setVisibility(View.INVISIBLE);
         textView7=findViewById(R.id.textView7);
+        textView7.setVisibility(View.INVISIBLE);
         textView8=findViewById(R.id.textView8);
+        textView8.setVisibility(View.INVISIBLE);
         textView9=findViewById(R.id.textView9);
+        textView9.setVisibility(View.INVISIBLE);
         textView10=findViewById(R.id.textView10);
+        textView10.setVisibility(View.INVISIBLE);
         textView11=findViewById(R.id.textView11);
+        textView11.setVisibility(View.INVISIBLE);
         textView12=findViewById(R.id.textView12);
+        textView12.setVisibility(View.INVISIBLE);
         textView13=findViewById(R.id.textView13);
+        textView13.setVisibility(View.INVISIBLE);
         textView14=findViewById(R.id.textView14);
+        textView14.setVisibility(View.INVISIBLE);
         textView15=findViewById(R.id.textView15);
+        textView15.setVisibility(View.INVISIBLE);
         textView16=findViewById(R.id.textView16);
+        textView16.setVisibility(View.INVISIBLE);
         total1=findViewById(R.id.total1);
         total2=findViewById(R.id.total2);
         cuentaManos=0;
@@ -163,6 +170,7 @@ public class Escoba extends AppCompatActivity {
 
     }
     public void organizarPuntajes(TextView parcial,TextView total,Jugador jugador,EditText puntaje){
+        parcial.setVisibility(View.VISIBLE);
         if(jugador.getPuntos()<15){
             int puntos=Integer.parseInt(puntaje.getText().toString());
             jugador.sumarPuntos(puntos);
@@ -258,6 +266,7 @@ public class Escoba extends AppCompatActivity {
     public void reiniciarMarcador(TextView parcial,TextView total,Jugador jugador){
         jugador.setPuntos(0);
         parcial.setText(R.string.Puntaje_en_0);
+        parcial.setVisibility(View.INVISIBLE);
         total.setText(R.string.Puntaje_en_0);
 
     }

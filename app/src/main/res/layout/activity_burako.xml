@@ -12,65 +12,54 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="center_horizontal"
+            android:layout_weight="0"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/jug1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:layout_weight="1"
-                android:text="Jugador 1"
+                android:layout_weight=".5"
+                android:clickable="true"
+                android:onClick="cambiarNombre"
+                android:text="@string/jugadoruno"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
-                android:textStyle="bold"
-                android:clickable="true"
-                android:onClick="cambiarNombre"/>
-
-            <Space
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/jug2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
                 android:layout_weight="1"
-                android:text="Jugador 2"
+                android:clickable="true"
+                android:onClick="cambiarNombre"
+                android:text="@string/jugadordos"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
-                android:textStyle="bold"
-                android:clickable="true"
-                android:onClick="cambiarNombre"/>
+                android:textStyle="bold" />
 
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="37dp"
-            android:layout_weight=".1"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/ronda1_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight=".5"
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:textStyle="bold" />
-
-            <Space
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
 
             <TextView
                 android:id="@+id/ronda1_2"
@@ -87,24 +76,20 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight=".1"
+            android:layout_weight="1"
+            android:gravity="center"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/ronda2_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight=".5"
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:textStyle="bold" />
-
-            <Space
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
 
             <TextView
                 android:id="@+id/ronda2_2"
@@ -121,24 +106,20 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight=".1"
+            android:layout_weight="1"
+            android:gravity="center"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/ronda3_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight=".5"
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:textStyle="bold" />
-
-            <Space
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
 
             <TextView
                 android:id="@+id/ronda3_2"
@@ -155,24 +136,20 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight=".1"
+            android:layout_weight="1"
+            android:gravity="center"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/ronda4_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight=".5"
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:textStyle="bold" />
-
-            <Space
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
 
             <TextView
                 android:id="@+id/ronda4_2"
@@ -189,24 +166,20 @@
         <TableRow
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight=".1"
+            android:layout_weight="1"
+            android:gravity="center"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/ronda5_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight=".5"
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:textStyle="bold" />
-
-            <Space
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
 
             <TextView
                 android:id="@+id/ronda5_2"
@@ -223,24 +196,20 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight=".1"
+            android:layout_weight="1"
+            android:gravity="center"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/total_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight=".5"
                 android:text="@string/Puntaje_en_0"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:textStyle="bold" />
-
-            <Space
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
 
             <TextView
                 android:id="@+id/total_2"
@@ -257,16 +226,17 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight=".1"
+            android:layout_weight="0"
             android:gravity="center"
             android:orientation="horizontal">
 
             <Button
                 android:id="@+id/button12"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/Mano_terminada_chinchon"
-                android:onClick="rondaTerminada"/>
+                android:layout_weight="1"
+                android:onClick="rondaTerminada"
+                android:text="@string/Mano_terminada_chinchon" />
         </TableRow>
 
     </TableLayout>

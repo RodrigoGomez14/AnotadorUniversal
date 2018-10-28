@@ -624,6 +624,7 @@ public class Generala extends AppCompatActivity  {
         total3.setText(R.string.Puntaje_en_0);
         total4.setText(R.string.Puntaje_en_0);
     }
+
 }
 
 

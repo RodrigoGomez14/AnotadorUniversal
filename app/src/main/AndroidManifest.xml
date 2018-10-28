@@ -20,6 +20,8 @@
         <activity android:name=".ConfiguracionTruco"/>
         <activity android:name=".Escoba_3_jug"/>
         <activity android:name=".Escoba_4_jug"/>
+        <activity android:name=".Uno"/>
+        <activity android:name=".Chorizo"></activity>
         <activity android:name=".CambiarNombre"
             android:theme="@style/Theme.AppCompat.Dialog"></activity>
         <activity android:name=".InformacionClase"

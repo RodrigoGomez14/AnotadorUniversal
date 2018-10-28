@@ -68,16 +68,18 @@
             android:text="@string/Rummy" />
 
         <Button
+            android:id="@+id/button4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="anotadorUno"
+            android:text="@string/Jodete_Uno" />
+
+        <Button
             android:id="@+id/button3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="anotadorChorizo"
             android:text="Chorizo (a 50)" />
-
-        <Button
-            android:id="@+id/button4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Jodete/Uno " />
 
     </LinearLayout>
 

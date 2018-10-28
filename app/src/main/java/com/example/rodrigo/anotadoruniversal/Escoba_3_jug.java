@@ -28,23 +28,41 @@ public class Escoba_3_jug extends AppCompatActivity {
         equipo2=findViewById(R.id.equipo2);
         equipo3=findViewById(R.id.equipo3);
         textView1=findViewById(R.id.textView1);
+        textView1.setVisibility(View.INVISIBLE);
         textView2=findViewById(R.id.textView2);
+        textView2.setVisibility(View.INVISIBLE);
         textView3=findViewById(R.id.textView3);
+        textView3.setVisibility(View.INVISIBLE);
         textView4=findViewById(R.id.textView4);
+        textView4.setVisibility(View.INVISIBLE);
         textView5=findViewById(R.id.textView5);
+        textView5.setVisibility(View.INVISIBLE);
         textView6=findViewById(R.id.textView6);
+        textView6.setVisibility(View.INVISIBLE);
         textView7=findViewById(R.id.textView7);
+        textView7.setVisibility(View.INVISIBLE);
         textView8=findViewById(R.id.textView8);
+        textView8.setVisibility(View.INVISIBLE);
         textView9=findViewById(R.id.textView9);
+        textView9.setVisibility(View.INVISIBLE);
         textView10=findViewById(R.id.textView10);
+        textView10.setVisibility(View.INVISIBLE);
         textView11=findViewById(R.id.textView11);
+        textView11.setVisibility(View.INVISIBLE);
         textView12=findViewById(R.id.textView12);
+        textView12.setVisibility(View.INVISIBLE);
         textView13=findViewById(R.id.textView13);
+        textView13.setVisibility(View.INVISIBLE);
         textView14=findViewById(R.id.textView14);
+        textView14.setVisibility(View.INVISIBLE);
         textView15=findViewById(R.id.textView15);
+        textView15.setVisibility(View.INVISIBLE);
         textView16=findViewById(R.id.textView16);
+        textView16.setVisibility(View.INVISIBLE);
         textView17=findViewById(R.id.textView17);
+        textView17.setVisibility(View.INVISIBLE);
         textView18=findViewById(R.id.textView18);
+        textView18.setVisibility(View.INVISIBLE);
         total1=findViewById(R.id.total1);
         total2=findViewById(R.id.total2);
         total3=findViewById(R.id.total3);
@@ -185,6 +203,7 @@ public class Escoba_3_jug extends AppCompatActivity {
         }
     }
     public void organizarPuntajes(TextView parcial,TextView total,Jugador jugador,EditText puntaje){
+        parcial.setVisibility(View.VISIBLE);
         if(jugador.getPuntos()<15){
             int puntos=Integer.parseInt(puntaje.getText().toString());
             jugador.sumarPuntos(puntos);
@@ -201,6 +220,7 @@ public class Escoba_3_jug extends AppCompatActivity {
     public void reiniciarMarcador(TextView parcial,TextView total,Jugador jugador){
         jugador.setPuntos(0);
         parcial.setText(R.string.Puntaje_en_0);
+        parcial.setVisibility(View.INVISIBLE);
         total.setText(R.string.Puntaje_en_0);
 
     }

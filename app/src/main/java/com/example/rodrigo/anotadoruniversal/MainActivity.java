@@ -51,6 +51,14 @@ public class MainActivity extends AppCompatActivity {
         Intent i=new Intent(this,Rummy.class);
         startActivity(i);
     }
+    public void anotadorUno(View vista){
+        Intent i=new Intent(this,Uno.class);
+        startActivity(i);
+    }
+    public void anotadorChorizo(View vista){
+        Intent i= new Intent(this, Chorizo.class);
+        startActivity(i);
+    }
 
 
     @Override
