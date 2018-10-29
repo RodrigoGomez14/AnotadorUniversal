@@ -13,7 +13,9 @@
         <activity android:name=".Escoba"/>
         <activity android:name=".Chancho"/>
         <activity android:name=".Generala"/>
-        <activity android:name=".Chinchon"/>
+        <activity android:name=".Chinchon2"/>
+        <activity android:name=".Chinchon3"/>
+        <activity android:name=".Chinchon4"/>
         <activity android:name=".Burako"/>
         <activity android:name=".Rummy"/>
         <activity android:name=".configuracionEscoba"/>
@@ -23,6 +25,7 @@
         <activity android:name=".Diezmil"/>
         <activity android:name=".Uno"/>
         <activity android:name=".Chorizo"/>
+        <activity android:name=".ConfiguracionChinchon"/>
         <activity android:name=".InformacionClase"
             android:theme="@style/Theme.AppCompat.Dialog"></activity>
         <activity android:name=".TrucoGallo"/>

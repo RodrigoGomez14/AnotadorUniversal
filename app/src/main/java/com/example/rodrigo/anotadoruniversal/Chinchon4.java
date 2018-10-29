@@ -1,6 +1,7 @@
 package com.example.rodrigo.anotadoruniversal;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -14,7 +15,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class Chinchon extends AppCompatActivity {
+public class Chinchon4 extends AppCompatActivity {
     private TextView juguno,jugdos,jugtres,jugcuatro;
     private TextView textView30,textView31,textView32,textView33,textView34,textView35,textView36,textView37,textView38,textView39,textView40,textView41,textView42,textView43,textView44,textView45,textView46,
     textView47,textView48,textView49,textView50,textView51,textView52,textView53,textView54,textView55,textView56,textView57,textView58,textView59,textView60,textView61,textView62,textView63,textView64,textView65,
@@ -25,7 +26,7 @@ public class Chinchon extends AppCompatActivity {
     @Override
     protected void onCreate( Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.chinchon_activity);
+        setContentView(R.layout.chinchon4_activity);
         juguno=findViewById(R.id.juguno);
         jugdos=findViewById(R.id.jugdos);
         jugtres=findViewById(R.id.jugtres);
@@ -164,16 +165,16 @@ public class Chinchon extends AppCompatActivity {
         LinearLayout layout = new LinearLayout(this);
         layout.setOrientation(LinearLayout.VERTICAL);
         final EditText puntaje1 = new EditText(this);
-        puntaje1.setInputType(InputType.TYPE_NUMBER_FLAG_SIGNED);
+        puntaje1.setInputType(InputType.TYPE_CLASS_NUMBER|InputType.TYPE_NUMBER_FLAG_SIGNED);
         puntaje1.setHint(jugador1.getNombre());
         final EditText puntaje2 = new EditText(this);
-        puntaje2.setInputType(InputType.TYPE_NUMBER_FLAG_SIGNED);
+        puntaje2.setInputType(InputType.TYPE_CLASS_NUMBER|InputType.TYPE_NUMBER_FLAG_SIGNED);
         puntaje2.setHint(jugador2.getNombre());
         final EditText puntaje3 = new EditText(this);
-        puntaje3.setInputType(InputType.TYPE_NUMBER_FLAG_SIGNED);
+        puntaje3.setInputType(InputType.TYPE_CLASS_NUMBER|InputType.TYPE_NUMBER_FLAG_SIGNED);
         puntaje3.setHint(jugador3.getNombre());
         final EditText puntaje4 = new EditText(this);
-        puntaje4.setInputType(InputType.TYPE_NUMBER_FLAG_SIGNED);
+        puntaje4.setInputType(InputType.TYPE_CLASS_NUMBER|InputType.TYPE_NUMBER_FLAG_SIGNED);
         puntaje4.setHint(jugador4.getNombre());
         layout.addView(puntaje1);
         layout.addView(puntaje2);
@@ -368,9 +369,6 @@ public class Chinchon extends AppCompatActivity {
             jugador.sumarPuntos(puntos);
             total.setText(String.valueOf(jugador.getPuntos()));
         }
-        if(jugador.getPuntos()>=101){
-            Toast.makeText(this, "Partido Finalizado, Ganador: "+jugador.getNombre(), Toast.LENGTH_SHORT).show();
-        }
     }
 
 
@@ -443,16 +441,115 @@ public class Chinchon extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.menu_reinicio_configuracion,menu);
         return super.onCreateOptionsMenu(menu);
     }
+    public void reiniciarPartido(){
+        AlertDialog.Builder alertdialog=new AlertDialog.Builder(this);
+        alertdialog.setTitle("Reiniciar?");
+        alertdialog.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                jugador1.setPuntos(0);
+                jugador2.setPuntos(0);
+                jugador3.setPuntos(0);
+                jugador4.setPuntos(0);
+                total1.setText(R.string.Puntaje_en_0);
+                total2.setText(R.string.Puntaje_en_0);
+                total3.setText(R.string.Puntaje_en_0);
+                total4.setText(R.string.Puntaje_en_0);
+                textView30.setVisibility(View.INVISIBLE);
+                textView31.setVisibility(View.INVISIBLE);
+                textView32.setVisibility(View.INVISIBLE);
+                textView33.setVisibility(View.INVISIBLE);
+                textView34.setVisibility(View.INVISIBLE);
+                textView35.setVisibility(View.INVISIBLE);
+                textView36.setVisibility(View.INVISIBLE);
+                textView37.setVisibility(View.INVISIBLE);
+                textView38.setVisibility(View.INVISIBLE);
+                textView39.setVisibility(View.INVISIBLE);
+                textView40.setVisibility(View.INVISIBLE);
+                textView41.setVisibility(View.INVISIBLE);
+                textView42.setVisibility(View.INVISIBLE);
+                textView43.setVisibility(View.INVISIBLE);
+                textView44.setVisibility(View.INVISIBLE);
+                textView45.setVisibility(View.INVISIBLE);
+                textView46.setVisibility(View.INVISIBLE);
+                textView47.setVisibility(View.INVISIBLE);
+                textView48.setVisibility(View.INVISIBLE);
+                textView49.setVisibility(View.INVISIBLE);
+                textView50.setVisibility(View.INVISIBLE);
+                textView51.setVisibility(View.INVISIBLE);
+                textView52.setVisibility(View.INVISIBLE);
+                textView53.setVisibility(View.INVISIBLE);
+                textView54.setVisibility(View.INVISIBLE);
+                textView55.setVisibility(View.INVISIBLE);
+                textView56.setVisibility(View.INVISIBLE);
+                textView57.setVisibility(View.INVISIBLE);
+                textView58.setVisibility(View.INVISIBLE);
+                textView59.setVisibility(View.INVISIBLE);
+                textView60.setVisibility(View.INVISIBLE);
+                textView61.setVisibility(View.INVISIBLE);
+                textView62.setVisibility(View.INVISIBLE);
+                textView63.setVisibility(View.INVISIBLE);
+                textView64.setVisibility(View.INVISIBLE);
+                textView65.setVisibility(View.INVISIBLE);
+                textView66.setVisibility(View.INVISIBLE);
+                textView67.setVisibility(View.INVISIBLE);
+                textView68.setVisibility(View.INVISIBLE);
+                textView69.setVisibility(View.INVISIBLE);
+                textView70.setVisibility(View.INVISIBLE);
+                textView71.setVisibility(View.INVISIBLE);
+                textView72.setVisibility(View.INVISIBLE);
+                textView73.setVisibility(View.INVISIBLE);
+                textView74.setVisibility(View.INVISIBLE);
+                textView75.setVisibility(View.INVISIBLE);
+                textView76.setVisibility(View.INVISIBLE);
+                textView77.setVisibility(View.INVISIBLE);
+                textView78.setVisibility(View.INVISIBLE);
+                textView79.setVisibility(View.INVISIBLE);
+                textView80.setVisibility(View.INVISIBLE);
+                textView81.setVisibility(View.INVISIBLE);
+                textView82.setVisibility(View.INVISIBLE);
+                textView83.setVisibility(View.INVISIBLE);
+                textView84.setVisibility(View.INVISIBLE);
+                textView85.setVisibility(View.INVISIBLE);
+                cuentamanos=0;
+            }
+        });
+        alertdialog.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+
+            }
+        });
+        alertdialog.create().show();
+    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id=item.getItemId();
         if(id==R.id.Reiniciar){
-
+            reiniciarPartido();
         }
         else if(id==R.id.configuracion){
+        final AlertDialog.Builder alertdialog =new AlertDialog.Builder(this);
+        alertdialog.setTitle("Configuracion");
+        alertdialog.setMessage("Se perderán los puntajes");
+        alertdialog.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                Intent j = new Intent(Chinchon4.this,ConfiguracionChinchon.class);
+                j.putExtra("jugadores", 4);
+                startActivity(j);
+                finish();
 
+            }
+        });
+        alertdialog.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
 
+            }
+        });
+        alertdialog.create().show();
         }
         return super.onOptionsItemSelected(item);
     }

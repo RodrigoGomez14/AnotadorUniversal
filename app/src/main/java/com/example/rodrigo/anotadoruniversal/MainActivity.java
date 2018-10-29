@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(i);
     }
     public void snotadorChinchon(View vista){
-        Intent i = new Intent(MainActivity.this,Chinchon.class);
+        Intent i = new Intent(MainActivity.this,Chinchon2.class);
         startActivity(i);
     }
     public void anotadorBurako(View vista){
