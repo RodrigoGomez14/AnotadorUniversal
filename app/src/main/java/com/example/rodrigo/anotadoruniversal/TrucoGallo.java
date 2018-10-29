@@ -36,8 +36,11 @@ public class TrucoGallo extends AppCompatActivity {
             e.printStackTrace();
         }
         jugador1=new Jugador(0);
+        jugador1.setNombre("Jugador 1");
         jugador2=new Jugador(0);
+        jugador2.setNombre("Jugador 2");
         jugador3=new Jugador(0);
+        jugador3.setNombre("Jugador 3");
         equipo1=findViewById(R.id.equipo1);
         equipo2=findViewById(R.id.equipo2);
         equipo3=findViewById(R.id.equipo3);
