@@ -2,24 +2,17 @@ package com.example.rodrigo.anotadoruniversal;
 
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
-import android.widget.TableLayout;
-import android.widget.TableRow;
 import android.widget.TextView;
 
 public class Chinchon extends AppCompatActivity {
     private TextView juguno,jugdos,jugtres,jugcuatro;
     private Jugador jugador1,jugador2,jugador3,jugador4;
-    private TableLayout tabla;
-    private TableRow jugadores,boton;
-    private Button manoFinalizada;
     @Override
     protected void onCreate( Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,10 +29,6 @@ public class Chinchon extends AppCompatActivity {
         jugador2=new Jugador(0);
         jugador3=new Jugador(0);
         jugador4=new Jugador(0);
-        tabla=findViewById(R.id.tabla);
-        jugadores=findViewById(R.id.fila1);
-        boton=findViewById(R.id.fila2);
-        tabla.addView(jugadores);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
     }
 
@@ -105,13 +94,4 @@ public class Chinchon extends AppCompatActivity {
         alertialog.show();
     }
 
-    public class tabla{
-
-
-        public void crearTabla(){
-
-
-        }
-
-    }
 }

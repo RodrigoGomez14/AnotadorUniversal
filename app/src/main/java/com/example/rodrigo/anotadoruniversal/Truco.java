@@ -2,13 +2,11 @@ package com.example.rodrigo.anotadoruniversal;
 
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.media.Image;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -29,7 +27,12 @@ public class Truco extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_truco);
-        cantidadDePuntos= Integer.parseInt(getIntent().getExtras().getString("cantidadDePuntos"));
+        try {
+            cantidadDePuntos= Integer.parseInt(getIntent().getExtras().getString("cantidadDePuntos"));
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
         jugador1=new Jugador(0);
         jugador1.setNombre("Jugador 1");
         jugador2=new Jugador(0);
@@ -93,7 +96,7 @@ public class Truco extends AppCompatActivity {
             jugador.sumarPuntos(1);
         if(jugador.getPuntos()>=cantidadDePuntos){
             jugador.setPuntos(cantidadDePuntos);
-            Toast.makeText(this, "Partido Finalizado", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Partido Finalizado, Ganador: "+jugador.getNombre(), Toast.LENGTH_LONG).show();
         }
              if(jugador.equals(jugador1)){
                 byM(BoM1,resultado,jugador1);
@@ -107,10 +110,6 @@ public class Truco extends AppCompatActivity {
     public void restar(View vista, Jugador jugador){
         TextView resultado=(TextView)vista;
         jugador.restarPuntos(1);
-        if(jugador.getPuntos()>=cantidadDePuntos){
-            jugador.setPuntos(cantidadDePuntos);
-            Toast.makeText(this, "Partido Finalizado", Toast.LENGTH_LONG).show();
-        }
         if(jugador.getPuntos()<0){
             jugador.setPuntos(0);
         }
@@ -124,7 +123,6 @@ public class Truco extends AppCompatActivity {
     }
 
     public void capturarBoton(View vista){
-        Jugador jugador = capturarJugador(vista);
         Button boton=(Button)vista;
         if(boton.equals(boton1)){
                 sumar(puntos1,jugador1);
@@ -143,23 +141,6 @@ public class Truco extends AppCompatActivity {
                 actualizarLineas2(jugador2,boton);
         }
     }
-    public Jugador capturarJugador(View vista){
-        Button boton=(Button)vista;
-        if(boton.equals(boton1)){
-            return jugador1;
-        }
-        else if (boton.equals(boton2)){
-            return jugador1;
-        }
-        else if (boton.equals(boton3)){
-            return jugador2;
-        }
-        else if (boton.equals(boton4)){
-            return jugador2;
-        }
-        return null;
-    }
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_reinicio_configuracion,menu);
@@ -238,12 +219,12 @@ public class Truco extends AppCompatActivity {
     public void byM(TextView bym, TextView numero,Jugador jug){
 
         if(jug.getPuntos()<=16){
-            bym.setText("Malas");
+            bym.setText(R.string.Malas);
             bym.setTextColor(getResources().getColor(R.color.rojo));
             numero.setText(String.valueOf(jug.getPuntos()));
         }
         if (jug.getPuntos()>=16 && cantidadDePuntos==30) {
-            bym.setText("Buenas");
+            bym.setText(R.string.Buenas);
             bym.setTextColor(getResources().getColor(R.color.verde));
             numero.setText(String.valueOf(jug.getPuntos()-15));
         }

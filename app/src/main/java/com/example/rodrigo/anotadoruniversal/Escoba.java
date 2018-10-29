@@ -110,7 +110,7 @@ public class Escoba extends AppCompatActivity {
                     cambiarNombre(jugdos,equipo2,jugador2);
                 }
                 catch (Exception e){
-
+                    e.printStackTrace();
                 }
 
             }

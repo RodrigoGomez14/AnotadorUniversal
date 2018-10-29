@@ -12,7 +12,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class Chancho extends AppCompatActivity {
-    TextView letraC1_1,letraC1_2,letraC1_3,letraC1_4,letraC1_5,letraH1_1,letraH1_2,letraH1_3,letraH1_4,letraH1_5,letra_A,letra_A2,letra_A3,letra_A4,letra_A5,letra_N,letra_N1,
+    TextView letraC1_1,letraC1_2,letraC1_3,letraC1_4,letraC1_5,letraH1_1,letraH1_2,letraH1_3,letraH1_4,letraH1_5,letra_A,letra_A2,letra_A3,letra_A4,letra_A5,letra_N,
             letra_N2,letra_N3,letra_N4,letra_N5,letraC2_1,letraC2_2,letraC2_3,letraC2_4,letraC2_5,letraH2_1,letraH2_2,letraH2_3,letraH2_4,letraH2_5,letra_O,letra_O2,letra_O3,
             letra_O4,letra_O5;
     Jugador jugador1,jugador2,jugador3,jugador4,jugador5;

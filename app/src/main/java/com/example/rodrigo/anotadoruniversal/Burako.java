@@ -1,13 +1,11 @@
 package com.example.rodrigo.anotadoruniversal;
 
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.text.InputType;
-import android.text.Layout;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -19,7 +17,7 @@ import android.widget.Toast;
 
 public class Burako extends AppCompatActivity {
     private Jugador jugador1, jugador2;
-    private int cuentaManos,ronda;
+    private int cuentaManos;
     private TextView jug1, jug2, ronda1_1,ronda1_2,ronda2_1,ronda2_2,ronda3_1,ronda3_2,ronda4_1,ronda4_2,ronda5_1,ronda5_2,total_1,total_2;
 
     public Burako() {
@@ -98,9 +96,9 @@ public class Burako extends AppCompatActivity {
         String puntaje1= et1.getText().toString();
         String puntaje2= et2.getText().toString();
         organizarPuntaje(puntaje1,puntaje2);
-        casillero1.setText(""+puntaje1);
+        casillero1.setText(puntaje1);
         casillero1.setVisibility(View.VISIBLE);
-        casillero2.setText(""+puntaje2);
+        casillero2.setText(puntaje2);
         casillero2.setVisibility(View.VISIBLE);
 
     }
@@ -127,7 +125,7 @@ public class Burako extends AppCompatActivity {
                     mostrarPuntaje(ronda1_1,ronda1_2,et1,et2);
                 }
                 if ((cuentaManos == 1) && (jugador1.getPuntos() <= 3000) && (jugador2.getPuntos() <= 3000)) {
-                    mostrarPuntaje(ronda2_1,ronda2_2,et1,et2);;
+                    mostrarPuntaje(ronda2_1,ronda2_2,et1,et2);
 
                 }
                 if ((cuentaManos == 2) && (jugador1.getPuntos() <= 3000) && (jugador2.getPuntos() <= 3000)) {

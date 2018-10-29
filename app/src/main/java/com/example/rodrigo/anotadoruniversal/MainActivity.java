@@ -6,16 +6,12 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.support.v7.widget.Toolbar;
-import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
-    private Button burako1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        burako1=findViewById(R.id.botonburako);
     }
 
     public void anotadorTruco(View vista){

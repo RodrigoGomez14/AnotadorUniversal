@@ -2,7 +2,6 @@ package com.example.rodrigo.anotadoruniversal;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -18,7 +17,12 @@ public class configuracionEscoba extends AppCompatActivity {
         dosjugadores=findViewById(R.id.dosjugadores);
         tresjugadores=findViewById(R.id.tresjugadores);
         cuatrojugadores=findViewById(R.id.cuatrojugadores);
-        jugadores=getIntent().getExtras().getInt("jugadores");
+        try{
+            jugadores=getIntent().getExtras().getInt("jugadores");
+        }
+        catch (NullPointerException e){
+            e.printStackTrace();
+        }
         if(jugadores==2){
             dosjugadores.setChecked(true);
         }
