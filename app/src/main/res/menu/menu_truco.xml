@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/configuracion"
+        android:title="@string/Configuracion"
+        android:icon="@android:drawable/ic_menu_preferences"
+        app:showAsAction="always"
+        android:orderInCategory="2"/>
+    <item android:id="@+id/Reiniciar"
+        android:title="@string/Reiniciar"
+        android:icon="@android:drawable/ic_menu_revert"
+        app:showAsAction="always"
+        android:orderInCategory="1"/>
+    <item
+        android:id="@+id/PicaPicaAlResto"
+        android:title="PicaPicaAlResto"
+        android:icon="@android:drawable/ic_menu_add"
+        app:showAsAction="always"/>
+</menu>

@@ -15,8 +15,10 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import javax.crypto.spec.IvParameterSpec;
+
 public class Chinchon3 extends AppCompatActivity {
-    private TextView juguno,jugdos,jugtres,jugcuatro;
+    private TextView juguno,jugdos,jugtres;
     private TextView textView30,textView31,textView32,textView34,textView35,textView36,textView38,textView39,textView40,textView42,textView43,textView44,textView46,
             textView47,textView48,textView50,textView51,textView52,textView54,textView55,textView56,textView58,textView59,textView60,textView62,textView63,textView64,
             textView66,textView67,textView68,textView70,textView71,textView72,textView74,textView75,textView76,textView78,textView79,textView80,textView82,textView83,textView84,
@@ -30,7 +32,6 @@ public class Chinchon3 extends AppCompatActivity {
         juguno=findViewById(R.id.juguno);
         jugdos=findViewById(R.id.jugdos);
         jugtres=findViewById(R.id.jugtres);
-        jugcuatro=findViewById(R.id.jugcuatro);
         jugador1=new Jugador(0);
         jugador1.setNombre("Jugador 1");
         jugador2=new Jugador(0);
@@ -150,12 +151,24 @@ public class Chinchon3 extends AppCompatActivity {
         final EditText puntaje1 = new EditText(this);
         puntaje1.setInputType(InputType.TYPE_CLASS_NUMBER|InputType.TYPE_NUMBER_FLAG_SIGNED);
         puntaje1.setHint(jugador1.getNombre());
+        if(jugador1.getPuntos()>101){
+            puntaje1.setText("0");
+            puntaje1.setVisibility(View.INVISIBLE);
+        }
         final EditText puntaje2 = new EditText(this);
         puntaje2.setInputType(InputType.TYPE_CLASS_NUMBER|InputType.TYPE_NUMBER_FLAG_SIGNED);
         puntaje2.setHint(jugador2.getNombre());
+        if(jugador2.getPuntos()>101){
+            puntaje2.setText("0");
+            puntaje2.setVisibility(View.INVISIBLE);
+        }
         final EditText puntaje3 = new EditText(this);
         puntaje3.setInputType(InputType.TYPE_CLASS_NUMBER|InputType.TYPE_NUMBER_FLAG_SIGNED);
         puntaje3.setHint(jugador3.getNombre());
+        if(jugador3.getPuntos()>101){
+            puntaje3.setText("0");
+            puntaje3.setVisibility(View.INVISIBLE);
+        }
         layout.addView(puntaje1);
         layout.addView(puntaje2);
         layout.addView(puntaje3);
@@ -186,6 +199,7 @@ public class Chinchon3 extends AppCompatActivity {
             Toast.makeText(this, "Ingresar puntajes de todos los jugadores", Toast.LENGTH_SHORT).show();
 
         }
+
     }
 
 
@@ -319,6 +333,9 @@ public class Chinchon3 extends AppCompatActivity {
             jugador.sumarPuntos(puntos);
             total.setText(String.valueOf(jugador.getPuntos()));
         }
+        if(jugador.getPuntos()>101){
+            total.setTextColor(getResources().getColor(R.color.rojo));
+        }
     }
 
 
@@ -396,8 +413,11 @@ public class Chinchon3 extends AppCompatActivity {
                 jugador2.setPuntos(0);
                 jugador3.setPuntos(0);
                 total1.setText(R.string.Puntaje_en_0);
+                total1.setTextColor(getResources().getColor(R.color.Negro));
                 total2.setText(R.string.Puntaje_en_0);
+                total2.setTextColor(getResources().getColor(R.color.Negro));
                 total3.setText(R.string.Puntaje_en_0);
+                total3.setTextColor(getResources().getColor(R.color.Negro));
                 textView30.setVisibility(View.INVISIBLE);
                 textView31.setVisibility(View.INVISIBLE);
                 textView32.setVisibility(View.INVISIBLE);

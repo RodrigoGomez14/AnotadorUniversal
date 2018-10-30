@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.InputType;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -34,13 +35,15 @@ public class Truco extends AppCompatActivity {
             e.printStackTrace();
         }
         jugador1=new Jugador(0);
-        jugador1.setNombre("Jugador 1");
+        jugador1.setNombre(getResources().getString(R.string.Equipo_Nosotros));
         jugador2=new Jugador(0);
-        jugador2.setNombre("Jugador 2");
+        jugador2.setNombre(getResources().getString(R.string.Equipo_Ellos));
         puntos1= findViewById(R.id.puntos1);
         puntos2=findViewById(R.id.puntos2);
         equipo1=findViewById(R.id.equipo1);
+        equipo1.setText(jugador1.getNombre());
         equipo2=findViewById(R.id.equipo2);
+        equipo2.setText(jugador2.getNombre());
         boton1=findViewById(R.id.boton1);
         boton2=findViewById(R.id.boton2);
         boton3=findViewById(R.id.boton3);
@@ -143,7 +146,7 @@ public class Truco extends AppCompatActivity {
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_reinicio_configuracion,menu);
+        getMenuInflater().inflate(R.menu.menu_truco,menu);
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -173,7 +176,7 @@ public class Truco extends AppCompatActivity {
             });
             alertialog.show();
         }
-        if(id==R.id.Reiniciar){
+        else if(id==R.id.Reiniciar){
             AlertDialog.Builder alertdialog =new AlertDialog.Builder(this);
             alertdialog.setTitle("Reiniciar?");
             alertdialog.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
@@ -189,6 +192,60 @@ public class Truco extends AppCompatActivity {
                 }
             });
             alertdialog.create().show();
+        }
+        else if(id==R.id.PicaPicaAlResto){
+            AlertDialog.Builder alertialog=new AlertDialog.Builder(this);
+            alertialog.setTitle("Pica Pica al Resto");
+            alertialog.setMessage("Ingresar puntaje de cada mano sin espacios");
+            final EditText juego1=new EditText(this);
+            juego1.setHint("Mano 1 ("+jugador1.getNombre()+" - "+jugador2.getNombre()+")");
+            juego1.setInputType(InputType.TYPE_CLASS_NUMBER);
+            final EditText juego2=new EditText(this);
+            juego2.setHint("Mano 2 ("+jugador1.getNombre()+" - "+jugador2.getNombre()+")");
+            juego2.setInputType(InputType.TYPE_CLASS_NUMBER);
+            final EditText juego3=new EditText(this);
+            juego3.setHint("Mano 3 ("+jugador1.getNombre()+" - "+jugador2.getNombre()+")");
+            juego3.setInputType(InputType.TYPE_CLASS_NUMBER);
+            LinearLayout layout = new LinearLayout(this);
+            layout.setOrientation(LinearLayout.VERTICAL);
+            layout.addView(juego1);
+            layout.addView(juego2);
+            layout.addView(juego3);
+            alertialog.setView(layout);
+            alertialog.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                    String juego1String=juego1.getText().toString();
+                    String juego2String=juego2.getText().toString();
+                    String juego3String= juego3.getText().toString();
+                    int resultado1=Integer.parseInt(String.valueOf(juego1String.charAt(0)));
+                    int resultado2=Integer.parseInt(String.valueOf(juego1String.charAt(1)));
+                    int resultado3=Integer.parseInt(String.valueOf(juego2String.charAt(0)));
+                    int resultado4=Integer.parseInt(String.valueOf(juego2String.charAt(1)));
+                    int resultado5=Integer.parseInt(String.valueOf(juego3String.charAt(0)));
+                    int resultado6=Integer.parseInt(String.valueOf(juego3String.charAt(1)));
+                    int resultado_global=((resultado1-resultado2)+(resultado3-resultado4)+(resultado5-resultado6));
+                    if(resultado_global<0){
+                        for (int j = 0; j > resultado_global; j--) {
+                            boton3.callOnClick();
+                        }
+                    }
+                    else if (resultado_global>0){
+                        for (int j = 0; j < resultado_global; j++) {
+                            boton1.callOnClick();
+                        }
+                    }
+                }
+            });
+            alertialog.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+
+                }
+            });
+            alertialog.create().show();
+
+
         }
 
         return super.onOptionsItemSelected(item);

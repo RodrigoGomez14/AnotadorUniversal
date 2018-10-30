@@ -50,18 +50,18 @@ public class ConfiguracionChinchon extends AppCompatActivity {
     public void onBackPressed() {
 
         if(dosjugadores.isChecked()){
-            Intent j = new Intent(this,Escoba.class);
+            Intent j = new Intent(this,Chinchon2.class);
             startActivity(j);
             finish();
 
         }
         else if(tresjugadores.isChecked()){
-            Intent j = new Intent(this,Escoba_3_jug.class);
+            Intent j = new Intent(this,Chinchon3.class);
             startActivity(j);
             finish();
         }
         else if(cuatrojugadores.isChecked()){
-            Intent j = new Intent(this,Escoba_4_jug.class);
+            Intent j = new Intent(this,Chinchon4.class);
             startActivity(j);
             finish();
         }
