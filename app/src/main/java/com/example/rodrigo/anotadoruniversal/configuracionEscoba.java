@@ -72,7 +72,7 @@ public class configuracionEscoba extends AppCompatActivity {
             }
             else if(tresjugadores.isChecked()){
                 if(chorizo.isChecked()){
-                    Intent j=new Intent(this,Chorizo.class);
+                    Intent j=new Intent(this,Chorizo2.class);
                     startActivity(j);
                     finish();
                 }

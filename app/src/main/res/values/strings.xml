@@ -64,7 +64,14 @@
     <string name="Setenta">Setenta</string>
     <string name="Cartas">Cartas</string>
     <string name="Oros">Oros</string>
-    <string name="Explicacion_Chorizo">El chorizo es una variacion de la escoba del 15. Tiene la misma dinamica de juego, pero hay mas y diferentes jugadas para sumar puntos</string>
+    <string name="Explicacion_Chorizo">El chorizo es una variacion de la escoba del 15. Tiene la misma dinamica de juego, pero hay mas y diferentes jugadas para sumar puntos.</string>
+    <string name="TresDelNueve">Tres del Nueve (3)</string>
+    <string name="DosdelSiete">Dos del Siete (2)</string>
+    <string name="Escalera3">Escalera (3)</string>
+    <string name="flor">Flore (3)</string>
+    <string name="ChorizoJugada">Chorizo (10)</string>
+    <string name="DocedeOro">Doce de Oro</string>
+    <string name="extras">Extras</string>
     
     
     
