@@ -5,10 +5,12 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.CheckBox;
 import android.widget.RadioButton;
 
 public class configuracionEscoba extends AppCompatActivity {
     private RadioButton dosjugadores,tresjugadores,cuatrojugadores;
+    private CheckBox chorizo;
     private int jugadores;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +19,7 @@ public class configuracionEscoba extends AppCompatActivity {
         dosjugadores=findViewById(R.id.dosjugadores);
         tresjugadores=findViewById(R.id.tresjugadores);
         cuatrojugadores=findViewById(R.id.cuatrojugadores);
+        chorizo=findViewById(R.id.chorizoCheck);
         try{
             jugadores=getIntent().getExtras().getInt("jugadores");
         }
@@ -54,20 +57,44 @@ public class configuracionEscoba extends AppCompatActivity {
     public void onBackPressed() {
 
             if(dosjugadores.isChecked()){
-                Intent j = new Intent(this,Escoba.class);
-                startActivity(j);
-                finish();
+                if(chorizo.isChecked()){
+                    Intent j=new Intent(this,Chorizo.class);
+                    startActivity(j);
+                    finish();
+                }
+
+                else{
+                    Intent j = new Intent(this,Escoba.class);
+                    startActivity(j);
+                    finish();
+                }
 
             }
             else if(tresjugadores.isChecked()){
-                Intent j = new Intent(this,Escoba_3_jug.class);
-                startActivity(j);
-                finish();
+                if(chorizo.isChecked()){
+                    Intent j=new Intent(this,Chorizo.class);
+                    startActivity(j);
+                    finish();
+                }
+
+                else{
+                    Intent j = new Intent(this,Escoba_3_jug.class);
+                    startActivity(j);
+                    finish();
+                }
             }
             else if(cuatrojugadores.isChecked()){
-                Intent j = new Intent(this,Escoba_4_jug.class);
-                startActivity(j);
-                finish();
+                if(chorizo.isChecked()){
+                    Intent j=new Intent(this,Chorizo.class);
+                    startActivity(j);
+                    finish();
+                }
+
+                else{
+                    Intent j = new Intent(this,Escoba_4_jug.class);
+                    startActivity(j);
+                    finish();
+                }
             }
 
     }

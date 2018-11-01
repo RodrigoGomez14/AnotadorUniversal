@@ -117,14 +117,14 @@ public class Chinchon2 extends AppCompatActivity {
         final EditText puntaje1 = new EditText(this);
         puntaje1.setInputType(InputType.TYPE_CLASS_NUMBER|InputType.TYPE_NUMBER_FLAG_SIGNED);
         puntaje1.setHint(jugador1.getNombre());
-        if(jugador1.getPuntos()>101){
+        if(jugador1.getPuntos()>=101){
             puntaje1.setText("0");
             puntaje1.setVisibility(View.INVISIBLE);
         }
         final EditText puntaje2 = new EditText(this);
         puntaje2.setInputType(InputType.TYPE_CLASS_NUMBER|InputType.TYPE_NUMBER_FLAG_SIGNED);
         puntaje2.setHint(jugador2.getNombre());
-        if(jugador2.getPuntos()>101){
+        if(jugador2.getPuntos()>=101){
             puntaje2.setText("0");
             puntaje2.setVisibility(View.INVISIBLE);
         }
@@ -261,7 +261,7 @@ public class Chinchon2 extends AppCompatActivity {
             jugador.sumarPuntos(puntos);
             total.setText(String.valueOf(jugador.getPuntos()));
         }
-        if(jugador.getPuntos()>101){
+        if(jugador.getPuntos()>=101){
             total.setTextColor(getResources().getColor(R.color.rojo));
         }
     }

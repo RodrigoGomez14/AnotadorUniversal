@@ -146,7 +146,7 @@ public class Truco extends AppCompatActivity {
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_truco,menu);
+        getMenuInflater().inflate(R.menu.menu_truco_chorizo,menu);
         return super.onCreateOptionsMenu(menu);
     }
 

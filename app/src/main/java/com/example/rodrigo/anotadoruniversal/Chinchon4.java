@@ -167,28 +167,28 @@ public class Chinchon4 extends AppCompatActivity {
         final EditText puntaje1 = new EditText(this);
         puntaje1.setInputType(InputType.TYPE_CLASS_NUMBER|InputType.TYPE_NUMBER_FLAG_SIGNED);
         puntaje1.setHint(jugador1.getNombre());
-        if(jugador1.getPuntos()>101){
+        if(jugador1.getPuntos()>=101){
             puntaje1.setText("0");
             puntaje1.setVisibility(View.INVISIBLE);
         }
         final EditText puntaje2 = new EditText(this);
         puntaje2.setInputType(InputType.TYPE_CLASS_NUMBER|InputType.TYPE_NUMBER_FLAG_SIGNED);
         puntaje2.setHint(jugador2.getNombre());
-        if(jugador2.getPuntos()>101){
+        if(jugador2.getPuntos()>=101){
             puntaje2.setText("0");
             puntaje2.setVisibility(View.INVISIBLE);
         }
         final EditText puntaje3 = new EditText(this);
         puntaje3.setInputType(InputType.TYPE_CLASS_NUMBER|InputType.TYPE_NUMBER_FLAG_SIGNED);
         puntaje3.setHint(jugador3.getNombre());
-        if(jugador3.getPuntos()>101){
+        if(jugador3.getPuntos()>=101){
             puntaje3.setText("0");
             puntaje3.setVisibility(View.INVISIBLE);
         }
         final EditText puntaje4 = new EditText(this);
         puntaje4.setInputType(InputType.TYPE_CLASS_NUMBER|InputType.TYPE_NUMBER_FLAG_SIGNED);
         puntaje4.setHint(jugador4.getNombre());
-        if(jugador4.getPuntos()>101){
+        if(jugador4.getPuntos()>=101){
             puntaje4.setText("0");
             puntaje4.setVisibility(View.INVISIBLE);
         }
@@ -385,6 +385,9 @@ public class Chinchon4 extends AppCompatActivity {
             jugador.sumarPuntos(puntos);
             total.setText(String.valueOf(jugador.getPuntos()));
         }
+        if(jugador.getPuntos()>=101){
+            total.setTextColor(getResources().getColor(R.color.rojo));
+        }
     }
 
 
@@ -468,9 +471,13 @@ public class Chinchon4 extends AppCompatActivity {
                 jugador3.setPuntos(0);
                 jugador4.setPuntos(0);
                 total1.setText(R.string.Puntaje_en_0);
+                total1.setTextColor(getResources().getColor(R.color.Negro));
                 total2.setText(R.string.Puntaje_en_0);
+                total2.setTextColor(getResources().getColor(R.color.Negro));
                 total3.setText(R.string.Puntaje_en_0);
+                total3.setTextColor(getResources().getColor(R.color.Negro));
                 total4.setText(R.string.Puntaje_en_0);
+                total4.setTextColor(getResources().getColor(R.color.Negro));
                 textView30.setVisibility(View.INVISIBLE);
                 textView31.setVisibility(View.INVISIBLE);
                 textView32.setVisibility(View.INVISIBLE);
