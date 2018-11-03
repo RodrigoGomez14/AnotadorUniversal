@@ -4,7 +4,6 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.text.InputType;
@@ -12,7 +11,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
@@ -152,16 +150,34 @@ public class Uno extends AppCompatActivity {
         }
         final EditText nombre5 = new EditText(this);
         nombre5.setHint("Jugador 5");
+        if(nuevaPartida&&!jugador5.getNombre().equals("")){
+            nombre5.setText(jugador5.getNombre());
+        }
         final EditText nombre6 = new EditText(this);
         nombre6.setHint("Jugador 6");
+        if(nuevaPartida&&!jugador6.getNombre().equals("")){
+            nombre6.setText(jugador6.getNombre());
+        }
         final EditText nombre7 = new EditText(this);
         nombre7.setHint("Jugador 7");
+        if(nuevaPartida&&!jugador7.getNombre().equals("")){
+            nombre7.setText(jugador7.getNombre());
+        }
         final EditText nombre8 = new EditText(this);
         nombre8.setHint("Jugador 8");
+        if(nuevaPartida&&!jugador8.getNombre().equals("")){
+            nombre8.setText(jugador8.getNombre());
+        }
         final EditText nombre9 = new EditText(this);
         nombre9.setHint("Jugador 9");
+        if(nuevaPartida&&!jugador9.getNombre().equals("")){
+            nombre9.setText(jugador9.getNombre());
+        }
         final EditText nombre10 = new EditText(this);
         nombre10.setHint("Jugador 10");
+        if(nuevaPartida&&!jugador10.getNombre().equals("")){
+            nombre10.setText(jugador10.getNombre());
+        }
         layout.addView(nombre1);
         layout.addView(nombre2);
         layout.addView(nombre3);
@@ -206,13 +222,18 @@ public class Uno extends AppCompatActivity {
                 if(mostrarJugadores(nombre10,jugador10)){
                     jugadores++;
                 }
-                avisoPrincipio();
+                if(nombre1.getText().toString().equals("")&&nombre2.getText().toString().equals("")&&nombre3.getText().toString().equals("")&&nombre4.getText().toString().equals("")&&nombre5.getText().toString().equals("")&&nombre6.getText().toString().equals("")&&nombre7.getText().toString().equals("")&&nombre8.getText().toString().equals("")&&nombre9.getText().toString().equals("")&&nombre10.getText().toString().equals("")){
+                    finish();
+                }
+                else{
+                    avisoPrincipio();
+                }
             }
         });
         alertdialog.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-
+            finish();
             }
         });
         alertdialog.create().show();
@@ -333,6 +354,26 @@ public class Uno extends AppCompatActivity {
                 public void onClick(DialogInterface dialogInterface, int i) {
                     capaDeInvisivilidad();
                     seleccionarJugadores(true);
+                    jugador1.setPuntos(0);
+                    sumarPuntos(0,jugador1,resultado1);
+                    jugador2.setPuntos(0);
+                    sumarPuntos(0,jugador2,resultado2);
+                    jugador3.setPuntos(0);
+                    sumarPuntos(0,jugador3,resultado3);
+                    jugador4.setPuntos(0);
+                    sumarPuntos(0,jugador4,resultado4);
+                    jugador5.setPuntos(0);
+                    sumarPuntos(0,jugador5,resultado5);
+                    jugador6.setPuntos(0);
+                    sumarPuntos(0,jugador6,resultado6);
+                    jugador7.setPuntos(0);
+                    sumarPuntos(0,jugador6,resultado6);
+                    jugador8.setPuntos(0);
+                    sumarPuntos(0,jugador7,resultado7);
+                    jugador9.setPuntos(0);
+                    sumarPuntos(0,jugador9,resultado9);
+                    jugador10.setPuntos(0);
+                    sumarPuntos(0,jugador10,resultado10);
                     jugadores=0;
                 }
             });
@@ -393,35 +434,91 @@ public class Uno extends AppCompatActivity {
             layout.addView(et1);
         }
         else if(jugadores==2){
-            layout.addView(et1);
-            layout.addView(et2);
+            if(jugador1.getPuntos()<500){
+                if(!ch1.isChecked()){
+                    layout.addView(et1);
+                }
+            }
+            if(jugador2.getPuntos()<500){
+                if(!ch2.isChecked()){
+                    layout.addView(et2);
+                }
+            }
             arrayEt[0]=et1;
             arrayEt[1]=et2;
         }
         else if(jugadores==3){
-            layout.addView(et1);
-            layout.addView(et2);
-            layout.addView(et3);
+            if(jugador1.getPuntos()<500){
+                if(!ch1.isChecked()){
+                    layout.addView(et1);
+                }
+            }
+            if(jugador2.getPuntos()<500){
+                if(!ch2.isChecked()){
+                    layout.addView(et2);
+                }
+            }
+            if(jugador3.getPuntos()<500){
+                if(!ch3.isChecked()){
+                    layout.addView(et3);
+                }
+            }
             arrayEt[0]=et1;
             arrayEt[1]=et2;
             arrayEt[2]=et3;
         }
         else if(jugadores==4){
-            layout.addView(et1);
-            layout.addView(et2);
-            layout.addView(et3);
-            layout.addView(et4);
+            if(jugador1.getPuntos()<500){
+                if(!ch1.isChecked()){
+                    layout.addView(et1);
+                }
+            }
+            if(jugador2.getPuntos()<500){
+                if(!ch2.isChecked()){
+                    layout.addView(et2);
+                }
+            }
+            if(jugador3.getPuntos()<500){
+                if(!ch3.isChecked()){
+                    layout.addView(et3);
+                }
+            }
+            if(jugador4.getPuntos()<500){
+                if(!ch4.isChecked()){
+                    layout.addView(et4);
+                }
+            }
             arrayEt[0]=et1;
             arrayEt[1]=et2;
             arrayEt[2]=et3;
             arrayEt[3]=et4;
         }
         else if(jugadores==5){
-            layout.addView(et1);
-            layout.addView(et2);
-            layout.addView(et3);
-            layout.addView(et4);
-            layout.addView(et5);
+            if(jugador1.getPuntos()<500){
+                if(!ch1.isChecked()){
+                    layout.addView(et1);
+                }
+            }
+            if(jugador2.getPuntos()<500){
+                if(!ch2.isChecked()){
+                    layout.addView(et2);
+                }
+            }
+            if(jugador3.getPuntos()<500){
+                if(!ch3.isChecked()){
+                    layout.addView(et3);
+                }
+            }
+            if(jugador4.getPuntos()<500){
+                if(!ch4.isChecked()){
+                    layout.addView(et4);
+                }
+            }
+            if(jugador5.getPuntos()<500){
+                if(!ch5.isChecked()){
+                    layout.addView(et5);
+                }
+            }
             arrayEt[0]=et1;
             arrayEt[1]=et2;
             arrayEt[2]=et3;
@@ -429,12 +526,36 @@ public class Uno extends AppCompatActivity {
             arrayEt[4]=et5;
         }
         else if(jugadores==6){
-            layout.addView(et1);
-            layout.addView(et2);
-            layout.addView(et3);
-            layout.addView(et4);
-            layout.addView(et5);
-            layout.addView(et6);
+            if(jugador1.getPuntos()<500){
+                if(!ch1.isChecked()){
+                    layout.addView(et1);
+                }
+            }
+            if(jugador2.getPuntos()<500){
+                if(!ch2.isChecked()){
+                    layout.addView(et2);
+                }
+            }
+            if(jugador3.getPuntos()<500){
+                if(!ch3.isChecked()){
+                    layout.addView(et3);
+                }
+            }
+            if(jugador4.getPuntos()<500){
+                if(!ch4.isChecked()){
+                    layout.addView(et4);
+                }
+            }
+            if(jugador5.getPuntos()<500){
+                if(!ch5.isChecked()){
+                    layout.addView(et5);
+                }
+            }
+            if(jugador6.getPuntos()<500){
+                if(!ch6.isChecked()){
+                    layout.addView(et6);
+                }
+            }
             arrayEt[0]=et1;
             arrayEt[1]=et2;
             arrayEt[2]=et3;
@@ -443,13 +564,41 @@ public class Uno extends AppCompatActivity {
             arrayEt[5]=et6;
         }
         else if(jugadores==7){
-            layout.addView(et1);
-            layout.addView(et2);
-            layout.addView(et3);
-            layout.addView(et4);
-            layout.addView(et5);
-            layout.addView(et6);
-            layout.addView(et7);
+            if(jugador1.getPuntos()<500){
+                if(!ch1.isChecked()){
+                    layout.addView(et1);
+                }
+            }
+            if(jugador2.getPuntos()<500){
+                if(!ch2.isChecked()){
+                    layout.addView(et2);
+                }
+            }
+            if(jugador3.getPuntos()<500){
+                if(!ch3.isChecked()){
+                    layout.addView(et3);
+                }
+            }
+            if(jugador4.getPuntos()<500){
+                if(!ch4.isChecked()){
+                    layout.addView(et4);
+                }
+            }
+            if(jugador5.getPuntos()<500){
+                if(!ch5.isChecked()){
+                    layout.addView(et5);
+                }
+            }
+            if(jugador6.getPuntos()<500){
+                if(!ch6.isChecked()){
+                    layout.addView(et6);
+                }
+            }
+            if(jugador7.getPuntos()<500){
+                if(!ch7.isChecked()){
+                    layout.addView(et7);
+                }
+            }
             arrayEt[0]=et1;
             arrayEt[1]=et2;
             arrayEt[2]=et3;
@@ -459,14 +608,46 @@ public class Uno extends AppCompatActivity {
             arrayEt[6]=et7;
         }
         else if(jugadores==8){
-            layout.addView(et1);
-            layout.addView(et2);
-            layout.addView(et3);
-            layout.addView(et4);
-            layout.addView(et5);
-            layout.addView(et6);
-            layout.addView(et7);
-            layout.addView(et8);
+            if(jugador1.getPuntos()<500){
+                if(!ch1.isChecked()){
+                    layout.addView(et1);
+                }
+            }
+            if(jugador2.getPuntos()<500){
+                if(!ch2.isChecked()){
+                    layout.addView(et2);
+                }
+            }
+            if(jugador3.getPuntos()<500){
+                if(!ch3.isChecked()){
+                    layout.addView(et3);
+                }
+            }
+            if(jugador4.getPuntos()<500){
+                if(!ch4.isChecked()){
+                    layout.addView(et4);
+                }
+            }
+            if(jugador5.getPuntos()<500){
+                if(!ch5.isChecked()){
+                    layout.addView(et5);
+                }
+            }
+            if(jugador6.getPuntos()<500){
+                if(!ch6.isChecked()){
+                    layout.addView(et6);
+                }
+            }
+            if(jugador7.getPuntos()<500){
+                if(!ch7.isChecked()){
+                    layout.addView(et7);
+                }
+            }
+            if(jugador8.getPuntos()<500){
+                if(!ch8.isChecked()){
+                    layout.addView(et8);
+                }
+            }
             arrayEt[0]=et1;
             arrayEt[1]=et2;
             arrayEt[2]=et3;
@@ -477,15 +658,51 @@ public class Uno extends AppCompatActivity {
             arrayEt[7]=et8;
         }
         else if(jugadores==9){
-            layout.addView(et1);
-            layout.addView(et2);
-            layout.addView(et3);
-            layout.addView(et4);
-            layout.addView(et5);
-            layout.addView(et6);
-            layout.addView(et7);
-            layout.addView(et8);
-            layout.addView(et9);
+            if(jugador1.getPuntos()<500){
+                if(!ch1.isChecked()){
+                    layout.addView(et1);
+                }
+            }
+            if(jugador2.getPuntos()<500){
+                if(!ch2.isChecked()){
+                    layout.addView(et2);
+                }
+            }
+            if(jugador3.getPuntos()<500){
+                if(!ch3.isChecked()){
+                    layout.addView(et3);
+                }
+            }
+            if(jugador4.getPuntos()<500){
+                if(!ch4.isChecked()){
+                    layout.addView(et4);
+                }
+            }
+            if(jugador5.getPuntos()<500){
+                if(!ch5.isChecked()){
+                    layout.addView(et5);
+                }
+            }
+            if(jugador6.getPuntos()<500){
+                if(!ch6.isChecked()){
+                    layout.addView(et6);
+                }
+            }
+            if(jugador7.getPuntos()<500){
+                if(!ch7.isChecked()){
+                    layout.addView(et7);
+                }
+            }
+            if(jugador8.getPuntos()<500){
+                if(!ch8.isChecked()){
+                    layout.addView(et8);
+                }
+            }
+            if(jugador9.getPuntos()<500){
+                if(!ch9.isChecked()){
+                    layout.addView(et9);
+                }
+            }
             arrayEt[0]=et1;
             arrayEt[1]=et2;
             arrayEt[2]=et3;
@@ -497,16 +714,56 @@ public class Uno extends AppCompatActivity {
             arrayEt[8]=et9;
         }
         else if(jugadores==10){
-            layout.addView(et1);
-            layout.addView(et2);
-            layout.addView(et3);
-            layout.addView(et4);
-            layout.addView(et5);
-            layout.addView(et6);
-            layout.addView(et7);
-            layout.addView(et8);
-            layout.addView(et9);
-            layout.addView(et10);
+            if(jugador1.getPuntos()<500){
+                if(!ch1.isChecked()){
+                    layout.addView(et1);
+                }
+            }
+            if(jugador2.getPuntos()<500){
+                if(!ch2.isChecked()){
+                    layout.addView(et2);
+                }
+            }
+            if(jugador3.getPuntos()<500){
+                if(!ch3.isChecked()){
+                    layout.addView(et3);
+                }
+            }
+            if(jugador4.getPuntos()<500){
+                if(!ch4.isChecked()){
+                    layout.addView(et4);
+                }
+            }
+            if(jugador5.getPuntos()<500){
+                if(!ch5.isChecked()){
+                    layout.addView(et5);
+                }
+            }
+            if(jugador6.getPuntos()<500){
+                if(!ch6.isChecked()){
+                    layout.addView(et6);
+                }
+            }
+            if(jugador7.getPuntos()<500){
+                if(!ch7.isChecked()){
+                    layout.addView(et7);
+                }
+            }
+            if(jugador8.getPuntos()<500){
+                if(!ch8.isChecked()){
+                    layout.addView(et8);
+                }
+            }
+            if(jugador9.getPuntos()<500){
+                if(!ch9.isChecked()){
+                    layout.addView(et9);
+                }
+            }
+            if(jugador10.getPuntos()<500){
+                if(!ch10.isChecked()){
+                    layout.addView(et10);
+                }
+            }
             arrayEt[0]=et1;
             arrayEt[1]=et2;
             arrayEt[2]=et3;
@@ -526,8 +783,7 @@ public class Uno extends AppCompatActivity {
                     if(!arrayEt[j].getText().toString().equals(""))
                         sumatoria+=(Integer.parseInt(arrayEt[j].getText().toString()));
                     else {
-                        Toast.makeText(Uno.this, "Ingresar puntaje de todos los jugadores", Toast.LENGTH_SHORT).show();
-                        break;
+                        sumatoria+=0;
                     }
                 }
                 if(ch1.isChecked()){
@@ -575,6 +831,7 @@ public class Uno extends AppCompatActivity {
                 if(jugador.getPuntos()<500){
                     jugador.sumarPuntos(puntos);
                     puntaje.setText(String.valueOf(jugador.getPuntos()));
+                    puntaje.setTextColor(getResources().getColor(R.color.Negro));
                 }
                 if(jugador.getPuntos()>=500){
                     puntaje.setTextColor(getResources().getColor(R.color.verde));
