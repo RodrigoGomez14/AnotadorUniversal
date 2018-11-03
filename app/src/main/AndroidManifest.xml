@@ -54,6 +54,7 @@
             android:theme="@style/Theme.AppCompat.Dialog"/>
         <activity android:name=".TrucoGallo"
             android:label="@string/boton_truco"/>
+        <activity android:name=".Jodete"/>
         <activity android:name=".MainActivity"/>
         <activity
             android:name=".SplashActivity"
