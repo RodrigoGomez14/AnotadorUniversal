@@ -6,16 +6,12 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.support.v7.widget.Toolbar;
-import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
-    private Button burako1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        burako1=findViewById(R.id.botonburako);
     }
 
     public void anotadorTruco(View vista){
@@ -40,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(i);
     }
     public void snotadorChinchon(View vista){
-        Intent i = new Intent(MainActivity.this,Chinchon.class);
+        Intent i = new Intent(MainActivity.this,Chinchon2.class);
         startActivity(i);
     }
     public void anotadorBurako(View vista){
@@ -49,6 +45,14 @@ public class MainActivity extends AppCompatActivity {
     }
     public void anotadorRummy(View vista){
         Intent i=new Intent(this,Rummy.class);
+        startActivity(i);
+    }
+    public void anotadorUno(View vista){
+        Intent i=new Intent(this,Uno.class);
+        startActivity(i);
+    }
+    public void anotadorDiezMil(View vista){
+        Intent i = new Intent(this,Diezmil.class);
         startActivity(i);
     }
 

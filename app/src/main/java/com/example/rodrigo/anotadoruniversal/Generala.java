@@ -1,30 +1,22 @@
 package com.example.rodrigo.anotadoruniversal;
 
-import android.app.Dialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.text.InputType;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
+import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.LinearLayout;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import org.w3c.dom.Text;
 
 public class Generala extends AppCompatActivity  {
-    String jguada;
     private TextView jugadoruno, jugadordos, jugadortres, jugadorcuatro, unouno, unodos, unotres, unocuatro, dosuno, dosdos, dostres, doscuatro, tresuno, tresdos, trestres, trescuatro, cuatrouno, cuatrodos, cuatrotres, cuatrocuatro, cincouno,
             cincodos, cincotres, cincocuatro, seisuno, seisdos, seistres, seiscuatro, escalerauno, escalerados, escaleratres, escaleracuatro, fulluno, fulldos, fulltres,
             fullcuatro, pokeruno, pokerdos, pokertres, pokercuatro, generalauno, generalados, generalatres, generalacuatro, generala2uno, generala2dos, generala2tres, generala2cuatro,
-            total1, total2, total3, total4, txt1, txt2, txt3, txt4, txt5, txt6, txtescalera, txtfull, txtpoker, txtgenerala, txtgeneralados;
+            total1, total2, total3, total4;
     private Jugador jugador1, jugador2, jugador3, jugador4;
 
     @Override
@@ -79,17 +71,6 @@ public class Generala extends AppCompatActivity  {
         generala2dos = findViewById(R.id.generala2dos);
         generala2tres = findViewById(R.id.generala2tres);
         generala2cuatro = findViewById(R.id.generala2cuatro);
-        txt1 = findViewById(R.id.txt1);
-        txt2 = findViewById(R.id.txt2);
-        txt3 = findViewById(R.id.txt3);
-        txt4 = findViewById(R.id.txt4);
-        txt5 = findViewById(R.id.txt5);
-        txt6 = findViewById(R.id.txt6);
-        txtescalera = findViewById(R.id.txtescalera);
-        txtfull = findViewById(R.id.txtfull);
-        txtpoker = findViewById(R.id.txtpoker);
-        txtgenerala = findViewById(R.id.txtgenerala);
-        txtgeneralados = findViewById(R.id.txtgeneralados);
         generala2cuatro = findViewById(R.id.generala2cuatro);
         total1 = findViewById(R.id.Total1);
         total2 = findViewById(R.id.Total2);
@@ -104,6 +85,7 @@ public class Generala extends AppCompatActivity  {
         jugador4 = new Jugador(0);
         jugador4.setNombre("Jugador 4");
         cambiarNombre(null);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
     }
 
@@ -167,7 +149,6 @@ public class Generala extends AppCompatActivity  {
 
 
     public void elegirPuntaje(View vista) {
-        final Jugador jugador= capturarJugador(vista);
         final TextView casillero = (TextView) vista;
         final String jugada=Jugada(casillero);
         AlertDialog.Builder alertdialog= alertPuntos(jugada,casillero);
@@ -178,263 +159,254 @@ public class Generala extends AppCompatActivity  {
         final Jugador jugador = capturarJugador(casillero);
         final AlertDialog.Builder nuevaAlerta=new AlertDialog.Builder(this);
         nuevaAlerta.setTitle(jugador.getNombre()+"\nJugada: "+jugada );
-        if(jugada.equals("1")) {
-            nuevaAlerta.setItems(R.array.puntos_dado_uno, new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialogInterface, int i) {
-                    switch (i) {
-                        case 0:
-                            actualizarCasilleros(casillero, jugador, 0);
-                            break;
-                        case 1:
-                            actualizarCasilleros(casillero, jugador, 1);
-                            break;
-                        case 2:
-                            actualizarCasilleros(casillero, jugador, 2);
-                            break;
-                        case 3:
-                            actualizarCasilleros(casillero, jugador, 3);
-                            break;
-                        case 4:
-                            actualizarCasilleros(casillero, jugador, 4);
-                            break;
-                        case 5:
-                            actualizarCasilleros(casillero, jugador, 5);
-                            break;
+        switch (jugada) {
+            case "1":
+                nuevaAlerta.setItems(R.array.puntos_dado_uno, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        switch (i) {
+                            case 0:
+                                actualizarCasilleros(casillero, jugador, 0);
+                                break;
+                            case 1:
+                                actualizarCasilleros(casillero, jugador, 1);
+                                break;
+                            case 2:
+                                actualizarCasilleros(casillero, jugador, 2);
+                                break;
+                            case 3:
+                                actualizarCasilleros(casillero, jugador, 3);
+                                break;
+                            case 4:
+                                actualizarCasilleros(casillero, jugador, 4);
+                                break;
+                            case 5:
+                                actualizarCasilleros(casillero, jugador, 5);
+                                break;
+                        }
                     }
-                }
-            });
-            return nuevaAlerta;
-        }
-        else if(jugada.equals("2")) {
-            nuevaAlerta.setItems(R.array.puntos_dado_dos, new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialogInterface, int i) {
-                    switch (i) {
-                        case 0:
-                            actualizarCasilleros(casillero, jugador, 0);
-                            break;
-                        case 1:
-                            actualizarCasilleros(casillero, jugador, 2);
-                            break;
-                        case 2:
-                            actualizarCasilleros(casillero, jugador, 4);
-                            break;
-                        case 3:
-                            actualizarCasilleros(casillero, jugador, 6);
-                            break;
-                        case 4:
-                            actualizarCasilleros(casillero, jugador, 8);
-                            break;
-                        case 5:
-                            actualizarCasilleros(casillero, jugador, 10);
-                            break;
-                    }
-                }
-            });
-            return nuevaAlerta;
-        }
-                 else if (jugada.equals("3")) {
-            nuevaAlerta.setItems(R.array.puntos_lado_tres, new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialogInterface, int i) {
-                    switch (i) {
-                        case 0:
-                            actualizarCasilleros(casillero, jugador, 0);
-                            break;
-                        case 1:
-                            actualizarCasilleros(casillero, jugador, 3);
-                            break;
-                        case 2:
-                            actualizarCasilleros(casillero, jugador, 6);
-                            break;
-                        case 3:
-                            actualizarCasilleros(casillero, jugador, 9);
-                            break;
-                        case 4:
-                            actualizarCasilleros(casillero, jugador, 12);
-                            break;
-                        case 5:
-                            actualizarCasilleros(casillero, jugador, 15);
-                            break;
-                    }
-                }
-            });
-            return nuevaAlerta;
-        }
-                    else if(jugada.equals("4")) {
-            nuevaAlerta.setItems(R.array.puntos_lado_cuatro, new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialogInterface, int i) {
-                    switch (i) {
-                        case 0:
-                            actualizarCasilleros(casillero, jugador, 0);
-                            break;
-                        case 1:
-                            actualizarCasilleros(casillero, jugador, 4);
-                            break;
-                        case 2:
-                            actualizarCasilleros(casillero, jugador, 8);
-                            break;
-                        case 3:
-                            actualizarCasilleros(casillero, jugador, 12);
-                            break;
-                        case 4:
-                            actualizarCasilleros(casillero, jugador, 16);
-                            break;
-                        case 5:
-                            actualizarCasilleros(casillero, jugador, 20);
-                            break;
-                    }
-                }
-            });
-            return nuevaAlerta;
-        }
-        else if(jugada.equals("5")) {
-                nuevaAlerta.setItems(R.array.puntos_lado_cinco, new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialogInterface, int i) {
-                    switch (i) {
-                        case 0:
-                            actualizarCasilleros(casillero, jugador, 0);
-                            break;
-                        case 1:
-                            actualizarCasilleros(casillero, jugador, 5);
-                            break;
-                        case 2:
-                            actualizarCasilleros(casillero, jugador, 10);
-                            break;
-                        case 3:
-                            actualizarCasilleros(casillero, jugador, 15);
-                            break;
-                        case 4:
-                            actualizarCasilleros(casillero, jugador, 20);
-                            break;
-                        case 5:
-                            actualizarCasilleros(casillero, jugador, 25);
-                            break;
-                    }
-                }
-            });
+                });
                 return nuevaAlerta;
-        }
-            else if(jugada.equals("6")) {
-            nuevaAlerta.setItems(R.array.puntos_lado_seis, new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialogInterface, int i) {
-                    switch (i) {
-                        case 0:
-                            actualizarCasilleros(casillero, jugador, 0);
-                            break;
-                        case 1:
-                            actualizarCasilleros(casillero, jugador, 6);
-                            break;
-                        case 2:
-                            actualizarCasilleros(casillero, jugador, 12);
-                            break;
-                        case 3:
-                            actualizarCasilleros(casillero, jugador, 18);
-                            break;
-                        case 4:
-                            actualizarCasilleros(casillero, jugador, 24);
-                            break;
-                        case 5:
-                            actualizarCasilleros(casillero, jugador, 30);
-                            break;
+            case "2":
+                nuevaAlerta.setItems(R.array.puntos_dado_dos, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        switch (i) {
+                            case 0:
+                                actualizarCasilleros(casillero, jugador, 0);
+                                break;
+                            case 1:
+                                actualizarCasilleros(casillero, jugador, 2);
+                                break;
+                            case 2:
+                                actualizarCasilleros(casillero, jugador, 4);
+                                break;
+                            case 3:
+                                actualizarCasilleros(casillero, jugador, 6);
+                                break;
+                            case 4:
+                                actualizarCasilleros(casillero, jugador, 8);
+                                break;
+                            case 5:
+                                actualizarCasilleros(casillero, jugador, 10);
+                                break;
+                        }
                     }
-                }
-            });
-            return nuevaAlerta;
-        }
-        else if(jugada.equals("Escalera")) {
-            nuevaAlerta.setItems(R.array.puntos_escalera, new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialogInterface, int i) {
-                    switch (i) {
-                        case 0:
-                            actualizarCasilleros(casillero, jugador, 0);
-                            break;
-                        case 1:
-                            actualizarCasilleros(casillero, jugador, 20);
-                            break;
-                        case 2:
-                            actualizarCasilleros(casillero, jugador, 25);
-                            break;
+                });
+                return nuevaAlerta;
+            case "3":
+                nuevaAlerta.setItems(R.array.puntos_lado_tres, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        switch (i) {
+                            case 0:
+                                actualizarCasilleros(casillero, jugador, 0);
+                                break;
+                            case 1:
+                                actualizarCasilleros(casillero, jugador, 3);
+                                break;
+                            case 2:
+                                actualizarCasilleros(casillero, jugador, 6);
+                                break;
+                            case 3:
+                                actualizarCasilleros(casillero, jugador, 9);
+                                break;
+                            case 4:
+                                actualizarCasilleros(casillero, jugador, 12);
+                                break;
+                            case 5:
+                                actualizarCasilleros(casillero, jugador, 15);
+                                break;
+                        }
                     }
-                }
-            });
-            return nuevaAlerta;
-        }
-        else if(jugada.equals("Full")) {
-            nuevaAlerta.setItems(R.array.puntos_full, new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialogInterface, int i) {
-                    switch (i) {
-                        case 0:
-                            actualizarCasilleros(casillero, jugador, 0);
-                            break;
-                        case 1:
-                            actualizarCasilleros(casillero, jugador, 30);
-                            break;
-                        case 2:
-                            actualizarCasilleros(casillero, jugador, 35);
-                            break;
+                });
+                return nuevaAlerta;
+            case "4":
+                nuevaAlerta.setItems(R.array.puntos_lado_cuatro, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        switch (i) {
+                            case 0:
+                                actualizarCasilleros(casillero, jugador, 0);
+                                break;
+                            case 1:
+                                actualizarCasilleros(casillero, jugador, 4);
+                                break;
+                            case 2:
+                                actualizarCasilleros(casillero, jugador, 8);
+                                break;
+                            case 3:
+                                actualizarCasilleros(casillero, jugador, 12);
+                                break;
+                            case 4:
+                                actualizarCasilleros(casillero, jugador, 16);
+                                break;
+                            case 5:
+                                actualizarCasilleros(casillero, jugador, 20);
+                                break;
+                        }
                     }
-                }
-            });
-            return nuevaAlerta;
-        }
-        else if(jugada.equals("Poker")) {
-            nuevaAlerta.setItems(R.array.puntos_poker, new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialogInterface, int i) {
-                    switch (i) {
-                        case 0:
-                            actualizarCasilleros(casillero, jugador, 0);
-                            break;
-                        case 1:
-                            actualizarCasilleros(casillero, jugador, 40);
-                            break;
-                        case 2:
-                            actualizarCasilleros(casillero, jugador, 45);
-                            break;
+                });
+                return nuevaAlerta;
+            case "5":
+                nuevaAlerta.setItems(R.array.puntos_lado_cinco, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        switch (i) {
+                            case 0:
+                                actualizarCasilleros(casillero, jugador, 0);
+                                break;
+                            case 1:
+                                actualizarCasilleros(casillero, jugador, 5);
+                                break;
+                            case 2:
+                                actualizarCasilleros(casillero, jugador, 10);
+                                break;
+                            case 3:
+                                actualizarCasilleros(casillero, jugador, 15);
+                                break;
+                            case 4:
+                                actualizarCasilleros(casillero, jugador, 20);
+                                break;
+                            case 5:
+                                actualizarCasilleros(casillero, jugador, 25);
+                                break;
+                        }
                     }
-                }
-            });
-            return nuevaAlerta;
-        }
-        else if(jugada.equals("Generala")) {
-            nuevaAlerta.setItems(R.array.puntos_generala, new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialogInterface, int i) {
-                    switch (i) {
-                        case 0:
-                            actualizarCasilleros(casillero, jugador, 0);
-                            break;
-                        case 1:
-                            actualizarCasilleros(casillero, jugador, 50);
-                            break;
+                });
+                return nuevaAlerta;
+            case "6":
+                nuevaAlerta.setItems(R.array.puntos_lado_seis, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        switch (i) {
+                            case 0:
+                                actualizarCasilleros(casillero, jugador, 0);
+                                break;
+                            case 1:
+                                actualizarCasilleros(casillero, jugador, 6);
+                                break;
+                            case 2:
+                                actualizarCasilleros(casillero, jugador, 12);
+                                break;
+                            case 3:
+                                actualizarCasilleros(casillero, jugador, 18);
+                                break;
+                            case 4:
+                                actualizarCasilleros(casillero, jugador, 24);
+                                break;
+                            case 5:
+                                actualizarCasilleros(casillero, jugador, 30);
+                                break;
+                        }
+                    }
+                });
+                return nuevaAlerta;
+            case "Escalera":
+                nuevaAlerta.setItems(R.array.puntos_escalera, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        switch (i) {
+                            case 0:
+                                actualizarCasilleros(casillero, jugador, 0);
+                                break;
+                            case 1:
+                                actualizarCasilleros(casillero, jugador, 20);
+                                break;
+                            case 2:
+                                actualizarCasilleros(casillero, jugador, 25);
+                                break;
+                        }
+                    }
+                });
+                return nuevaAlerta;
+            case "Full":
+                nuevaAlerta.setItems(R.array.puntos_full, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        switch (i) {
+                            case 0:
+                                actualizarCasilleros(casillero, jugador, 0);
+                                break;
+                            case 1:
+                                actualizarCasilleros(casillero, jugador, 30);
+                                break;
+                            case 2:
+                                actualizarCasilleros(casillero, jugador, 35);
+                                break;
+                        }
+                    }
+                });
+                return nuevaAlerta;
+            case "Poker":
+                nuevaAlerta.setItems(R.array.puntos_poker, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        switch (i) {
+                            case 0:
+                                actualizarCasilleros(casillero, jugador, 0);
+                                break;
+                            case 1:
+                                actualizarCasilleros(casillero, jugador, 40);
+                                break;
+                            case 2:
+                                actualizarCasilleros(casillero, jugador, 45);
+                                break;
+                        }
+                    }
+                });
+                return nuevaAlerta;
+            case "Generala":
+                nuevaAlerta.setItems(R.array.puntos_generala, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        switch (i) {
+                            case 0:
+                                actualizarCasilleros(casillero, jugador, 0);
+                                break;
+                            case 1:
+                                actualizarCasilleros(casillero, jugador, 50);
+                                break;
 
+                        }
                     }
-                }
-            });
-            return nuevaAlerta;
-        }
-        else if(jugada.equals("Generala Doble")) {
-            nuevaAlerta.setItems(R.array.puntos_generala_doble, new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialogInterface, int i) {
-                    switch (i) {
-                        case 0:
-                            actualizarCasilleros(casillero, jugador, 0);
-                            break;
-                        case 1:
-                            actualizarCasilleros(casillero, jugador, 60);
-                            break;
+                });
+                return nuevaAlerta;
+            case "Generala Doble":
+                nuevaAlerta.setItems(R.array.puntos_generala_doble, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        switch (i) {
+                            case 0:
+                                actualizarCasilleros(casillero, jugador, 0);
+                                break;
+                            case 1:
+                                actualizarCasilleros(casillero, jugador, 60);
+                                break;
+                        }
                     }
-                }
-            });
-            return nuevaAlerta;
+                });
+                return nuevaAlerta;
         }
         return null;
     }
@@ -527,11 +499,8 @@ public class Generala extends AppCompatActivity  {
         alertialog.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                try {
+                getWindow().clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
                     finish();
-                } catch (Throwable throwable) {
-                    throwable.printStackTrace();
-                }
             }
         });
         alertialog.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
@@ -544,7 +513,7 @@ public class Generala extends AppCompatActivity  {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_generala,menu);
+        getMenuInflater().inflate(R.menu.menu_reinicio,menu);
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -624,6 +593,7 @@ public class Generala extends AppCompatActivity  {
         total3.setText(R.string.Puntaje_en_0);
         total4.setText(R.string.Puntaje_en_0);
     }
+
 }
 
 

@@ -52,6 +52,26 @@
     <string name="Rummy">Rummy</string>
     <string name="Malas">Malas</string>
     <integer name="numuno">1</integer>
+    <string name="Jodete_Uno">Jodete/Uno</string>
+    <string name="Diezmil">Diez mil</string>
+    <string name="Chorizo">Chorizo</string>
+    <string name="icono">Icono</string>
+    <string name="malas">Malas</string>
+    <string name="Buenas">Buenas</string>
+    <string name="Cantidad_de_jugadores">Cantidad de jugadores</string>
+    <string name="Escobas">Escobas</string>
+    <string name="Siete_de_Oro">Siete de Oro</string>
+    <string name="Setenta">Setenta</string>
+    <string name="Cartas">Cartas</string>
+    <string name="Oros">Oros</string>
+    <string name="Explicacion_Chorizo">El chorizo es una variacion de la escoba del 15. Tiene la misma dinamica de juego, pero hay mas y diferentes jugadas para sumar puntos.</string>
+    <string name="TresDelNueve">Tres del Nueve (3)</string>
+    <string name="DosdelSiete">Dos del Siete (2)</string>
+    <string name="Escalera3">Escalera (3)</string>
+    <string name="flor">Flore (3)</string>
+    <string name="ChorizoJugada">Chorizo (10)</string>
+    <string name="DocedeOro">Doce de Oro</string>
+    <string name="extras">Extras</string>
     
     
     

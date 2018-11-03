@@ -2,14 +2,14 @@ package com.example.rodrigo.anotadoruniversal;
 
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.media.Image;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.InputType;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.MotionEvent;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -28,15 +28,22 @@ public class Truco extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_truco);
-        cantidadDePuntos= Integer.parseInt(getIntent().getExtras().getString("cantidadDePuntos"));
+        try {
+            cantidadDePuntos= Integer.parseInt(getIntent().getExtras().getString("cantidadDePuntos"));
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
         jugador1=new Jugador(0);
-        jugador1.setNombre("Jugador 1");
+        jugador1.setNombre(getResources().getString(R.string.Equipo_Nosotros));
         jugador2=new Jugador(0);
-        jugador2.setNombre("Jugador 2");
+        jugador2.setNombre(getResources().getString(R.string.Equipo_Ellos));
         puntos1= findViewById(R.id.puntos1);
         puntos2=findViewById(R.id.puntos2);
         equipo1=findViewById(R.id.equipo1);
+        equipo1.setText(jugador1.getNombre());
         equipo2=findViewById(R.id.equipo2);
+        equipo2.setText(jugador2.getNombre());
         boton1=findViewById(R.id.boton1);
         boton2=findViewById(R.id.boton2);
         boton3=findViewById(R.id.boton3);
@@ -75,6 +82,7 @@ public class Truco extends AppCompatActivity {
         BoM2=findViewById(R.id.BoM2);
         lineas(jugador1);
         lineas(jugador2);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
     }
 
@@ -91,7 +99,7 @@ public class Truco extends AppCompatActivity {
             jugador.sumarPuntos(1);
         if(jugador.getPuntos()>=cantidadDePuntos){
             jugador.setPuntos(cantidadDePuntos);
-            Toast.makeText(this, "Partido Finalizado", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Partido Finalizado, Ganador: "+jugador.getNombre(), Toast.LENGTH_LONG).show();
         }
              if(jugador.equals(jugador1)){
                 byM(BoM1,resultado,jugador1);
@@ -105,10 +113,6 @@ public class Truco extends AppCompatActivity {
     public void restar(View vista, Jugador jugador){
         TextView resultado=(TextView)vista;
         jugador.restarPuntos(1);
-        if(jugador.getPuntos()>=cantidadDePuntos){
-            jugador.setPuntos(cantidadDePuntos);
-            Toast.makeText(this, "Partido Finalizado", Toast.LENGTH_LONG).show();
-        }
         if(jugador.getPuntos()<0){
             jugador.setPuntos(0);
         }
@@ -122,7 +126,6 @@ public class Truco extends AppCompatActivity {
     }
 
     public void capturarBoton(View vista){
-        Jugador jugador = capturarJugador(vista);
         Button boton=(Button)vista;
         if(boton.equals(boton1)){
                 sumar(puntos1,jugador1);
@@ -141,26 +144,9 @@ public class Truco extends AppCompatActivity {
                 actualizarLineas2(jugador2,boton);
         }
     }
-    public Jugador capturarJugador(View vista){
-        Button boton=(Button)vista;
-        if(boton.equals(boton1)){
-            return jugador1;
-        }
-        else if (boton.equals(boton2)){
-            return jugador1;
-        }
-        else if (boton.equals(boton3)){
-            return jugador2;
-        }
-        else if (boton.equals(boton4)){
-            return jugador2;
-        }
-        return null;
-    }
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_truco,menu);
+        getMenuInflater().inflate(R.menu.menu_truco_chorizo,menu);
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -190,7 +176,7 @@ public class Truco extends AppCompatActivity {
             });
             alertialog.show();
         }
-        if(id==R.id.Reiniciar){
+        else if(id==R.id.Reiniciar){
             AlertDialog.Builder alertdialog =new AlertDialog.Builder(this);
             alertdialog.setTitle("Reiniciar?");
             alertdialog.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
@@ -207,6 +193,60 @@ public class Truco extends AppCompatActivity {
             });
             alertdialog.create().show();
         }
+        else if(id==R.id.PicaPicaAlResto){
+            AlertDialog.Builder alertialog=new AlertDialog.Builder(this);
+            alertialog.setTitle("Pica Pica al Resto");
+            alertialog.setMessage("Ingresar puntaje de cada mano sin espacios");
+            final EditText juego1=new EditText(this);
+            juego1.setHint("Mano 1 ("+jugador1.getNombre()+" - "+jugador2.getNombre()+")");
+            juego1.setInputType(InputType.TYPE_CLASS_NUMBER);
+            final EditText juego2=new EditText(this);
+            juego2.setHint("Mano 2 ("+jugador1.getNombre()+" - "+jugador2.getNombre()+")");
+            juego2.setInputType(InputType.TYPE_CLASS_NUMBER);
+            final EditText juego3=new EditText(this);
+            juego3.setHint("Mano 3 ("+jugador1.getNombre()+" - "+jugador2.getNombre()+")");
+            juego3.setInputType(InputType.TYPE_CLASS_NUMBER);
+            LinearLayout layout = new LinearLayout(this);
+            layout.setOrientation(LinearLayout.VERTICAL);
+            layout.addView(juego1);
+            layout.addView(juego2);
+            layout.addView(juego3);
+            alertialog.setView(layout);
+            alertialog.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                    String juego1String=juego1.getText().toString();
+                    String juego2String=juego2.getText().toString();
+                    String juego3String= juego3.getText().toString();
+                    int resultado1=Integer.parseInt(String.valueOf(juego1String.charAt(0)));
+                    int resultado2=Integer.parseInt(String.valueOf(juego1String.charAt(1)));
+                    int resultado3=Integer.parseInt(String.valueOf(juego2String.charAt(0)));
+                    int resultado4=Integer.parseInt(String.valueOf(juego2String.charAt(1)));
+                    int resultado5=Integer.parseInt(String.valueOf(juego3String.charAt(0)));
+                    int resultado6=Integer.parseInt(String.valueOf(juego3String.charAt(1)));
+                    int resultado_global=((resultado1-resultado2)+(resultado3-resultado4)+(resultado5-resultado6));
+                    if(resultado_global<0){
+                        for (int j = 0; j > resultado_global; j--) {
+                            boton3.callOnClick();
+                        }
+                    }
+                    else if (resultado_global>0){
+                        for (int j = 0; j < resultado_global; j++) {
+                            boton1.callOnClick();
+                        }
+                    }
+                }
+            });
+            alertialog.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+
+                }
+            });
+            alertialog.create().show();
+
+
+        }
 
         return super.onOptionsItemSelected(item);
     }
@@ -219,6 +259,7 @@ public class Truco extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 try {
+                    getWindow().clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
                     finish();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
@@ -235,12 +276,12 @@ public class Truco extends AppCompatActivity {
     public void byM(TextView bym, TextView numero,Jugador jug){
 
         if(jug.getPuntos()<=16){
-            bym.setText("Malas");
+            bym.setText(R.string.Malas);
             bym.setTextColor(getResources().getColor(R.color.rojo));
             numero.setText(String.valueOf(jug.getPuntos()));
         }
         if (jug.getPuntos()>=16 && cantidadDePuntos==30) {
-            bym.setText("Buenas");
+            bym.setText(R.string.Buenas);
             bym.setTextColor(getResources().getColor(R.color.verde));
             numero.setText(String.valueOf(jug.getPuntos()-15));
         }
@@ -263,8 +304,10 @@ public class Truco extends AppCompatActivity {
         alertialog.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                cambiarNombre(equipo1,equipouno,jugador1);
-                cambiarNombre(equipo2,equipodos,jugador2);
+                if(!equipouno.getText().toString().equals(""))
+                    cambiarNombre(equipo1,equipouno,jugador1);
+                if((!equipodos.getText().toString().equals("")))
+                    cambiarNombre(equipo2,equipodos,jugador2);
             }
         });
         alertialog.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {

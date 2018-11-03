@@ -9,6 +9,7 @@ import android.text.InputType;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -30,29 +31,53 @@ public class Escoba_4_jug extends AppCompatActivity {
         equipo3=findViewById(R.id.equipo3);
         equipo4=findViewById(R.id.equipo4);
         textView1=findViewById(R.id.textView1);
+        textView1.setVisibility(View.INVISIBLE);
         textView2=findViewById(R.id.textView2);
+        textView2.setVisibility(View.INVISIBLE);
         textView3=findViewById(R.id.textView3);
+        textView3.setVisibility(View.INVISIBLE);
         textView4=findViewById(R.id.textView4);
+        textView4.setVisibility(View.INVISIBLE);
         textView5=findViewById(R.id.textView5);
+        textView5.setVisibility(View.INVISIBLE);
         textView6=findViewById(R.id.textView6);
+        textView6.setVisibility(View.INVISIBLE);
         textView7=findViewById(R.id.textView7);
+        textView7.setVisibility(View.INVISIBLE);
         textView8=findViewById(R.id.textView8);
+        textView8.setVisibility(View.INVISIBLE);
         textView9=findViewById(R.id.textView9);
+        textView9.setVisibility(View.INVISIBLE);
         textView10=findViewById(R.id.textView10);
+        textView10.setVisibility(View.INVISIBLE);
         textView11=findViewById(R.id.textView11);
+        textView11.setVisibility(View.INVISIBLE);
         textView12=findViewById(R.id.textView12);
+        textView12.setVisibility(View.INVISIBLE);
         textView13=findViewById(R.id.textView13);
+        textView13.setVisibility(View.INVISIBLE);
         textView14=findViewById(R.id.textView14);
+        textView14.setVisibility(View.INVISIBLE);
         textView15=findViewById(R.id.textView15);
+        textView15.setVisibility(View.INVISIBLE);
         textView16=findViewById(R.id.textView16);
+        textView16.setVisibility(View.INVISIBLE);
         textView17=findViewById(R.id.textView17);
+        textView17.setVisibility(View.INVISIBLE);
         textView18=findViewById(R.id.textView18);
+        textView18.setVisibility(View.INVISIBLE);
         textView19=findViewById(R.id.textView19);
+        textView19.setVisibility(View.INVISIBLE);
         textView20=findViewById(R.id.textView20);
+        textView20.setVisibility(View.INVISIBLE);
         textView21=findViewById(R.id.textView21);
+        textView21.setVisibility(View.INVISIBLE);
         textView22=findViewById(R.id.textView22);
+        textView22.setVisibility(View.INVISIBLE);
         textView23=findViewById(R.id.textView23);
+        textView23.setVisibility(View.INVISIBLE);
         textView24=findViewById(R.id.textView24);
+        textView24.setVisibility(View.INVISIBLE);
         total1=findViewById(R.id.total1);
         total2=findViewById(R.id.total2);
         total3=findViewById(R.id.total3);
@@ -66,10 +91,11 @@ public class Escoba_4_jug extends AppCompatActivity {
         jugador4=new Jugador(0);
         jugador4.setNombre("Jugador 4");
         cuentaManos=0;
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_escoba,menu);
+        getMenuInflater().inflate(R.menu.menu_reinicio_configuracion,menu);
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -206,15 +232,16 @@ public class Escoba_4_jug extends AppCompatActivity {
         }
     }
     public void organizarPuntajes(TextView parcial,TextView total,Jugador jugador,EditText puntaje){
+        parcial.setVisibility(View.VISIBLE);
         if(jugador.getPuntos()<15){
             int puntos=Integer.parseInt(puntaje.getText().toString());
             jugador.sumarPuntos(puntos);
             parcial.setText(String.valueOf(puntos));
             total.setText(String.valueOf(jugador.getPuntos()));
         }
-        else if(jugador.getPuntos()>=15){
+        if(jugador.getPuntos()>=15){
             jugador.setPuntos(15);
-            Toast.makeText(this, "Partido Finalizado", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Partido Finalizado, Ganador: "+jugador.getNombre(), Toast.LENGTH_SHORT).show();
         }
 
     }
@@ -222,6 +249,7 @@ public class Escoba_4_jug extends AppCompatActivity {
     public void reiniciarMarcador(TextView parcial,TextView total,Jugador jugador){
         jugador.setPuntos(0);
         parcial.setText(R.string.Puntaje_en_0);
+        parcial.setVisibility(View.INVISIBLE);
         total.setText(R.string.Puntaje_en_0);
 
     }
@@ -295,5 +323,23 @@ public class Escoba_4_jug extends AppCompatActivity {
             Jugador.setNombre(nombrestring);
             Equipo.setText(nombrestring);
         }
+    }
+    public void onBackPressed() {
+        AlertDialog.Builder alertialog = new AlertDialog.Builder(this);
+        alertialog.setTitle("Salir?");
+        alertialog.setMessage("Se reiniciará la partida");
+        alertialog.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                getWindow().clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+                finish();
+            }
+        });
+        alertialog.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+            }
+        });
+        alertialog.show();
     }
 }

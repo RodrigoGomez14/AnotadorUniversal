@@ -2,14 +2,15 @@ package com.example.rodrigo.anotadoruniversal;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.CheckBox;
 import android.widget.RadioButton;
 
 public class configuracionEscoba extends AppCompatActivity {
     private RadioButton dosjugadores,tresjugadores,cuatrojugadores;
+    private CheckBox chorizo;
     private int jugadores;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,7 +19,13 @@ public class configuracionEscoba extends AppCompatActivity {
         dosjugadores=findViewById(R.id.dosjugadores);
         tresjugadores=findViewById(R.id.tresjugadores);
         cuatrojugadores=findViewById(R.id.cuatrojugadores);
-        jugadores=getIntent().getExtras().getInt("jugadores");
+        chorizo=findViewById(R.id.chorizoCheck);
+        try{
+            jugadores=getIntent().getExtras().getInt("jugadores");
+        }
+        catch (NullPointerException e){
+            e.printStackTrace();
+        }
         if(jugadores==2){
             dosjugadores.setChecked(true);
         }
@@ -33,14 +40,14 @@ public class configuracionEscoba extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_configuracion_escoba,menu);
+        getMenuInflater().inflate(R.menu.enviar_configuracion,menu);
         return super.onCreateOptionsMenu(menu);
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id=item.getItemId();
-        if(id==R.id.aceptar) {
+        if(id==R.id.atras) {
             onBackPressed();
         }
         return super.onOptionsItemSelected(item);
@@ -50,20 +57,44 @@ public class configuracionEscoba extends AppCompatActivity {
     public void onBackPressed() {
 
             if(dosjugadores.isChecked()){
-                Intent j = new Intent(this,Escoba.class);
-                startActivity(j);
-                finish();
+                if(chorizo.isChecked()){
+                    Intent j=new Intent(this,Chorizo.class);
+                    startActivity(j);
+                    finish();
+                }
+
+                else{
+                    Intent j = new Intent(this,Escoba.class);
+                    startActivity(j);
+                    finish();
+                }
 
             }
             else if(tresjugadores.isChecked()){
-                Intent j = new Intent(this,Escoba_3_jug.class);
-                startActivity(j);
-                finish();
+                if(chorizo.isChecked()){
+                    Intent j=new Intent(this,Chorizo2.class);
+                    startActivity(j);
+                    finish();
+                }
+
+                else{
+                    Intent j = new Intent(this,Escoba_3_jug.class);
+                    startActivity(j);
+                    finish();
+                }
             }
             else if(cuatrojugadores.isChecked()){
-                Intent j = new Intent(this,Escoba_4_jug.class);
-                startActivity(j);
-                finish();
+                if(chorizo.isChecked()){
+                    Intent j=new Intent(this,Chorizo.class);
+                    startActivity(j);
+                    finish();
+                }
+
+                else{
+                    Intent j = new Intent(this,Escoba_4_jug.class);
+                    startActivity(j);
+                    finish();
+                }
             }
 
     }

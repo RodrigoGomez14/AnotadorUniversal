@@ -3,12 +3,12 @@ package com.example.rodrigo.anotadoruniversal;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -24,15 +24,23 @@ public class TrucoGallo extends AppCompatActivity {
     private ImageView linea1_1,linea1_2,linea1_3,linea1_4,linea1_5,linea1_6,linea1_7,linea1_8,linea1_9,linea1_10,
             linea1_11,linea1_12,linea1_13,linea1_14,linea1_15,linea2_1,linea2_2,linea2_3,linea2_4,linea2_5,linea2_6,linea2_7,
             linea2_8,linea2_9,linea2_10,linea2_11,linea2_12,linea2_13,linea2_14,linea2_15,linea3_1,linea3_2,linea3_3,linea3_4,linea3_5,linea3_6,linea3_7,
-            linea3_8,linea3_9,linea3_10,linea3_11,linea3_12,linea3_13,linea3_14,linea3_15;;
+            linea3_8,linea3_9,linea3_10,linea3_11,linea3_12,linea3_13,linea3_14,linea3_15;
     @Override
     protected void onCreate( Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activit_truco_gallo);
-        cantidadDePuntos= Integer.parseInt(getIntent().getExtras().getString("cantidadDePuntos"));
+        try {
+            cantidadDePuntos= Integer.parseInt(getIntent().getExtras().getString("cantidadDePuntos"));
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
         jugador1=new Jugador(0);
+        jugador1.setNombre("Jugador 1");
         jugador2=new Jugador(0);
+        jugador2.setNombre("Jugador 2");
         jugador3=new Jugador(0);
+        jugador3.setNombre("Jugador 3");
         equipo1=findViewById(R.id.equipo1);
         equipo2=findViewById(R.id.equipo2);
         equipo3=findViewById(R.id.equipo3);
@@ -96,6 +104,7 @@ public class TrucoGallo extends AppCompatActivity {
         lineas(jugador1);
         lineas(jugador2);
         lineas(jugador3);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
     }
     public void onBackPressed() {
@@ -106,6 +115,7 @@ public class TrucoGallo extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 try {
+                    getWindow().clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
                     finish();
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
@@ -123,12 +133,12 @@ public class TrucoGallo extends AppCompatActivity {
     public void byM(TextView bym, TextView numero, Jugador jug){
 
         if(jug.getPuntos()<=16){
-            bym.setText("Malas");
+            bym.setText(R.string.Malas);
             bym.setTextColor(getResources().getColor(R.color.rojo));
             numero.setText(String.valueOf(jug.getPuntos()));
         }
         if (jug.getPuntos()>=16 && cantidadDePuntos==30) {
-            bym.setText("Buenas");
+            bym.setText(R.string.Buenas);
             bym.setTextColor(getResources().getColor(R.color.verde));
             numero.setText(String.valueOf(jug.getPuntos()-15));
         }
@@ -152,9 +162,12 @@ public class TrucoGallo extends AppCompatActivity {
         alertialog.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                cambiarNombre(equipo1, equipouno, jugador1);
-                cambiarNombre(equipo2, equipodos, jugador2);
-                cambiarNombre(equipo3, equipotres, jugador3);
+                if(!equipouno.getText().toString().equals(""))
+                    cambiarNombre(equipo1, equipouno, jugador1);
+                if(!equipodos.getText().toString().equals(""))
+                    cambiarNombre(equipo2, equipodos, jugador2);
+                if(!equipotres.getText().toString().equals(""))
+                    cambiarNombre(equipo3, equipotres, jugador3);
 
             }
         });
@@ -170,30 +183,8 @@ public class TrucoGallo extends AppCompatActivity {
         casillero.setText(nombreNuevo);
         jug.setNombre(nombreNuevo);
     }
-    public Jugador capturarJugador(View vista){
-        Button boton=(Button)vista;
-        if(boton.equals(boton1)){
-            return jugador1;
-        }
-        else if (boton.equals(boton2)){
-            return jugador1;
-        }
-        else if (boton.equals(boton3)){
-            return jugador2;
-        }
-        else if (boton.equals(boton4)){
-            return jugador2;
-        }
-        else if(boton.equals(boton5)){
-            return jugador3;
-        }
-        else if(boton.equals(boton6)){
-            return jugador3;
-        }
-        return null;
-    }
+
     public void capturarBoton(View vista){
-        Jugador jugador = capturarJugador(vista);
         Button boton=(Button)vista;
         if(boton.equals(boton1)){
             sumar(puntos1,jugador1);
@@ -227,7 +218,7 @@ public class TrucoGallo extends AppCompatActivity {
         jugador.sumarPuntos(1);
         if(jugador.getPuntos()>=cantidadDePuntos){
             jugador.setPuntos(cantidadDePuntos);
-            Toast.makeText(this, "Partido Finalizado", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Partido Finalizado, Ganador: "+jugador.getNombre(), Toast.LENGTH_LONG).show();
         }
         if(jugador.equals(jugador1)){
             byM(BoM1,resultado,jugador1);
@@ -705,7 +696,7 @@ public class TrucoGallo extends AppCompatActivity {
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_truco,menu);
+        getMenuInflater().inflate(R.menu.menu_reinicio_configuracion,menu);
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -756,13 +747,14 @@ public class TrucoGallo extends AppCompatActivity {
     }
     public void reiniciarPartido(){
         jugador1.setPuntos(0);
-        puntos1.setText( String.valueOf(jugador1.getPuntos()));
         jugador2.setPuntos(0);
-        puntos2.setText(String.valueOf(jugador2.getPuntos()));
         jugador3.setPuntos(0);
-        puntos3.setText(String.valueOf(jugador3.getPuntos()));
+        byM(BoM1,puntos1,jugador1);
+        byM(BoM2,puntos2,jugador2);
+        byM(BoM3,puntos3,jugador3);
         lineas(jugador1);
         lineas(jugador2);
         lineas(jugador3);
+
     }
 }

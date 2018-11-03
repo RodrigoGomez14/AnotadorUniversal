@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.rodrigo.anotadoruniversal">
 
     <application
@@ -8,27 +9,60 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".Truco"></activity>
-        <activity android:name=".Escoba"></activity>
-        <activity android:name=".Chancho"></activity>
-        <activity android:name=".Generala"></activity>
-        <activity android:name=".Chinchon"></activity>
-        <activity android:name=".Burako"></activity>
-        <activity android:name=".Rummy"></activity>
-        <activity android:name=".configuracionEscoba"/>
-        <activity android:name=".ConfiguracionTruco"/>
-        <activity android:name=".Escoba_3_jug"/>
-        <activity android:name=".Escoba_4_jug"/>
-        <activity android:name=".CambiarNombre"
-            android:theme="@style/Theme.AppCompat.Dialog"></activity>
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".Truco"
+            android:label="@string/boton_truco"/>
+        <activity android:name=".Escoba"
+            android:label="@string/boton_escoba"/>
+        <activity android:name=".Chancho"
+            android:label="@string/boton_chancho"/>
+        <activity android:name=".ConfiguracionRummy"
+            android:label="Configuracion Rummy"/>
+        <activity android:name=".Generala"
+            android:label="@string/Generala"/>
+        <activity android:name=".Chinchon2"
+            android:label="@string/Chinchon"/>
+        <activity android:name=".Chinchon3"
+            android:label="@string/Chinchon"/>
+        <activity android:name=".Chinchon4"
+            android:label="@string/Chinchon"/>
+        <activity android:name=".Burako"
+            android:label="@string/Burako"/>
+        <activity android:name=".Rummy"
+            android:label="@string/Rummy"/>
+        <activity android:name=".configuracionEscoba"
+            android:label="Configuracion Escoba"/>
+        <activity android:name=".ConfiguracionTruco"
+            android:label="Configuracion Truco"/>
+        <activity android:name=".Escoba_3_jug"
+            android:label="@string/boton_escoba"/>
+        <activity android:name=".Escoba_4_jug"
+            android:label="@string/boton_escoba"/>
+        <activity android:name=".Diezmil"
+            android:label="@string/Diezmil"/>
+        <activity android:name=".Uno"
+            android:label="Uno"/>
+        <activity android:name=".Chorizo"
+            android:label="@string/Chorizo"/>
+        <activity android:name=".Chorizo2"
+            android:label="@string/Chorizo"/>
+        <activity android:name=".ConfiguracionChinchon"
+            android:label="Configuracion Chinchon"/>
         <activity android:name=".InformacionClase"
-            android:theme="@style/Theme.AppCompat.Dialog"></activity>
-        <activity android:name=".TrucoGallo"></activity>
-        <activity android:name=".MainActivity">
+            android:label="@string/Informacion"
+            android:theme="@style/Theme.AppCompat.Dialog"/>
+        <activity android:name=".TrucoGallo"
+            android:label="@string/boton_truco"/>
+        <activity android:name=".Jodete"
+            android:label="Jodete"/>
+        <activity android:name=".MainActivity"/>
+        <activity
+            android:name=".SplashActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
